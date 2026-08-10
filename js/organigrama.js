@@ -2,18 +2,25 @@ const informacionZonas = {
 
     1: {
         responsable: "C. Verna",
-        nombre: "Zona 1",
-        regional: "Regional Norte/Oeste",
-        descripcion:
-            "Información correspondiente a la Zona 1 de la Escuela de Capacitación.",
-        cuarteles:
-            "Capacitación correspondiente a las asociaciones y cuarteles de la zona."
+
+        nombre: "Escuela Zonal 1",
+
+        correo: "zona1escuelabvlp@gmail.com",
+
+        cuarteles: [
+            "Alta Italia",
+            "Bernardo de Larroudé",
+            "Sarah",
+            "Intendente Alvear",
+            "Rancul",
+            "Realicó"
+        ]
     },
 
     2: {
         responsable: "I. Chiurazzi",
         nombre: "Zona 2",
-        regional: "Regional Norte/Oeste",
+        correo: "zona2escuelabvlp@gmail.com",
         descripcion:
             "Información correspondiente a la Zona 2 de la Escuela de Capacitación.",
         cuarteles:
@@ -23,7 +30,7 @@ const informacionZonas = {
     3: {
         responsable: "H. Yrigoyen",
         nombre: "Zona 3",
-        regional: "Regional Norte/Oeste",
+        correo: "zona3escuelabvlp@gmail.com",
         descripcion:
             "Información correspondiente a la Zona 3 de la Escuela de Capacitación.",
         cuarteles:
@@ -33,7 +40,8 @@ const informacionZonas = {
     4: {
         responsable: "J. Fredes Fdez.",
         nombre: "Zona 4",
-        regional: "Regional Sur",
+        correo: "zona4escuelabvlp@gmail.com",
+    
         descripcion:
             "Información correspondiente a la Zona 4 de la Escuela de Capacitación.",
         cuarteles:
@@ -43,7 +51,7 @@ const informacionZonas = {
     5: {
         responsable: "M. Muñoz",
         nombre: "Zona 5",
-        regional: "Regional Sur",
+        correo: "zona5escuelabvlp@gmail.com",
         descripcion:
             "Información correspondiente a la Zona 5 de la Escuela de Capacitación.",
         cuarteles:
@@ -53,7 +61,7 @@ const informacionZonas = {
     6: {
         responsable: "E. Cleman",
         nombre: "Zona 6",
-        regional: "Regional Sur",
+        correo: "zona6escuelabvlp@gmail.com",
         descripcion:
             "Información correspondiente a la Zona 6 de la Escuela de Capacitación.",
         cuarteles:
@@ -143,21 +151,6 @@ botonesZona.forEach(boton => {
 
                         <strong>
 
-                            <i class="fa-solid fa-location-dot"></i>
-
-                            Región
-
-                        </strong>
-
-                        ${zona.regional}
-
-                    </div>
-
-
-                    <div class="info-item">
-
-                        <strong>
-
                             <i class="fa-solid fa-graduation-cap"></i>
 
                             Capacitación
@@ -179,7 +172,18 @@ botonesZona.forEach(boton => {
 
                         </strong>
 
-                        ${zona.cuarteles}
+                        <ul class="lista-cuarteles-zona">
+
+                            ${zona.cuarteles.map(cuartel => `
+
+                                <li>
+                                    <i class="fa-solid fa-fire-flame-curved"></i>
+                                    ${cuartel}
+                                </li>
+
+                            `).join("")}
+
+                        </ul>
 
                     </div>
 
