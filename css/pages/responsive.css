@@ -490,6 +490,103 @@
     object-position:center top;
 
     }
+
+    /* HISTORIA ESCUELA */
+    .historia-escuela{
+        padding: 70px 0;
+    }
+
+    .historia-escuela .titulo-seccion{
+        margin-bottom: 50px;
+    }
+
+    .historia-escuela .titulo-seccion h2{
+        font-size: 30px;
+    }
+
+    .historia-escuela .titulo-seccion p{
+        font-size: 14px;
+    }
+
+
+    /* QUITAMOS EL CENTRO */
+
+    .timeline::before{
+        left: 27px;
+        transform: none;
+    }
+
+
+    /* TODOS LOS ELEMENTOS A LA DERECHA */
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+
+        width: 100%;
+
+        left: 0;
+
+        text-align: left;
+
+        padding-left: 75px;
+        padding-right: 10px;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* MARCADOR */
+
+    .timeline-item:nth-child(odd) .timeline-marker,
+    .timeline-item:nth-child(even) .timeline-marker{
+
+        left: 0;
+        right: auto;
+
+        width: 54px;
+        height: 54px;
+    }
+
+
+    /* OCULTAR CONECTORES */
+
+    .timeline-item::after{
+        display: none;
+    }
+
+
+    /* TARJETA */
+
+    .timeline-content{
+        padding: 25px 22px;
+
+        border-radius: 15px;
+    }
+
+
+    .timeline-content h3{
+        font-size: 21px;
+    }
+
+    .timeline-content p{
+        font-size: 14px;
+    }
+
+    /* IDENTIDAD ESCUELA*/
+    .identidad-grid{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .identidad-card{
+        padding: 35px 30px;
+    }
+
+    .identidad-escuela .titulo-seccion h2{
+        font-size: 34px;
+    }
+
 }
 
 
@@ -634,6 +731,64 @@
     .calendario-container iframe{
         height:500px;
         border-radius:12px;
+    }
+
+    /* HISTORIA DE ESCUELA */
+     .historia-escuela{
+        padding: 60px 0;
+    }
+
+    .historia-escuela .titulo-seccion h2{
+        font-size: 27px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 65px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-marker,
+    .timeline-item:nth-child(even) .timeline-marker{
+        width: 48px;
+        height: 48px;
+        font-size: 17px;
+    }
+
+    .timeline-content{
+        padding: 22px 18px;
+    }
+
+    .timeline-fecha{
+        font-size: 12px;
+    }
+
+    .timeline-content h3{
+        font-size: 19px;
+    }
+
+    /* IDENTIDAD ESCUELA */
+    .identidad-escuela{
+        padding: 70px 0;
+    }
+
+    .identidad-escuela .titulo-seccion h2{
+        font-size: 29px;
+    }
+
+    .identidad-card{
+        padding: 30px 25px;
+        border-radius: 15px;
+    }
+
+    .identidad-icono{
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .identidad-card h3{
+        font-size: 24px;
     }
 }
 
