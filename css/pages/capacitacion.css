@@ -213,3 +213,438 @@
     }
 
 }
+
+/* =========================================
+   HISTORIA DE LA ESCUELA
+========================================= */
+
+.historia-escuela{
+    padding: 110px 0;
+    background: #fff;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.historia-escuela .titulo-seccion{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.historia-escuela .subtitulo-seccion{
+    display: inline-block;
+    color: #c1121f;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.historia-escuela .titulo-seccion h2{
+    font-size: 42px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.historia-escuela .titulo-seccion p{
+    max-width: 800px;
+    margin: 0 auto 10px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   LÍNEA DE TIEMPO
+========================================= */
+
+.timeline{
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* LÍNEA CENTRAL */
+
+.timeline::before{
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 4px;
+
+    background: #c1121f;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   ELEMENTO
+========================================= */
+
+.timeline-item{
+    position: relative;
+
+    width: 50%;
+
+    padding: 20px 50px;
+
+    margin-bottom: 50px;
+}
+
+
+/* IZQUIERDA */
+
+.timeline-item:nth-child(odd){
+    left: 0;
+    text-align: right;
+}
+
+
+/* DERECHA */
+
+.timeline-item:nth-child(even){
+    left: 50%;
+    text-align: left;
+}
+
+
+/* =========================================
+   MARCADOR
+========================================= */
+
+.timeline-marker{
+    position: absolute;
+
+    top: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #c1121f;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    border: 5px solid #fff;
+
+    box-shadow:
+        0 0 0 3px #c1121f,
+        0 6px 18px rgba(0,0,0,.15);
+
+    z-index: 2;
+}
+
+
+/* MARCADOR IZQUIERDO */
+
+.timeline-item:nth-child(odd) .timeline-marker{
+    right: -27px;
+}
+
+
+/* MARCADOR DERECHO */
+
+.timeline-item:nth-child(even) .timeline-marker{
+    left: -27px;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.timeline-content{
+    background: #f8f8f8;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    border: 1px solid #eee;
+
+    transition: .35s ease;
+}
+
+
+/* HOVER */
+
+.timeline-content:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.13);
+}
+
+
+/* =========================================
+   FECHA
+========================================= */
+
+.timeline-fecha{
+    display: inline-block;
+
+    background: #c1121f;
+    color: #fff;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.timeline-content h3{
+    font-size: 24px;
+
+    font-weight: 800;
+
+    color: #111;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.timeline-content p{
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 12px;
+}
+
+
+/* TEXTO EN NEGRITA */
+
+.timeline-content strong{
+    color: #333;
+}
+
+
+/* =========================================
+   EFECTO DE LA LÍNEA
+========================================= */
+
+.timeline-item::after{
+    content: "";
+
+    position: absolute;
+
+    top: 50px;
+
+    width: 50px;
+    height: 2px;
+
+    background: #c1121f;
+
+    z-index: 1;
+}
+
+
+/* CONECTOR IZQUIERDO */
+
+.timeline-item:nth-child(odd)::after{
+    right: 0;
+}
+
+
+/* CONECTOR DERECHO */
+
+.timeline-item:nth-child(even)::after{
+    left: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 992px){
+
+    .historia-escuela{
+        padding: 80px 0;
+    }
+
+    .historia-escuela .titulo-seccion h2{
+        font-size: 36px;
+    }
+
+    .timeline{
+        max-width: 850px;
+    }
+
+    .timeline-item{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .historia-escuela{
+        padding: 70px 0;
+    }
+
+    .historia-escuela .titulo-seccion{
+        margin-bottom: 50px;
+    }
+
+    .historia-escuela .titulo-seccion h2{
+        font-size: 30px;
+    }
+
+    .historia-escuela .titulo-seccion p{
+        font-size: 14px;
+    }
+
+
+    /* QUITAMOS EL CENTRO */
+
+    .timeline::before{
+        left: 27px;
+        transform: none;
+    }
+
+
+    /* TODOS LOS ELEMENTOS A LA DERECHA */
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+
+        width: 100%;
+
+        left: 0;
+
+        text-align: left;
+
+        padding-left: 75px;
+        padding-right: 10px;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* MARCADOR */
+
+    .timeline-item:nth-child(odd) .timeline-marker,
+    .timeline-item:nth-child(even) .timeline-marker{
+
+        left: 0;
+        right: auto;
+
+        width: 54px;
+        height: 54px;
+    }
+
+
+    /* OCULTAR CONECTORES */
+
+    .timeline-item::after{
+        display: none;
+    }
+
+
+    /* TARJETA */
+
+    .timeline-content{
+        padding: 25px 22px;
+
+        border-radius: 15px;
+    }
+
+
+    .timeline-content h3{
+        font-size: 21px;
+    }
+
+    .timeline-content p{
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media (max-width: 480px){
+
+    .historia-escuela{
+        padding: 60px 0;
+    }
+
+    .historia-escuela .titulo-seccion h2{
+        font-size: 27px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+
+        padding-left: 65px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-marker,
+    .timeline-item:nth-child(even) .timeline-marker{
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 17px;
+    }
+
+    .timeline-content{
+        padding: 22px 18px;
+    }
+
+    .timeline-fecha{
+        font-size: 12px;
+    }
+
+    .timeline-content h3{
+        font-size: 19px;
+    }
+
+}
