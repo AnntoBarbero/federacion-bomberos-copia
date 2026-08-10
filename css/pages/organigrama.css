@@ -1,3 +1,15 @@
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:#c1121f;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:50px;
+    font-weight:700;
+    margin-bottom:30px;
+}
+
 /* =========================================
    ORGANIGRAMA
 ========================================= */
@@ -486,128 +498,5 @@
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
-
-@media(max-width:992px){
-
-    .zonas-organigrama{
-
-        grid-template-columns:
-            repeat(3,1fr);
-
-    }
-
-}
 
 
-/* =========================================
-   CELULAR
-========================================= */
-
-@media(max-width:768px){
-
-    .seccion-organigrama{
-
-        padding:60px 0;
-
-    }
-
-
-    .nivel{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:20px;
-
-    }
-
-
-    .nivel-regionales{
-
-        gap:20px;
-
-    }
-
-
-    .linea-vertical{
-
-        height:25px;
-
-    }
-
-
-    .org-card,
-    .org-card.principal,
-    .regional{
-
-        width:90%;
-
-        min-width:0;
-
-    }
-
-
-    .zonas-organigrama{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:12px;
-
-    }
-
-
-    .zona-org{
-
-        min-height:100px;
-
-    }
-
-
-    .zona-info-contenido{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .zona-info-card{
-
-        padding:25px 20px;
-
-    }
-
-}
-
-
-/* =========================================
-   CELULAR PEQUEÑO
-========================================= */
-
-@media(max-width:480px){
-
-    .zonas-organigrama{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .zona-org{
-
-        width:100%;
-
-    }
-
-
-    .org-card h3{
-
-        font-size:16px;
-
-    }
-
-}
