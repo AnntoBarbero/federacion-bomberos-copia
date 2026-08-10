@@ -1,0 +1,613 @@
+/* =========================================
+   ORGANIGRAMA
+========================================= */
+
+.seccion-organigrama{
+    padding:90px 0;
+    background:#f7f7f7;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.organigrama{
+    width:100%;
+    margin-top:60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+/* =========================================
+   NIVELES
+========================================= */
+
+.nivel{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.org-card{
+
+    min-width:250px;
+
+    padding:18px 25px;
+
+    background:#fff;
+
+    border:2px solid #ff7200;
+
+    border-radius:16px;
+
+    display:flex;
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.org-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+
+/* DIRECTOR */
+
+.org-card.principal{
+
+    min-width:300px;
+
+    border-width:3px;
+
+}
+
+
+.org-card h3{
+
+    margin:0;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+
+.org-card span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#c1121f;
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+
+/* =========================================
+   ICONOS
+========================================= */
+
+.org-icon{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#c1121f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+    flex-shrink:0;
+
+}
+
+
+/* =========================================
+   LINEAS
+========================================= */
+
+.linea-vertical{
+
+    width:2px;
+
+    height:40px;
+
+    background:#ff9d4d;
+
+}
+
+
+/* =========================================
+   REGIONALES
+========================================= */
+
+.nivel-regionales{
+
+    gap:80px;
+
+}
+
+
+.regional{
+
+    min-width:270px;
+
+}
+
+
+/* =========================================
+   ZONAS
+========================================= */
+
+.zonas-organigrama{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap:15px;
+
+    margin-top:0;
+
+}
+
+
+/* =========================================
+   BOTONES DE ZONA
+========================================= */
+
+.zona-org{
+
+    border:2px solid #ff7200;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    min-height:110px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+}
+
+
+.zona-org i{
+
+    font-size:20px;
+
+    color:#c1121f;
+
+    margin-bottom:5px;
+
+}
+
+
+.zona-org strong{
+
+    font-size:15px;
+
+    color:#222;
+
+}
+
+
+.zona-org span{
+
+    font-size:13px;
+
+    color:#c1121f;
+
+}
+
+
+/* HOVER */
+
+.zona-org:hover{
+
+    transform:translateY(-5px);
+
+    background:#fff5ed;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.12);
+
+}
+
+
+/* ZONA ACTIVA */
+
+.zona-org.activa{
+
+    background:#ff7200;
+
+    border-color:#ff7200;
+
+    color:#fff;
+
+}
+
+
+.zona-org.activa i,
+.zona-org.activa strong,
+.zona-org.activa span{
+
+    color:#fff;
+
+}
+
+
+/* =========================================
+   INFORMACIÓN DE ZONA
+========================================= */
+
+.informacion-zona{
+
+    margin-top:50px;
+
+    min-height:220px;
+
+}
+
+
+.zona-info-vacia{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+}
+
+
+.zona-info-vacia i{
+
+    font-size:35px;
+
+    color:#c1121f;
+
+    margin-bottom:15px;
+
+}
+
+
+.zona-info-vacia h3{
+
+    font-family:'Montserrat',sans-serif;
+
+    margin-bottom:8px;
+
+}
+
+
+.zona-info-vacia p{
+
+    color:#666;
+
+    margin:0;
+
+}
+
+
+/* =========================================
+   TARJETA INFORMACIÓN
+========================================= */
+
+.zona-info-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border-top:6px solid #ff7200;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    animation:aparecerZona .4s ease;
+
+}
+
+
+.zona-info-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:25px;
+
+}
+
+
+.zona-info-icon{
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#c1121f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:25px;
+
+}
+
+
+.zona-info-header h3{
+
+    margin:0;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:25px;
+
+}
+
+
+.zona-info-header span{
+
+    color:#c1121f;
+
+    font-size:14px;
+
+}
+
+
+.zona-info-contenido{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+.info-item{
+
+    background:#f8f8f8;
+
+    padding:18px;
+
+    border-radius:12px;
+
+}
+
+
+.info-item i{
+
+    color:#c1121f;
+
+    margin-right:8px;
+
+}
+
+
+.info-item strong{
+
+    display:block;
+
+    margin-bottom:5px;
+
+}
+
+
+@keyframes aparecerZona{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+    .zonas-organigrama{
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width:768px){
+
+    .seccion-organigrama{
+
+        padding:60px 0;
+
+    }
+
+
+    .nivel{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+
+    .nivel-regionales{
+
+        gap:20px;
+
+    }
+
+
+    .linea-vertical{
+
+        height:25px;
+
+    }
+
+
+    .org-card,
+    .org-card.principal,
+    .regional{
+
+        width:90%;
+
+        min-width:0;
+
+    }
+
+
+    .zonas-organigrama{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+
+    .zona-org{
+
+        min-height:100px;
+
+    }
+
+
+    .zona-info-contenido{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .zona-info-card{
+
+        padding:25px 20px;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media(max-width:480px){
+
+    .zonas-organigrama{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .zona-org{
+
+        width:100%;
+
+    }
+
+
+    .org-card h3{
+
+        font-size:16px;
+
+    }
+
+}
