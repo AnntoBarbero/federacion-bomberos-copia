@@ -84,6 +84,26 @@ HERO
     margin-bottom:30px;
 }
 
+.hero-content .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: fit-content !important;
+
+    background: #c1121f;
+    color: #fff;
+
+    padding: 9px 20px;
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
 .autoridades-hero h1{
     color:white;
     font-size:clamp(3rem,6vw,5rem);
