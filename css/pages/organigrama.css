@@ -497,6 +497,485 @@
 
 }
 
+/* ========================================
+   MODAL INFORMACIÓN DE ZONA
+======================================== */
 
+.modal-zona{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0, 0, 0, 0.65);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:30px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:all 0.3s ease;
+
+    z-index:9999;
+
+}
+
+
+/* MODAL ACTIVO */
+
+.modal-zona.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* CONTENIDO */
+
+.modal-zona-contenido{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:700px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
+
+    transform:translateY(30px) scale(0.95);
+
+    transition:all 0.3s ease;
+
+}
+
+
+/* ANIMACIÓN */
+
+.modal-zona.activo .modal-zona-contenido{
+
+    transform:translateY(0) scale(1);
+
+}
+
+
+/* BOTÓN CERRAR */
+
+.cerrar-modal-zona{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f1f1f1;
+
+    color:#333;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:all 0.3s ease;
+
+}
+
+
+.cerrar-modal-zona:hover{
+
+    background:#c1121f;
+
+    color:#fff;
+
+    transform:rotate(90deg);
+
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.modal-zona-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding-right:45px;
+
+}
+
+
+.modal-zona-icono{
+
+    width:70px;
+
+    height:70px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#c1121f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+}
+
+
+.modal-zona-header h2{
+
+    margin:0 0 6px;
+
+    font-family:"Montserrat", sans-serif;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#222;
+
+}
+
+
+.modal-zona-header p{
+
+    margin:0;
+
+    font-family:"Poppins", sans-serif;
+
+    font-size:14px;
+
+}
+
+
+.modal-zona-header a{
+
+    color:#c1121f;
+
+    text-decoration:none;
+
+}
+
+
+.modal-zona-header a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+.modal-zona-linea{
+
+    width:100%;
+
+    height:2px;
+
+    background:#eee;
+
+    margin:25px 0;
+
+}
+
+
+/* ========================================
+   SECCIONES
+======================================== */
+
+.modal-zona-seccion{
+
+    margin-bottom:30px;
+
+}
+
+
+.modal-zona-seccion h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+    font-family:"Montserrat", sans-serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+
+.modal-zona-seccion h3 i{
+
+    color:#c1121f;
+
+}
+
+
+/* ========================================
+   EQUIPO
+======================================== */
+
+.equipo-zona{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+
+.persona-zona{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px;
+
+    background:#f7f7f7;
+
+    border-radius:12px;
+
+    border-left:4px solid #c1121f;
+
+}
+
+
+.persona-icono{
+
+    width:38px;
+
+    height:38px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#c1121f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.persona-zona div:last-child{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.persona-zona span{
+
+    font-size:12px;
+
+    color:#777;
+
+    margin-bottom:2px;
+
+}
+
+
+.persona-zona strong{
+
+    font-size:14px;
+
+    color:#222;
+
+}
+
+
+/* ========================================
+   CUARTELES
+======================================== */
+
+.cuarteles-zona{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+}
+
+
+.cuartel-zona{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 15px;
+
+    background:#f7f7f7;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    color:#333;
+
+}
+
+
+.cuartel-zona i{
+
+    color:#c1121f;
+
+    width:20px;
+
+    text-align:center;
+
+}
+
+
+/* ========================================
+   BLOQUEAR SCROLL CUANDO MODAL ESTÁ ABIERTO
+======================================== */
+
+body.modal-abierto{
+
+    overflow:hidden;
+
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:768px){
+
+    .modal-zona{
+
+        padding:15px;
+
+    }
+
+
+    .modal-zona-contenido{
+
+        padding:25px 20px;
+
+        max-height:92vh;
+
+        border-radius:16px;
+
+    }
+
+
+    .modal-zona-header{
+
+        gap:14px;
+
+    }
+
+
+    .modal-zona-icono{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:23px;
+
+    }
+
+
+    .modal-zona-header h2{
+
+        font-size:21px;
+
+    }
+
+
+    .modal-zona-header p{
+
+        font-size:12px;
+
+        word-break:break-word;
+
+    }
+
+
+    .equipo-zona{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .cuarteles-zona{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
 
 
