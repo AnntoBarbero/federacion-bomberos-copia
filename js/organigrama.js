@@ -248,7 +248,7 @@ botonesZona.forEach(boton => {
 
 
         // MOSTRAR
-        informacionZona.classList.add("modal-zona");
+        informacionZona.classList.add("mostrar");
 
 
         // CERRAR
@@ -265,7 +265,7 @@ botonesZona.forEach(boton => {
 // CERRAR VENTANA
 function cerrarZona() {
 
-    informacionZona.classList.remove("modal-zona");
+    informacionZona.classList.remove("mostrar");
 
 }
 

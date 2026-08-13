@@ -306,37 +306,56 @@
    INFORMACIÓN DE ZONA
 ========================================= */
 
-.informacion-zona {
-    margin: 50px auto 0;
-    width: 100%;
+.informacion-zona{
+
+    margin-top:50px;
+
+    min-height:220px;
+
 }
 
 
-/* MENSAJE INICIAL */
+.zona-info-vacia{
 
-.zona-info-vacia {
-    text-align: center;
-    padding: 50px 30px;
-    background: #f5f5f5;
-    border-radius: 15px;
-    border: 1px solid #e5e5e5;
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
 }
 
-.zona-info-vacia i {
-    font-size: 40px;
-    color: #c1121f;
-    margin-bottom: 15px;
+
+.zona-info-vacia i{
+
+    font-size:35px;
+
+    color:#c1121f;
+
+    margin-bottom:15px;
+
 }
 
-.zona-info-vacia h3 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 22px;
-    margin-bottom: 10px;
+
+.zona-info-vacia h3{
+
+    font-family:'Montserrat',sans-serif;
+
+    margin-bottom:8px;
+
 }
 
-.zona-info-vacia p {
-    color: #666;
-    margin: 0;
+
+.zona-info-vacia p{
+
+    color:#666;
+
+    margin:0;
+
 }
 
 
@@ -509,37 +528,27 @@
 }
 
 
-/* =========================================
-   VENTANA ABIERTA
-========================================= */
+/* VENTANA ABIERTA */
 
-.informacion-zona.modal-zona {
-    position: fixed;
-    inset: 0;
-    margin: 0;
+.informacion-zona.mostrar {
 
-    width: 100%;
-    height: 100%;
+    opacity: 1;
 
-    background: rgba(0, 0, 0, 0.55);
+    visibility: visible;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px;
-
-    z-index: 9999;
 }
 
 
 /* TARJETA */
 
 .ventana-zona {
+
     position: relative;
 
     width: 100%;
+
     max-width: 700px;
+
     max-height: 85vh;
 
     overflow-y: auto;
@@ -549,7 +558,13 @@
     border-radius: 20px;
 
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+
+    transform: translateY(30px) scale(0.96);
+
+    transition: all 0.3s ease;
+
 }
+
 
 .informacion-zona.mostrar .ventana-zona {
 
