@@ -37,9 +37,33 @@ const informacionZonas = {
         nombre: "Escuela Zonal 2",
         correo: "zona2escuelabvlp@gmail.com",
 
-        equipo: [],
+        equipo: [
+            {
+                cargo: "Director",
+                nombre: "Ignacio Chiruazzi"
+            },
+            {
+                cargo: "Vice Directora",
+                nombre: "Hilda Luna"
+            },
+            {
+                cargo: "Secretario",
+                nombre: "Renzo Odetti"
+            },
+            {
+                cargo: "Pro Secretario",
+                nombre: "Daniel Altamirano"
+            }
+        ],
 
-        cuarteles: []
+        cuarteles: [
+            "Arata",
+            "Caleufú",
+            "Embajador Martini",
+            "Ingeniero Luiggi",
+            "La Maruja",
+            "Parera"
+        ]
     },
 
 
@@ -47,9 +71,34 @@ const informacionZonas = {
         nombre: "Escuela Zonal 3",
         correo: "zona3escuelabvlp@gmail.com",
 
-        equipo: [],
+        equipo: [
+            {
+                cargo: "Director",
+                nombre: "Heber Yrigoyen"
+            },
+            {
+                cargo: "Vice Directora",
+                nombre: "Fiama Pico"
+            },
+            {
+                cargo: "Secretaria",
+                nombre: "Patricia Molina"
+            },
+            {
+                cargo: "Pro Secretaria",
+                nombre: "Graciela Rojas"
+            }
+        ],
 
-        cuarteles: []
+        cuarteles: [
+            "25 de Mayo",
+            "Algarrobo del Águila",
+            "Eduardo Castex",
+            "General Pico",
+            "Santa Isabel",
+            "Trenel",
+            "Victorica"
+        ]
     },
 
 
@@ -57,9 +106,34 @@ const informacionZonas = {
         nombre: "Escuela Zonal 4",
         correo: "zona4escuelabvlp@gmail.com",
 
-        equipo: [],
+        equipo: [
+            {
+                cargo: "Directora",
+                nombre: "Jorgelina Fernandez"
+            },
+            {
+                cargo: "Vice Director",
+                nombre: "Gustavo Arias"
+            },
+            {
+                cargo: "Secretaria",
+                nombre: "Silvina Abbona"
+            },
+            {
+                cargo: "Pro Secretario",
+                nombre: "Fernando Arias"
+            }
+        ],
 
-        cuarteles: []
+        cuarteles: [
+            "Anguil",
+            "Catriló",
+            "Colonia Barón",
+            "Lonquimay",
+            "Miguel Cané",
+            "Quemú Quemú",
+            "Winifreda"
+        ]
     },
 
 
@@ -67,9 +141,34 @@ const informacionZonas = {
         nombre: "Escuela Zonal 5",
         correo: "zona5escuelabvlp@gmail.com",
 
-        equipo: [],
+        equipo: [
+            {
+                cargo: "Directora",
+                nombre: "Mariela Muñoz"
+            },
+            {
+                cargo: "Vice Director",
+                nombre: "Milton Heit"
+            },
+            {
+                cargo: "Secretaria",
+                nombre: "Nora Ozan"
+            },
+            {
+                cargo: "Pro Secretaria",
+                nombre: "Mariana Burgui"
+            }
+        ],
 
-        cuarteles: []
+        cuarteles: [
+            "Alpachiri",
+            "Altaliva Roca",
+            "Doblas",
+            "Guatraché",
+            "Macachín",
+            "Miguel Riglos",
+            "Toay"
+        ]
     },
 
 
@@ -77,9 +176,33 @@ const informacionZonas = {
         nombre: "Escuela Zonal 6",
         correo: "zona6escuelabvlp@gmail.com",
 
-        equipo: [],
+        equipo: [
+            {
+                cargo: "Directora",
+                nombre: "Eliana Cleman"
+            },
+            {
+                cargo: "Vice Director",
+                nombre: "Lautaro Urbanovich"
+            },
+            {
+                cargo: "Secretaria",
+                nombre: "Pamela Lambercht"
+            },
+            {
+                cargo: "Pro Secretaria",
+                nombre: "Flor Catalan"
+            }
+        ],
 
-        cuarteles: []
+        cuarteles: [
+            "Bernasconi",
+            "Casa de Piedra",
+            "General Acha",
+            "General San Martín",
+            "Jacinto Arauz",
+            "La Adela"
+        ]
     }
 
 };
