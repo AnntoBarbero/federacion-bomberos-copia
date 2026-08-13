@@ -497,6 +497,470 @@
 
 }
 
+/* =========================================
+   VENTANA INFORMACIÓN DE ZONA
+========================================= */
 
+.informacion-zona {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* VENTANA ABIERTA */
+
+.informacion-zona.mostrar {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* TARJETA */
+
+.ventana-zona {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+
+    transform: translateY(30px) scale(0.96);
+
+    transition: all 0.3s ease;
+
+}
+
+
+.informacion-zona.mostrar .ventana-zona {
+
+    transform: translateY(0) scale(1);
+
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.cabecera-zona {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #c1121f,
+        #e63946
+    );
+
+    color: #fff;
+
+}
+
+
+/* ICONO */
+
+.icono-zona {
+
+    width: 70px;
+
+    height: 70px;
+
+    min-width: 70px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+}
+
+
+/* TITULO */
+
+.cabecera-zona h2 {
+
+    margin: 0 0 8px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+}
+
+
+/* EMAIL */
+
+.cabecera-zona a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.cabecera-zona a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================
+   BOTÓN CERRAR
+========================================= */
+
+.cerrar-zona {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition: 0.2s;
+
+}
+
+
+.cerrar-zona:hover {
+
+    background: rgba(255,255,255,0.35);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido-zona {
+
+    padding: 30px;
+
+}
+
+
+/* BLOQUES */
+
+.bloque-zona {
+
+    margin-bottom: 30px;
+
+}
+
+
+.bloque-zona:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.bloque-zona h3 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0 0 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #eee;
+
+    color: #222;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 20px;
+
+}
+
+
+.bloque-zona h3 i {
+
+    color: #c1121f;
+
+}
+
+
+/* =========================================
+   EQUIPO
+========================================= */
+
+.equipo-zona {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.persona-zona {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 15px;
+
+    background: #f7f7f7;
+
+    border-left: 4px solid #c1121f;
+
+    border-radius: 8px;
+
+}
+
+
+.cargo-persona {
+
+    color: #c1121f;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+
+}
+
+
+.persona-zona strong {
+
+    font-size: 16px;
+
+    color: #333;
+
+}
+
+
+/* =========================================
+   CUARTELES
+========================================= */
+
+.lista-cuarteles-zona {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.lista-cuarteles-zona li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    background: #f7f7f7;
+
+    border-radius: 8px;
+
+    color: #333;
+
+    font-size: 15px;
+
+}
+
+
+.lista-cuarteles-zona li i {
+
+    color: #c1121f;
+
+}
+
+
+/* =========================================
+   SIN INFORMACIÓN
+========================================= */
+
+.sin-datos {
+
+    color: #777;
+
+    font-style: italic;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .informacion-zona {
+
+        padding: 15px;
+
+    }
+
+
+    .ventana-zona {
+
+        max-height: 90vh;
+
+        border-radius: 16px;
+
+    }
+
+
+    .cabecera-zona {
+
+        padding: 25px 20px;
+
+        gap: 15px;
+
+    }
+
+
+    .icono-zona {
+
+        width: 55px;
+
+        height: 55px;
+
+        min-width: 55px;
+
+        font-size: 23px;
+
+    }
+
+
+    .cabecera-zona h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .cabecera-zona a {
+
+        font-size: 12px;
+
+        word-break: break-word;
+
+    }
+
+
+    .contenido-zona {
+
+        padding: 20px;
+
+    }
+
+
+    .equipo-zona {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .lista-cuarteles-zona {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
 
 
