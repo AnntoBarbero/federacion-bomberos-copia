@@ -1,5 +1,16 @@
 /* ESTILOS PARA AUTORIDADES */
 
+/* VARIABLES */
+
+:root {
+    --rojo: #c1121f;
+    --rojo-hover: #a40f1a;
+    --gris: #f6f7fb;
+    --texto: #5b5b5b;
+    --oscuro: #1b1b1b;
+    --blanco: #ffffff;
+}
+
 /* Espaciado general de las secciones */
 .autoridades-section {
     padding: 100px 0;
@@ -138,36 +149,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
-
     width: 110px;
     height: 110px;
-
     border-radius: 50%;
-
     background: linear-gradient(
         135deg,
         var(--rojo),
         var(--rojo-claro)
     );
-
     color: var(--blanco);
-
     font-size: 45px;
 }
 
 
-/* =========================================================
-   TEXTO INTRODUCCIÓN
-   ========================================================= */
+/* TEXTO INTRODUCCIÓN */
 
 /* Título de introducción */
 .intro-texto h2 {
     margin-bottom: 20px;
-
     color: var(--oscuro);
-
     font-size: 2rem;
     font-weight: 800;
 }
@@ -175,28 +176,21 @@
 /* Texto de introducción */
 .intro-texto p {
     margin: 0;
-
     color: var(--texto);
     line-height: 2;
 }
 
 
-/* =========================================================
-   PRESIDENTE
-   ========================================================= */
+/* PRESIDENTE */
 
 /* Tarjeta principal del presidente */
 .presidente-card {
     display: grid;
     grid-template-columns: 350px 1fr;
-
     overflow: hidden;
-
     background: var(--blanco);
     border-radius: 30px;
-
     box-shadow: var(--sombra-media);
-
     transition: transform 0.35s ease;
 }
 
@@ -206,56 +200,43 @@
 }
 
 
-/* =========================================================
-   FOTO PRESIDENTE
-   ========================================================= */
+/* FOTO PRESIDENTE */
 
 /* Imagen del presidente */
 .presidente-card img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center top;
 }
 
 
-/* =========================================================
-   INFORMACIÓN PRESIDENTE
-   ========================================================= */
+/* INFORMACIÓN PRESIDENTE */
 
 /* Contenedor de la información */
 .presidente-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 60px;
 }
 
 /* Cargo del presidente */
 .presidente-info .cargo {
     display: inline-block;
-
     width: max-content;
-
     margin-bottom: 25px;
     padding: 10px 22px;
-
     border-radius: 50px;
-
     background: var(--rojo);
     color: var(--blanco);
-
     font-weight: 700;
 }
 
 /* Nombre del presidente */
 .presidente-info h2 {
     margin-bottom: 20px;
-
     color: var(--oscuro);
-
     font-size: 2.4rem;
     font-weight: 800;
 }
@@ -263,15 +244,12 @@
 /* Descripción del presidente */
 .presidente-info p {
     margin: 0;
-
     color: var(--texto-secundario);
     line-height: 1.9;
 }
 
 
-/* =========================================================
-   GRID DE AUTORIDADES
-   ========================================================= */
+/* GRID DE AUTORIDADES */
 
 /* Distribución de las tarjetas */
 .autoridades-grid {
@@ -280,25 +258,19 @@
         auto-fit,
         minmax(270px, 1fr)
     );
-
     gap: 35px;
 }
 
 
-/* =========================================================
-   TARJETA DE AUTORIDAD
-   ========================================================= */
+/* TARJETA DE AUTORIDAD */
 
 /* Tarjeta individual */
 .autoridad-card {
     overflow: hidden;
-
     background: var(--blanco);
     border: 2px solid transparent;
     border-radius: 22px;
-
     box-shadow: var(--sombra-suave);
-
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease,
@@ -308,48 +280,37 @@
 /* Efecto al pasar el mouse */
 .autoridad-card:hover {
     transform: translateY(-10px);
-
     border-color: var(--rojo);
-
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.12),
         0 0 0 4px rgba(193, 18, 31, 0.08);
 }
 
 
-/* =========================================================
-   FOTO DE AUTORIDAD
-   ========================================================= */
+/* FOTO DE AUTORIDAD */
 
 /* Imagen de cada autoridad */
 .autoridad-card img {
     display: block;
-
     width: 100%;
     height: 320px;
-
     object-fit: cover;
     object-position: center top;
 }
 
 
-/* =========================================================
-   INFORMACIÓN DE AUTORIDAD
-   ========================================================= */
+/* INFORMACIÓN DE AUTORIDAD */
 
 /* Texto de la tarjeta */
 .autoridad-info {
     padding: 30px;
-
     text-align: center;
 }
 
 /* Nombre de la autoridad */
 .autoridad-info h3 {
     margin-bottom: 10px;
-
     color: var(--texto);
-
     font-size: 1.35rem;
     font-weight: 700;
     line-height: 1.3;
@@ -358,16 +319,12 @@
 /* Cargo de la autoridad */
 .autoridad-info span {
     display: inline-block;
-
     color: var(--rojo);
-
     font-weight: 600;
 }
 
 
-/* =========================================================
-   AJUSTES PARA SECCIONES CON MUCHAS AUTORIDADES
-   ========================================================= */
+/* AJUSTES PARA SECCIONES CON MUCHAS AUTORIDADES */
 
 /* Evita problemas de tamaño en las tarjetas */
 .autoridades-grid .autoridad-card {
@@ -375,9 +332,7 @@
 }
 
 
-/* =========================================================
-   ACCESIBILIDAD
-   ========================================================= */
+/* ACCESIBILIDAD */
 
 /* Evita seleccionar las imágenes con el mouse */
 .autoridad-card img,
@@ -386,9 +341,7 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE ESPECÍFICO DE AUTORIDADES
-   ========================================================= */
+/* RESPONSIVE ESPECÍFICO DE AUTORIDADES */
 
 /* Pantallas de hasta 992px */
 @media (max-width: 992px) {
@@ -427,9 +380,7 @@
 }
 
 
-/* =========================================================
-   TABLETS / MÓVILES
-   ========================================================= */
+/* TABLETS / MÓVILES */
 
 /* Pantallas de hasta 768px */
 @media (max-width: 768px) {
@@ -487,9 +438,7 @@
 }
 
 
-/* =========================================================
-   MÓVILES PEQUEÑOS
-   ========================================================= */
+/* MÓVILES PEQUEÑOS */
 
 /* Pantallas de hasta 585px */
 @media (max-width: 585px) {
