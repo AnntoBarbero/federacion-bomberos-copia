@@ -166,26 +166,6 @@
         grid-template-columns:repeat(2,1fr);
     }
 
-    /* AUTORIDADES */
-
-    .presidente-card{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .presidente-card img{
-
-        height:420px;
-
-    }
-
-    .presidente-info{
-
-        padding:40px;
-
-    }
-
     /* ORGANIGRAMA */
     .zonas-organigrama{
         grid-template-columns: repeat(3,1fr);
@@ -435,67 +415,6 @@
         padding:30px 25px;
     }
 
-
-    /* AUTORIDADES */
-
-    .autoridades-section{
-
-        padding:70px 0;
-
-    }
-
-    .titulo-seccion{
-
-        margin-bottom:45px;
-
-    }
-
-    .titulo-seccion h2{
-
-        font-size:2.2rem;
-
-    }
-
-    .intro-card{
-
-        flex-direction:column;
-
-        text-align:center;
-
-        padding:40px 30px;
-
-    }
-
-    .intro-icon{
-
-        width:90px;
-        height:90px;
-        font-size:35px;
-
-    }
-
-    .presidente-info{
-
-        text-align:center;
-
-        align-items:center;
-
-    }
-
-    .presidente-info h2{
-
-        font-size:2rem;
-
-    }
-
-    .autoridad-card img{
-
-        height:340px;
-    object-fit:cover;
-    object-position:center top;
-
-    }
-
     /* HISTORIA ESCUELA */
     .historia-escuela{
         padding: 70px 0;
@@ -729,39 +648,6 @@
         padding:25px 20px;
     }
 
-    /* AUTORIDADES */
-
-    .autoridades-hero{
-
-        min-height:520px;
-
-    }
-
-    .autoridades-hero h1{
-
-        font-size:2.5rem;
-
-    }
-
-    .autoridades-hero p{
-
-        font-size:1rem;
-
-    }
-
-    .presidente-card img{
-
-        height:330px;
-
-    }
-
-    .autoridad-card img{
-
-        height:320px;
-    object-fit:cover;
-    object-position:center top;
-
-    }
 
     /* CALENDARIO */
 

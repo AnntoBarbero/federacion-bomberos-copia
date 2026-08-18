@@ -1,7 +1,6 @@
 /* ESTILOS PARA AUTORIDADES */
 
 /* VARIABLES */
-
 :root {
     --rojo: #c1121f;
     --rojo-hover: #a40f1a;
@@ -97,6 +96,7 @@
     font-weight: 700;
 }
 
+/* Palabra institucional en amarillo */
 .autoridades-hero .hero-badge {
     color: var(--amarillo);
 }
@@ -430,7 +430,6 @@
     /* Centra la información del presidente */
     .presidente-info {
         align-items: center;
-
         text-align: center;
     }
 
