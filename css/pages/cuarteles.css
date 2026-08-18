@@ -37,7 +37,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* HERO */
 
 /* Etiqueta roja del Hero */
@@ -45,22 +44,16 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-
     background: var(--rojo-cuarteles);
     color: var(--blanco-cuarteles);
-
     padding: 12px 24px;
     border-radius: 50px;
-
     font-weight: 700;
-
     margin-bottom: 30px;
 }
 
 
-/* =========================================================
-   SECCIÓN MAPA
-   ========================================================= */
+/* SECCIÓN MAPA */
 
 /* Espaciado y fondo de la sección del mapa */
 .mapa-cuarteles {
@@ -69,9 +62,7 @@ body {
 }
 
 
-/* =========================================================
-   TÍTULOS DE SECCIÓN
-   ========================================================= */
+/* TÍTULOS DE SECCIÓN */
 
 /* Contenedor del título */
 .titulo-seccion {
@@ -83,36 +74,26 @@ body {
 .titulo-seccion h2 {
     font-size: 42px;
     font-weight: 900;
-
     color: var(--negro-cuarteles);
-
     margin-bottom: 15px;
 }
 
 /* Texto debajo del título */
 .titulo-seccion p {
     max-width: 700px;
-
     margin: 0 auto;
-
     color: var(--texto-suave-cuarteles);
-
     line-height: 1.8;
 }
 
-
-/* =========================================================
-   BOTÓN ENCONTRAR CUARTEL CERCANO
-   ========================================================= */
+/* BOTÓN ENCONTRAR CUARTEL CERCANO */
 
 /* Centra el botón */
 .hero-botones {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 35px 20px 0;
-
     background: var(--gris-cuarteles);
 }
 
@@ -122,22 +103,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     border: none;
-
     background: var(--rojo-cuarteles);
     color: var(--blanco-cuarteles);
-
     padding: 14px 25px;
-
     border-radius: 8px;
-
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         transform 0.3s ease,
         background-color 0.3s ease,
@@ -147,27 +121,20 @@ body {
 /* Efecto al pasar el mouse */
 .btn-principal:hover {
     background: var(--rojo-hover-cuarteles);
-
     transform: translateY(-2px);
-
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
-/* =========================================================
-   LEYENDA DE ZONAS
-   ========================================================= */
+/* LEYENDA DE ZONAS */
 
 /* Contenedor de los filtros por zona */
 .leyenda-zonas {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 15px;
-
     flex-wrap: wrap;
-
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -177,23 +144,17 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 8px 15px;
-
     border-radius: 20px;
-
     color: var(--blanco-cuarteles);
-
     font-size: 14px;
     font-weight: 600;
-
     user-select: none;
 }
 
 /* Hace clickeable el filtro */
 .filtro-zona {
     cursor: pointer;
-
     transition:
         transform 0.3s ease,
         opacity 0.3s ease;
@@ -202,14 +163,11 @@ body {
 /* Efecto al pasar el mouse */
 .filtro-zona:hover {
     transform: translateY(-3px);
-
     opacity: 0.9;
 }
 
 
-/* =========================================================
-   COLORES DE ZONAS
-   ========================================================= */
+/* COLORES DE ZONAS */
 
 /* Zona 1 */
 .zona1 {
@@ -249,36 +207,26 @@ body {
 }
 
 
-/* =========================================================
-   BUSCADOR
-   ========================================================= */
+/* BUSCADOR */
 
 /* Contenedor del buscador */
 .buscador-cuarteles {
     width: 100%;
     max-width: 500px;
-
     margin: 20px auto 40px;
 }
 
 /* Campo de búsqueda */
 .buscador-cuarteles input {
     width: 100%;
-
     padding: 15px 20px;
-
     border: 1px solid var(--borde-cuarteles);
-
     border-radius: 10px;
-
     background: var(--blanco-cuarteles);
     color: var(--texto-cuarteles);
-
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-
     outline: none;
-
     transition:
         border-color 0.3s ease,
         box-shadow 0.3s ease;
@@ -292,35 +240,25 @@ body {
 /* Estilo al seleccionar el buscador */
 .buscador-cuarteles input:focus {
     border-color: var(--rojo-cuarteles);
-
     box-shadow: 0 0 0 3px rgba(193, 18, 31, 0.1);
 }
 
 
-/* =========================================================
-   MAPA
-   ========================================================= */
+/* MAPA */
 
 /* Contenedor principal del mapa */
 #mapa {
     width: 100%;
     height: 650px;
-
     border-radius: 15px;
-
     overflow: hidden;
-
     background: #e9e9e9;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-
     z-index: 1;
 }
 
 
-/* =========================================================
-   POPUP DEL MAPA
-   ========================================================= */
+/* POPUP DEL MAPA */
 
 /* Tamaño mínimo del popup */
 .popup-cuartel {
@@ -331,46 +269,33 @@ body {
 .popup-cuartel h3 {
     font-size: 18px;
     font-weight: 700;
-
     margin-bottom: 10px;
-
     color: #111111;
 }
 
 /* Información del popup */
 .popup-cuartel p {
     margin-bottom: 8px;
-
     color: #555555;
-
     font-size: 14px;
     line-height: 1.5;
 }
 
 
-/* =========================================================
-   BOTÓN MAPA
-   ========================================================= */
+/* BOTÓN MAPA */
 
 /* Botón dentro del popup */
 .btn-mapa {
     display: inline-block;
-
     margin-top: 10px;
-
     padding: 10px 15px;
-
     background: var(--rojo-cuarteles);
     color: var(--blanco-cuarteles);
-
     border: 2px solid transparent;
     border-radius: 6px;
-
     text-decoration: none;
-
     font-size: 14px;
     font-weight: 600;
-
     transition:
         background-color 0.3s ease,
         transform 0.3s ease,
@@ -381,14 +306,11 @@ body {
 .btn-mapa:hover {
     background: var(--rojo-hover-cuarteles);
     color: var(--blanco-cuarteles);
-
     transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   DETALLE DEL CUARTEL
-   ========================================================= */
+/* DETALLE DEL CUARTEL */
 
 /* Espacio antes del detalle */
 #detalle-cuartel {
@@ -398,11 +320,8 @@ body {
 /* Caja con la información del cuartel */
 .detalle-cuartel {
     background: var(--blanco-cuarteles);
-
     padding: 30px;
-
     border-radius: 15px;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -410,66 +329,50 @@ body {
 .detalle-cuartel h3 {
     font-size: 28px;
     font-weight: 700;
-
     margin-bottom: 15px;
 }
 
 /* Texto del detalle */
 .detalle-cuartel p {
     color: var(--texto-suave-cuarteles);
-
     margin-bottom: 10px;
 }
 
 
-/* =========================================================
-   DESTACADO - CUARTEL MÁS CERCANO
-   ========================================================= */
+/* DESTACADO - CUARTEL MÁS CERCANO */
 
 /* Caja destacada */
 .detalle-destacado {
     background: var(--blanco-cuarteles);
-
     border-left: 6px solid var(--rojo-cuarteles);
-
     padding: 25px;
-
     border-radius: 12px;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-
     margin-top: 20px;
 }
 
 /* Título destacado */
 .detalle-destacado h3 {
     color: var(--rojo-cuarteles);
-
     margin-bottom: 15px;
-
     font-weight: 800;
 }
 
 /* Nombre del cuartel */
 .detalle-destacado h4 {
     color: var(--negro-cuarteles);
-
     font-weight: 700;
-
     margin-bottom: 10px;
 }
 
 /* Información del cuartel */
 .detalle-destacado p {
     margin-bottom: 8px;
-
     color: var(--texto-cuarteles);
 }
 
 
-/* =========================================================
-   ESTADÍSTICAS
-   ========================================================= */
+/* ESTADÍSTICAS */
 
 /* Espacio antes de las estadísticas */
 .estadisticas-cuarteles {
@@ -479,17 +382,11 @@ body {
 /* Caja individual de estadística */
 .stat-box {
     height: 100%;
-
     background: var(--blanco-cuarteles);
-
     padding: 30px;
-
     border-radius: 12px;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
     text-align: center;
-
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -498,18 +395,14 @@ body {
 /* Efecto al pasar el mouse */
 .stat-box:hover {
     transform: translateY(-5px);
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Icono de la estadística */
 .stat-box i {
     display: block;
-
     margin-bottom: 15px;
-
     font-size: 40px;
-
     color: var(--rojo-cuarteles);
 }
 
@@ -517,25 +410,19 @@ body {
 .stat-box h3 {
     font-size: 36px;
     font-weight: 900;
-
     margin-bottom: 10px;
-
     color: var(--negro-cuarteles);
 }
 
 /* Texto de la estadística */
 .stat-box p {
     margin: 0;
-
     color: var(--rojo-cuarteles);
-
     font-weight: 600;
 }
 
 
-/* =========================================================
-   LISTADO DE CUARTELES
-   ========================================================= */
+/* LISTADO DE CUARTELES */
 
 /* Espacio antes del listado */
 .listado-cuarteles {
@@ -543,22 +430,15 @@ body {
 }
 
 
-/* =========================================================
-   CARD CUARTEL
-   ========================================================= */
+/* CARD CUARTEL */
 
 /* Tarjeta de cada cuartel */
 .card-cuartel {
     height: 100%;
-
     background: var(--blanco-cuarteles);
-
     border-radius: 18px;
-
     overflow: hidden;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
@@ -567,35 +447,28 @@ body {
 /* Efecto al pasar el mouse */
 .card-cuartel:hover {
     transform: translateY(-8px);
-
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
 
-/* =========================================================
-   IMAGEN DEL CUARTEL
-   ========================================================= */
+/* IMAGEN DEL CUARTEL */
 
 /* Contenedor de la imagen */
 .card-imagen {
     width: 100%;
     height: 220px;
-
     overflow: hidden;
-
     background: #eeeeee;
 }
 
-/* Imagen del cuartel */
+/* Imágen del cuartel*/
 .card-imagen img {
     display: block;
-
     width: 100%;
-    height: 220px;
-
+    height: 100%;
     object-fit: cover;
     object-position: center;
-
+    border-radius: 0; /* Sin forma ovalada */
     transition: transform 0.5s ease;
 }
 
@@ -605,53 +478,39 @@ body {
 }
 
 
-/* =========================================================
-   CABECERA DE LA CARD
-   ========================================================= */
+/* CABECERA DE LA CARD */
 
 /* Parte superior de la tarjeta */
 .card-header-cuartel {
     display: flex;
     align-items: center;
-
     gap: 18px;
-
     padding: 25px;
 }
 
 /* Nombre del cuartel */
 .card-header-cuartel h3 {
     margin: 0 0 8px;
-
     font-size: 24px;
     font-weight: 700;
-
     color: var(--negro-cuarteles);
 }
 
 
-/* =========================================================
-   BADGE DE ZONA
-   ========================================================= */
+/* BADGE DE ZONA */
 
 /* Etiqueta que muestra la zona */
 .badge-zona {
     display: inline-block;
-
     padding: 5px 12px;
-
     border-radius: 20px;
-
     color: var(--blanco-cuarteles);
-
     font-size: 13px;
     font-weight: 600;
 }
 
 
-/* =========================================================
-   CUERPO DE LA CARD
-   ========================================================= */
+/* CUERPO DE LA CARD */
 
 /* Contenido de la tarjeta */
 .card-body-cuartel {
@@ -662,13 +521,9 @@ body {
 .card-body-cuartel p {
     display: flex;
     align-items: flex-start;
-
     gap: 10px;
-
     margin-bottom: 14px;
-
     color: #555555;
-
     line-height: 1.5;
 }
 
@@ -680,52 +535,37 @@ body {
 /* Iconos de los datos */
 .card-body-cuartel i {
     flex-shrink: 0;
-
     width: 20px;
-
     margin-top: 3px;
-
     color: var(--rojo-cuarteles);
 }
 
 
-/* =========================================================
-   FOOTER DE LA CARD
-   ========================================================= */
+/* FOOTER DE LA CARD */
 
 /* Parte inferior de la tarjeta */
 .card-footer-cuartel {
     display: flex;
-
     justify-content: space-between;
-
     gap: 10px;
-
     padding: 20px 25px;
-
     border-top: 1px solid var(--borde-cuarteles);
 }
 
 /* Botones del footer */
 .card-footer-cuartel .btn {
     flex: 1;
-
     border-radius: 10px;
-
     font-weight: 600;
 }
 
 
-/* =========================================================
-   MODAL
-   ========================================================= */
+/* MODAL */
 
 /* Ventana modal */
 .modal-content {
     border: none;
-
     border-radius: 20px;
-
     overflow: hidden;
 }
 
@@ -733,7 +573,6 @@ body {
 .modal-header {
     background: var(--negro-cuarteles);
     color: var(--blanco-cuarteles);
-
     border-bottom: none;
 }
 
@@ -741,16 +580,13 @@ body {
 .modal-title {
     display: flex;
     align-items: center;
-
     gap: 10px;
-
     font-weight: 700;
 }
 
 /* Botón cerrar del modal */
 .modal-header .btn-close {
     filter: invert(1);
-
     opacity: 1;
 }
 
@@ -760,16 +596,12 @@ body {
 }
 
 
-/* =========================================================
-   FICHA DEL CUARTEL
-   ========================================================= */
+/* FICHA DEL CUARTEL */
 
 /* Nombre del cuartel */
 .ficha-cuartel h2 {
     margin-bottom: 10px;
-
     color: var(--negro-cuarteles);
-
     font-weight: 800;
 }
 
@@ -777,69 +609,54 @@ body {
 .ficha-cuartel h5 {
     margin-top: 15px;
     margin-bottom: 12px;
-
     color: var(--rojo-cuarteles);
-
     font-weight: 700;
 }
 
 /* Texto de la ficha */
 .ficha-cuartel p {
     margin-bottom: 8px;
-
     color: var(--texto-cuarteles);
 }
 
 /* Badge dentro de la ficha */
 .ficha-cuartel .badge {
     padding: 8px 14px;
-
     font-size: 15px;
 }
 
 
-/* =========================================================
-   BOTONES DE BOOTSTRAP DENTRO DE LA FICHA
-   ========================================================= */
+/* BOTONES DE BOOTSTRAP DENTRO DE LA FICHA */
 
 /* Botón rojo de Bootstrap */
 .ficha-cuartel .btn-danger {
     background: var(--rojo-cuarteles);
-
     border-color: var(--rojo-cuarteles);
 }
 
 /* Efecto del botón rojo */
 .ficha-cuartel .btn-danger:hover {
     background: var(--rojo-hover-cuarteles);
-
     border-color: var(--rojo-hover-cuarteles);
 }
 
 
-/* =========================================================
-   EFECTO TARJETA 3D
-   ========================================================= */
+/* EFECTO TARJETA 3D */
 
 /* Contenedor de la tarjeta 3D */
 .cuartel-card {
     position: relative;
-
     perspective: 1000px;
-
     height: 220px;
 }
 
 /* Parte interna que gira */
 .cuartel-inner {
     position: relative;
-
     width: 100%;
     height: 100%;
-
     transition:
         transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-
     transform-style: preserve-3d;
 }
 
@@ -847,75 +664,55 @@ body {
 .cuartel-front,
 .cuartel-back {
     position: absolute;
-
     width: 100%;
     height: 100%;
-
     padding: 20px;
-
     border-radius: 12px;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-
     backface-visibility: hidden;
 }
 
 
-/* =========================================================
-   FRENTE 3D
-   ========================================================= */
+/* FRENTE 3D */
 
 /* Diseño del frente */
 .cuartel-front {
     background: var(--blanco-cuarteles);
-
     color: var(--negro-cuarteles);
 }
 
 /* Icono del frente */
 .cuartel-front i {
     margin-bottom: 10px;
-
     font-size: 32px;
-
     color: var(--zona-color, var(--rojo-cuarteles));
 }
 
 /* Nombre del cuartel */
 .cuartel-front h3 {
     font-size: 16px;
-
     text-align: center;
-
     color: var(--negro-cuarteles);
 }
 
 /* Zona del cuartel */
 .cuartel-front p {
     color: var(--zona-color, var(--rojo-cuarteles));
-
     font-weight: 600;
 }
 
 
-/* =========================================================
-   DORSO 3D
-   ========================================================= */
+/* DORSO 3D */
 
 /* Diseño del dorso */
 .cuartel-back {
     background: var(--zona-color, var(--rojo-cuarteles));
-
     color: var(--blanco-cuarteles);
-
     transform: rotateY(180deg);
-
     text-align: center;
 }
 
@@ -928,14 +725,11 @@ body {
 /* Información del dorso */
 .cuartel-back p {
     margin: 5px 0;
-
     font-size: 0.9rem;
 }
 
 
-/* =========================================================
-   ACTIVACIÓN DEL GIRO
-   ========================================================= */
+/* ACTIVACIÓN DEL GIRO */
 
 /* Gira la tarjeta al pasar el mouse */
 .cuartel-card:hover .cuartel-inner {
@@ -948,30 +742,23 @@ body {
 }
 
 
-/* =========================================================
-   BOTÓN DENTRO DE TARJETA 3D
-   ========================================================= */
+/* BOTÓN DENTRO DE TARJETA 3D */
 
 /* Botón del dorso */
 .cuartel-back .btn-mapa {
     background: var(--blanco-cuarteles);
-
     color: var(--zona-color, var(--rojo-cuarteles));
-
     border: 2px solid transparent;
 }
 
 /* Efecto del botón */
 .cuartel-back .btn-mapa:hover {
     border-color: var(--negro-cuarteles);
-
     transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* RESPONSIVE */
 
 /* Pantallas de hasta 992px */
 @media (max-width: 992px) {
@@ -999,9 +786,7 @@ body {
 }
 
 
-/* =========================================================
-   TABLETS Y MÓVILES
-   ========================================================= */
+/* TABLETS Y MÓVILES */
 
 /* Pantallas de hasta 768px */
 @media (max-width: 768px) {
@@ -1110,9 +895,7 @@ body {
 }
 
 
-/* =========================================================
-   MÓVILES PEQUEÑOS
-   ========================================================= */
+/* MÓVILES PEQUEÑOS */
 
 /* Pantallas de hasta 576px */
 @media (max-width: 576px) {
@@ -1142,16 +925,13 @@ body {
     /* Reduce el texto */
     .titulo-seccion p {
         font-size: 13px;
-
         line-height: 1.7;
     }
 
     /* Botón ocupa todo el ancho */
     .btn-principal {
         width: 100%;
-
         padding: 13px 18px;
-
         font-size: 14px;
     }
 
@@ -1163,14 +943,12 @@ body {
     /* Reduce el campo de búsqueda */
     .buscador-cuarteles input {
         padding: 13px 15px;
-
         font-size: 14px;
     }
 
     /* Reduce la altura del mapa */
     #mapa {
         height: 400px;
-
         border-radius: 8px;
     }
 
@@ -1193,7 +971,6 @@ body {
     /* Reduce el padding del destacado */
     .detalle-destacado {
         padding: 20px;
-
         border-left-width: 4px;
     }
 
