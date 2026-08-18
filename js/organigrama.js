@@ -415,3 +415,401 @@ document.addEventListener("keydown", function(e) {
     }
 
 });
+
+/* =========================================
+   DEPARTAMENTOS DE ESPECIALIDADES
+========================================= */
+
+const especialidades = {
+
+    fuego: {
+        nombre: "Dpto. Fuego",
+        correo: "fuegoescuelabvlp@gmail.com",
+
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Lucas Pellegrino"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Emanuel Escudero"
+            }
+        ],
+
+        instructores: [
+            "Lucio Ciampoli",
+            "Heber Yrigoyen",
+            "Graciela Rojas",
+            "Daniel Tobares",
+            "Martín Pereyra"
+        ],
+
+        colaboradores: [
+            "Claudio Ostertag",
+            "Erica Ortiz"
+        ]
+    },
+
+    socorrismo: {
+        nombre: "Dpto. Socorrismo",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Julian Zalazar"
+        ],
+        colaboradores: []
+    },
+
+    vehicular: {
+        nombre: "Dpto. Rescate Vehicular",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Jorge Ruiz"
+        ],
+        colaboradores: []
+    },
+
+    cuerdas: {
+        nombre: "Dpto. Rescate con Cuerdas",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Marcelo Martínez"
+        ],
+        colaboradores: []
+    },
+
+    forestales: {
+        nombre: "Dpto. Inc. Forestales",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Juan Serraino"
+        ],
+        colaboradores: []
+    },
+
+    peligrosos: {
+        nombre: "Dpto. Mat. Peligrosos",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Roberto Sacco"
+        ],
+        colaboradores: []
+    },
+
+    sci: {
+        nombre: "Dpto. SCI",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Alina Tosco"
+        ],
+        colaboradores: []
+    },
+
+    canes: {
+        nombre: "Dpto. Búsq./Rescate Canes",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Pamela Ávalo"
+        ],
+        colaboradores: []
+    },
+
+    acuatico: {
+        nombre: "Dpto. Rescate Acuático",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "David Rojas"
+        ],
+        colaboradores: []
+    },
+
+    protocolo: {
+        nombre: "Dpto. Protocolo y Ceremonial",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Roque Martínez"
+        ],
+        colaboradores: []
+    },
+
+    seguridad: {
+        nombre: "Dpto. Seg. Bomberil",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Jazmín Bailo"
+        ],
+        colaboradores: []
+    },
+
+    bombas: {
+        nombre: "Dpto. Op. de Bombas",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Martín Meringer"
+        ],
+        colaboradores: []
+    },
+
+    psicologia: {
+        nombre: "Dpto. Psicología Emergencia",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Gabriela Paoli"
+        ],
+        colaboradores: []
+    },
+
+    estructuras: {
+        nombre: "Dpto. Búsq./Rescate Estructuras",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Daniela Marín"
+        ],
+        colaboradores: []
+    },
+
+    cadetes: {
+        nombre: "Dpto. Cadetes",
+        correo: "",
+        conduccion: [],
+        instructores: [
+            "Leandro Cortejarena"
+        ],
+        colaboradores: []
+    }
+
+};
+
+const modalEspecialidad =
+    document.getElementById("modal-especialidad");
+
+const contenidoEspecialidad =
+    document.getElementById("contenido-especialidad");
+
+const cerrarEspecialidad =
+    document.getElementById("cerrar-especialidad");
+
+
+document.querySelectorAll(".especialidad-card")
+.forEach(boton => {
+
+    boton.addEventListener("click", function () {
+
+        const id =
+            this.dataset.especialidad;
+
+        const departamento =
+            especialidades[id];
+
+        if (!departamento) return;
+
+        mostrarEspecialidad(departamento);
+
+    });
+
+});
+
+
+function mostrarEspecialidad(departamento) {
+
+    let conduccionHTML = "";
+
+    departamento.conduccion.forEach(persona => {
+
+        conduccionHTML += `
+
+            <div class="persona-especialidad">
+
+                <span>
+                    ${persona.cargo}
+                </span>
+
+                <strong>
+                    ${persona.nombre}
+                </strong>
+
+            </div>
+
+        `;
+
+    });
+
+
+    let instructoresHTML = "";
+
+    departamento.instructores.forEach(persona => {
+
+        instructoresHTML += `
+            <li>
+                <i class="fa-solid fa-user"></i>
+                ${persona}
+            </li>
+        `;
+
+    });
+
+
+    let colaboradoresHTML = "";
+
+    departamento.colaboradores.forEach(persona => {
+
+        colaboradoresHTML += `
+            <li>
+                <i class="fa-solid fa-user"></i>
+                ${persona}
+            </li>
+        `;
+
+    });
+
+
+    contenidoEspecialidad.innerHTML = `
+
+        <div class="cabecera-especialidad">
+
+            <div class="icono-especialidad">
+
+                <i class="fa-solid fa-fire-flame-curved"></i>
+
+            </div>
+
+            <div>
+
+                <h2>
+                    ${departamento.nombre}
+                </h2>
+
+                ${
+                    departamento.correo
+                    ?
+                    `<a href="mailto:${departamento.correo}">
+                        <i class="fa-solid fa-envelope"></i>
+                        ${departamento.correo}
+                    </a>`
+                    :
+                    ""
+                }
+
+            </div>
+
+        </div>
+
+
+        <div class="contenido-especialidad">
+
+
+            ${
+                departamento.conduccion.length
+                ?
+                `
+                <div class="bloque-especialidad">
+
+                    <h3>
+                        <i class="fa-solid fa-user-tie"></i>
+                        Conducción
+                    </h3>
+
+                    <div class="equipo-especialidad">
+
+                        ${conduccionHTML}
+
+                    </div>
+
+                </div>
+                `
+                :
+                ""
+            }
+
+
+            ${
+                departamento.instructores.length
+                ?
+                `
+                <div class="bloque-especialidad">
+
+                    <h3>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        Instructores/as
+                    </h3>
+
+                    <ul class="lista-especialidad">
+
+                        ${instructoresHTML}
+
+                    </ul>
+
+                </div>
+                `
+                :
+                ""
+            }
+
+
+            ${
+                departamento.colaboradores.length
+                ?
+                `
+                <div class="bloque-especialidad">
+
+                    <h3>
+                        <i class="fa-solid fa-users"></i>
+                        Colaboradores/as
+                    </h3>
+
+                    <ul class="lista-especialidad">
+
+                        ${colaboradoresHTML}
+
+                    </ul>
+
+                </div>
+                `
+                :
+                ""
+            }
+
+        </div>
+
+    `;
+
+    modalEspecialidad.classList.add("mostrar");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+cerrarEspecialidad.addEventListener("click", cerrarModalEspecialidad);
+
+
+modalEspecialidad.addEventListener("click", function(e) {
+
+    if (e.target === modalEspecialidad) {
+
+        cerrarModalEspecialidad();
+
+    }
+
+});
+
+
+function cerrarModalEspecialidad() {
+
+    modalEspecialidad.classList.remove("mostrar");
+
+    document.body.style.overflow = "";
+
+}

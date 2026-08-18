@@ -212,24 +212,125 @@
 
             </div>
 
+            <!-- =========================================
+            DEPARTAMENTOS DE ESPECIALIDADES
+        ========================================= -->
 
-            <!-- INFORMACIÓN DE ZONA -->
-            <div id="informacion-zona" class="informacion-zona">
+        <section class="seccion-especialidades">
 
-                <div class="zona-info-vacia">
+            <div class="titulo-seccion">
 
-                    <i class="fa-solid fa-hand-pointer"></i>
+                <h2>DEPARTAMENTOS DE ESPECIALIDADES</h2>
 
-                    <h3>Seleccioná una zona</h3>
-
-                    <p>
-                        Hacé clic sobre una de las zonas del
-                        organigrama para conocer su información.
-                    </p>
-
-                </div>
+                <p>
+                    Bajo la coordinación de Gabriela Paoli ·
+                    Hacé clic para ver el equipo
+                </p>
 
             </div>
+
+
+            <div class="especialidades-grid">
+
+                <button class="especialidad-card" data-especialidad="fuego">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <strong>Fuego</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="socorrismo">
+                    <i class="fa-solid fa-kit-medical"></i>
+                    <strong>Socorrismo</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="vehicular">
+                    <i class="fa-solid fa-car-burst"></i>
+                    <strong>Rescate Vehicular</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="cuerdas">
+                    <i class="fa-solid fa-mountain"></i>
+                    <strong>Rescate con Cuerdas</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="forestales">
+                    <i class="fa-solid fa-tree"></i>
+                    <strong>Inc. Forestales</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="peligrosos">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <strong>Mat. Peligrosos</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="sci">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <strong>SCI</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="canes">
+                    <i class="fa-solid fa-dog"></i>
+                    <strong>Búsq./Rescate Canes</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="acuatico">
+                    <i class="fa-solid fa-person-swimming"></i>
+                    <strong>Rescate Acuático</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="protocolo">
+                    <i class="fa-solid fa-flag"></i>
+                    <strong>Protocolo y Ceremonial</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="seguridad">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                    <strong>Seg. Bomberil</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="bombas">
+                    <i class="fa-solid fa-faucet"></i>
+                    <strong>Op. de Bombas</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="psicologia">
+                    <i class="fa-solid fa-brain"></i>
+                    <strong>Psicología Emergencia</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="estructuras">
+                    <i class="fa-solid fa-building"></i>
+                    <strong>Búsq./Rescate Estructuras</strong>
+                </button>
+
+                <button class="especialidad-card" data-especialidad="cadetes">
+                    <i class="fa-solid fa-child-reaching"></i>
+                    <strong>Cadetes</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+<!-- VENTANA DE ESPECIALIDAD -->
+
+<div id="modal-especialidad" class="modal-especialidad">
+
+    <div class="ventana-especialidad">
+
+        <button
+            id="cerrar-especialidad"
+            class="cerrar-especialidad">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div id="contenido-especialidad"></div>
+
+    </div>
+
+</div>
 
 
         </div>
