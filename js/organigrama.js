@@ -920,9 +920,14 @@ function mostrarEspecialidad(departamento) {
 }
 
 
-/* =========================================================
-   CERRAR ESPECIALIDAD
-========================================================= */
+const cerrarEspecialidad =
+    document.getElementById("cerrar-especialidad");
+
+cerrarEspecialidad.addEventListener(
+    "click",
+    cerrarModalEspecialidad
+);
+
 
 function cerrarModalEspecialidad() {
 
@@ -931,11 +936,6 @@ function cerrarModalEspecialidad() {
     document.body.style.overflow = "";
 
 }
-
-
-/* =========================================================
-   CLICK FUERA DE LA VENTANA
-========================================================= */
 
 modalEspecialidad.addEventListener("click", function (e) {
 
@@ -947,6 +947,15 @@ modalEspecialidad.addEventListener("click", function (e) {
 
 });
 
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape") {
+
+        cerrarModalEspecialidad();
+
+    }
+
+});
 
 /* =========================================================
    ESCAPE
