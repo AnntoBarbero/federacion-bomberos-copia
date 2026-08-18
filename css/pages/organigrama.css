@@ -302,62 +302,6 @@
 }
 
 
-/* =========================================
-   INFORMACIÓN DE ZONA
-========================================= */
-
-.informacion-zona{
-
-    margin-top:50px;
-
-    min-height:220px;
-
-}
-
-
-.zona-info-vacia{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:45px 30px;
-
-    text-align:center;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
-
-}
-
-
-.zona-info-vacia i{
-
-    font-size:35px;
-
-    color:#c1121f;
-
-    margin-bottom:15px;
-
-}
-
-
-.zona-info-vacia h3{
-
-    font-family:'Montserrat',sans-serif;
-
-    margin-bottom:8px;
-
-}
-
-
-.zona-info-vacia p{
-
-    color:#666;
-
-    margin:0;
-
-}
-
 
 /* =========================================
    TARJETA INFORMACIÓN
