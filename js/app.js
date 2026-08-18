@@ -1,7 +1,5 @@
 async function cargarComponentes() {
-
     try {
-
         const esHome =
             window.location.pathname.endsWith("/") ||
             window.location.pathname.endsWith("index.html");
@@ -10,7 +8,10 @@ async function cargarComponentes() {
             ? "components/"
             : "../components/";
 
+        // =========================
         // NAVBAR
+        // =========================
+
         const navbar = await fetch(rutaComponentes + "navbar.html");
 
         if (!navbar.ok) {
@@ -20,7 +21,11 @@ async function cargarComponentes() {
         document.getElementById("navbar-container").innerHTML =
             await navbar.text();
 
+
+        // =========================
         // FOOTER
+        // =========================
+
         const footer = await fetch(rutaComponentes + "footer.html");
 
         if (!footer.ok) {
@@ -30,22 +35,40 @@ async function cargarComponentes() {
         document.getElementById("footer-container").innerHTML =
             await footer.text();
 
+
+        // =========================
+        // RUTAS
+        // =========================
+
         corregirRutas();
+
+
+        // =========================
+        // MENÚ
+        // =========================
+
         iniciarMenu();
 
-        const nav = document.querySelector(".navbar");
 
-        if (!esHome && nav) {
-            nav.classList.add("interno");
+        // =========================
+        // HEADER
+        // =========================
+
+        const header = document.querySelector(".header");
+
+        if (!esHome && header) {
+            header.classList.add("interno");
         }
 
-    } catch (e) {
-
-        console.error(e);
-
+    } catch (error) {
+        console.error("Error al cargar componentes:", error);
     }
-
 }
+
+
+// ======================================================
+// CORREGIR RUTAS DEL NAVBAR Y FOOTER
+// ======================================================
 
 function corregirRutas() {
 
@@ -55,8 +78,13 @@ function corregirRutas() {
 
     const prefijo = esHome ? "" : "../";
 
-    // enlaces
-    document.querySelectorAll("#navbar-container a, #footer-container a")
+
+    // =========================
+    // ENLACES
+    // =========================
+
+    document
+        .querySelectorAll("#navbar-container a, #footer-container a")
         .forEach(link => {
 
             const href = link.getAttribute("href");
@@ -68,14 +96,20 @@ function corregirRutas() {
                 href.startsWith("#") ||
                 href.startsWith("mailto:") ||
                 href.startsWith("tel:")
-            ) return;
+            ) {
+                return;
+            }
 
             link.setAttribute("href", prefijo + href);
-
         });
 
-    // imágenes
-    document.querySelectorAll("#navbar-container img, #footer-container img")
+
+    // =========================
+    // IMÁGENES
+    // =========================
+
+    document
+        .querySelectorAll("#navbar-container img, #footer-container img")
         .forEach(img => {
 
             const src = img.getAttribute("src");
@@ -83,25 +117,35 @@ function corregirRutas() {
             if (!src) return;
 
             img.setAttribute("src", prefijo + src);
-
         });
-
 }
+
+
+// ======================================================
+// MENÚ
+// ======================================================
 
 function iniciarMenu() {
 
     const toggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("nav-menu");
 
+
+    // =========================
+    // MENÚ HAMBURGUESA
+    // =========================
+
     if (toggle && menu) {
 
         toggle.addEventListener("click", () => {
-
             menu.classList.toggle("active");
-
         });
-
     }
+
+
+    // =========================
+    // DROPDOWNS
+    // =========================
 
     const dropdowns = document.querySelectorAll(".dropdown");
 
@@ -109,11 +153,13 @@ function iniciarMenu() {
 
         const titulo = dropdown.querySelector(":scope > a");
 
-        titulo.addEventListener("click", function (e) {
+        if (!titulo) return;
+
+        titulo.addEventListener("click", function (event) {
 
             if (window.innerWidth <= 992) {
 
-                e.preventDefault();
+                event.preventDefault();
 
                 dropdowns.forEach(item => {
 
@@ -124,7 +170,25 @@ function iniciarMenu() {
                 });
 
                 dropdown.classList.toggle("active");
+            }
 
+        });
+
+    });
+
+
+    // =========================
+    // CERRAR MENÚ AL ELEGIR
+    // =========================
+
+    const enlacesSubmenu = document.querySelectorAll(".submenu a");
+
+    enlacesSubmenu.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            if (menu) {
+                menu.classList.remove("active");
             }
 
         });
@@ -133,32 +197,28 @@ function iniciarMenu() {
 
 }
 
-document.querySelectorAll(".submenu a").forEach(link => {
 
-    link.addEventListener("click", () => {
-
-        document.getElementById("nav-menu").classList.remove("active");
-
-    });
-
-});
+// ======================================================
+// CARGAR COMPONENTES
+// ======================================================
 
 cargarComponentes();
 
+
+// ======================================================
+// NAVBAR AL HACER SCROLL
+// ======================================================
+
 window.addEventListener("scroll", () => {
 
-    const navbar = document.querySelector(".navbar");
+    const header = document.querySelector(".header");
 
-    if (!navbar) return;
+    if (!header) return;
 
     if (window.scrollY > 50) {
-
-        navbar.classList.add("scrolled");
-
+        header.classList.add("scrolled");
     } else {
-
-        navbar.classList.remove("scrolled");
-
+        header.classList.remove("scrolled");
     }
 
 });
