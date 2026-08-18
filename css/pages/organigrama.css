@@ -502,10 +502,52 @@
 ========================================= */
 
 .informacion-zona {
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* MENSAJE INICIAL */
+.zona-info-vacia {
+    background: #fff;
+    border-radius: 18px;
+    padding: 45px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    border-top: 5px solid #c1121f;
+}
+
+.zona-info-vacia i {
+    font-size: 35px;
+    color: #c1121f;
+    margin-bottom: 15px;
+}
+
+.zona-info-vacia h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.zona-info-vacia p {
+    color: #666;
+    margin: 0;
+}
+
+/* =========================================
+   FONDO DE LA VENTANA FLOTANTE
+========================================= */
+
+.informacion-zona.modal-abierto {
 
     position: fixed;
 
     inset: 0;
+
+    margin: 0;
+
+    width: 100%;
+
+    height: 100%;
 
     background: rgba(0, 0, 0, 0.55);
 
@@ -519,15 +561,9 @@
 
     z-index: 9999;
 
-    opacity: 0;
-
-    visibility: hidden;
-
-    transition: all 0.3s ease;
+    animation: aparecerFondo .3s ease;
 
 }
-
-
 /* VENTANA ABIERTA */
 
 .informacion-zona.mostrar {
@@ -557,11 +593,35 @@
 
     border-radius: 20px;
 
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
 
-    transform: translateY(30px) scale(0.96);
+    animation: aparecerVentana .3s ease;
 
-    transition: all 0.3s ease;
+}
+
+@keyframes aparecerFondo {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes aparecerVentana {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 
 }
 
