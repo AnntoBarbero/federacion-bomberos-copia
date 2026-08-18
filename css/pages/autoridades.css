@@ -9,6 +9,7 @@
     --texto: #5b5b5b;
     --oscuro: #1b1b1b;
     --blanco: #ffffff;
+    --amarillo:#ffd166;
 }
 
 /* Espaciado general de las secciones */
@@ -78,7 +79,7 @@
 
 .hero-content span{
     display:block;
-    color:#ffd166;
+    color:var(--amarillo);
 }
 
 /* BADGE DEL HERO */
@@ -94,6 +95,10 @@
     background: var(--rojo);
     color: var(--blanco);
     font-weight: 700;
+}
+
+.hero-badge {
+    color: var(--amarillo);
 }
 
 /* Icono dentro del badge */
