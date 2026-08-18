@@ -222,12 +222,11 @@ body{
 }
 
 .btn-principal,
-.btn-secundario{
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:50px;
-    font-weight:600;
-    transform:translateY(-4px) scale(1.03);
+.btn-secundario {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
 }
 
 .btn-principal{
