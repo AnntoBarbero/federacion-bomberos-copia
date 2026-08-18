@@ -1,557 +1,1211 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ESTILOS PARA CUARTELES */
+
+
+/* VARIABLES DE RESPALDO */
+
+/* Colores usados por la sección de cuarteles */
+:root {
+    --rojo-cuarteles: var(--rojo, #c1121f);
+    --rojo-hover-cuarteles: var(--rojo-hover, #9f0d18);
+    --gris-cuarteles: var(--gris, #f5f5f5);
+    --negro-cuarteles: var(--negro, #111111);
+    --blanco-cuarteles: #ffffff;
+    --texto-cuarteles: #222222;
+    --texto-suave-cuarteles: #666666;
+    --borde-cuarteles: #e5e5e5;
 }
 
-html{
-    scroll-behavior:smooth;
+
+/* BASE */
+
+/* Desplazamiento suave al usar enlaces internos */
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    color:#222;
-    background:#f5f5f5;
+/* Estilos generales de la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto-cuarteles);
+    background: var(--gris-cuarteles);
 }
 
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
+/* Contenedor general */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-    background:#c1121f;
-    color:#fff;
-    padding:12px 24px;
-    border-radius:50px;
-    font-weight:700;
-    margin-bottom:30px;
+
+/* HERO */
+
+/* Etiqueta roja del Hero */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    background: var(--rojo-cuarteles);
+    color: var(--blanco-cuarteles);
+
+    padding: 12px 24px;
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
 }
 
-/* MAPA CUARTELES */
 
-.mapa-cuarteles{
+/* =========================================================
+   SECCIÓN MAPA
+   ========================================================= */
+
+/* Espaciado y fondo de la sección del mapa */
+.mapa-cuarteles {
     padding: 100px 0;
-    background-color: #f5f5f5;
+    background-color: var(--gris-cuarteles);
 }
 
-/* TITULO */
-.titulo-seccion{
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+   ========================================================= */
+
+/* Contenedor del título */
+.titulo-seccion {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.titulo-seccion h2{
+/* Título principal */
+.titulo-seccion h2 {
     font-size: 42px;
     font-weight: 900;
-    color: #111;
+
+    color: var(--negro-cuarteles);
+
     margin-bottom: 15px;
 }
 
-.titulo-seccion p{
+/* Texto debajo del título */
+.titulo-seccion p {
     max-width: 700px;
-    margin: auto;
-    color: #666;
+
+    margin: 0 auto;
+
+    color: var(--texto-suave-cuarteles);
+
     line-height: 1.8;
 }
 
-/* MAPA */
-#mapa{
-    width: 100%;
-    height: 650px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+
+/* =========================================================
+   BOTÓN ENCONTRAR CUARTEL CERCANO
+   ========================================================= */
+
+/* Centra el botón */
+.hero-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 20px 0;
+
+    background: var(--gris-cuarteles);
 }
 
-/* POPUP MAPA */
+/* Botón principal */
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-.popup-cuartel h3{
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #111;
+    border: none;
+
+    background: var(--rojo-cuarteles);
+    color: var(--blanco-cuarteles);
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.popup-cuartel p{
-    margin-bottom: 8px;
-    color: #555;
-    font-size: 14px;
+/* Efecto al pasar el mouse */
+.btn-principal:hover {
+    background: var(--rojo-hover-cuarteles);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* BOTON */
-.btn-mapa{
-    display: inline-block;
-    margin-top: 10px;
-    background-color: var(--rojo);
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 6px;
+
+/* =========================================================
+   LEYENDA DE ZONAS
+   ========================================================= */
+
+/* Contenedor de los filtros por zona */
+.leyenda-zonas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Estilo de cada zona */
+.leyenda-zonas span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    color: var(--blanco-cuarteles);
+
     font-size: 14px;
     font-weight: 600;
-    transition: .3s;
+
+    user-select: none;
 }
 
-.btn-mapa:hover{
-    background-color: var(--rojo-hover);
-    color: #fff;
+/* Hace clickeable el filtro */
+.filtro-zona {
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
 }
 
-/* BUSCADOR */
+/* Efecto al pasar el mouse */
+.filtro-zona:hover {
+    transform: translateY(-3px);
 
-.buscador-cuarteles{
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   COLORES DE ZONAS
+   ========================================================= */
+
+/* Zona 1 */
+.zona1 {
+    background: #0d6efd;
+}
+
+/* Zona 2 */
+.zona2 {
+    background: #198754;
+}
+
+/* Zona 3 */
+.zona3 {
+    background: #fd7e14;
+}
+
+/* Zona 4 */
+.zona4 {
+    background: #dc3545;
+}
+
+/* Zona 5 */
+.zona5 {
+    background: #6f42c1;
+}
+
+/* Zona 6 */
+.zona6 {
+    background: #ffc107;
+    color: #111111 !important;
+}
+
+/* Botón para mostrar todas las zonas */
+.todas-zonas {
+    background: var(--negro-cuarteles);
+    color: var(--blanco-cuarteles);
+}
+
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+/* Contenedor del buscador */
+.buscador-cuarteles {
+    width: 100%;
     max-width: 500px;
-    margin: 0 auto 40px;
+
+    margin: 20px auto 40px;
+}
+
+/* Campo de búsqueda */
+.buscador-cuarteles input {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 1px solid var(--borde-cuarteles);
+
+    border-radius: 10px;
+
+    background: var(--blanco-cuarteles);
+    color: var(--texto-cuarteles);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Color del texto de ejemplo */
+.buscador-cuarteles input::placeholder {
+    color: #999999;
+}
+
+/* Estilo al seleccionar el buscador */
+.buscador-cuarteles input:focus {
+    border-color: var(--rojo-cuarteles);
+
+    box-shadow: 0 0 0 3px rgba(193, 18, 31, 0.1);
+}
+
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+
+/* Contenedor principal del mapa */
+#mapa {
+    width: 100%;
+    height: 650px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: #e9e9e9;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   POPUP DEL MAPA
+   ========================================================= */
+
+/* Tamaño mínimo del popup */
+.popup-cuartel {
+    min-width: 230px;
+}
+
+/* Nombre del cuartel dentro del popup */
+.popup-cuartel h3 {
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    color: #111111;
+}
+
+/* Información del popup */
+.popup-cuartel p {
+    margin-bottom: 8px;
+
+    color: #555555;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BOTÓN MAPA
+   ========================================================= */
+
+/* Botón dentro del popup */
+.btn-mapa {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 15px;
+
+    background: var(--rojo-cuarteles);
+    color: var(--blanco-cuarteles);
+
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.btn-mapa:hover {
+    background: var(--rojo-hover-cuarteles);
+    color: var(--blanco-cuarteles);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DETALLE DEL CUARTEL
+   ========================================================= */
+
+/* Espacio antes del detalle */
+#detalle-cuartel {
+    margin-top: 30px;
+}
+
+/* Caja con la información del cuartel */
+.detalle-cuartel {
+    background: var(--blanco-cuarteles);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Título del detalle */
+.detalle-cuartel h3 {
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+/* Texto del detalle */
+.detalle-cuartel p {
+    color: var(--texto-suave-cuarteles);
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   DESTACADO - CUARTEL MÁS CERCANO
+   ========================================================= */
+
+/* Caja destacada */
+.detalle-destacado {
+    background: var(--blanco-cuarteles);
+
+    border-left: 6px solid var(--rojo-cuarteles);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
     margin-top: 20px;
 }
 
-.buscador-cuarteles input{
-    width: 100%;
-    padding: 15px 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
+/* Título destacado */
+.detalle-destacado h3 {
+    color: var(--rojo-cuarteles);
+
+    margin-bottom: 15px;
+
+    font-weight: 800;
 }
 
-/* ESTADISTICAS */
+/* Nombre del cuartel */
+.detalle-destacado h4 {
+    color: var(--negro-cuarteles);
 
-.estadisticas-cuarteles{
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+/* Información del cuartel */
+.detalle-destacado p {
+    margin-bottom: 8px;
+
+    color: var(--texto-cuarteles);
+}
+
+
+/* =========================================================
+   ESTADÍSTICAS
+   ========================================================= */
+
+/* Espacio antes de las estadísticas */
+.estadisticas-cuarteles {
     margin-top: 50px;
 }
 
-.stat-box{
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+/* Caja individual de estadística */
+.stat-box {
     height: 100%;
-    color:#c1121f;
+
+    background: var(--blanco-cuarteles);
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.stat-box i{
-    font-size: 40px;
-    color: var(--rojo);
+/* Efecto al pasar el mouse */
+.stat-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Icono de la estadística */
+.stat-box i {
+    display: block;
+
     margin-bottom: 15px;
-    color:#c1121f;
+
+    font-size: 40px;
+
+    color: var(--rojo-cuarteles);
 }
 
-.stat-box h3{
+/* Número de la estadística */
+.stat-box h3 {
     font-size: 36px;
     font-weight: 900;
+
     margin-bottom: 10px;
-    color:#000000;
+
+    color: var(--negro-cuarteles);
 }
 
-.stat-box p{
-    color: #c1121f;
+/* Texto de la estadística */
+.stat-box p {
     margin: 0;
-}
 
-/* LISTADO */
+    color: var(--rojo-cuarteles);
 
-.listado-cuarteles{
-    padding-top: 80px;
-}
-
-.leyenda-zonas{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
-
-.leyenda-zonas span{
-    padding:8px 15px;
-    border-radius:20px;
-    color:#fff;
-    font-weight:600;
-}
-
-.zona1{ background:#0d6efd; }
-.zona2{ background:#198754; }
-.zona3{ background:#fd7e14; }
-.zona4{ background:#dc3545; }
-.zona5{ background:#6f42c1; }
-.zona6{ background:#ffc107; color:#111; }
-
-.filtro-zona{
-    cursor:pointer;
-    transition:.3s;
-}
-
-.filtro-zona:hover{
-    transform:translateY(-3px);
-}
-
-.todas-zonas{
-    background:#111;
-    color:#fff;
-}
-
-.detalle-cuartel{
-    margin-top:30px;
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.detalle-cuartel h3{
-    font-size:28px;
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-.detalle-cuartel p{
-    color:#666;
-    margin-bottom:10px;
-}
-
-.detalle-destacado{
-    background:#fff;
-    border-left:6px solid #dc3545;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.15);
-    margin-top:20px;
-}
-
-.detalle-destacado h3{
-    color:#dc3545;
-    margin-bottom:15px;
-}
-
-.detalle-destacado h4{
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.cuartel-card {
-    perspective: 1000px;
-    height: 220px;
-}
-
-/*.cuartel-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-}
-
-
-
-.cuartel-front{
-    background: #111;
-    color: #fff;
-    border-radius: 12px;
-    border: 2px solid #222;
-}
-
-.cuartel-back{
-    background: #111;
-    border-radius: 12px;
-    color: #fff;
-} */
-
-/* ICONO */
-.cuartel-front i{
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: var(--zona-color);
-}
-
-/* TITULO */
-.cuartel-front h3{
-    font-size: 16px;
-    text-align: center;
-}
-
-/* ZONA TEXTO */
-.cuartel-front p{
-    color: var(--zona-color);
     font-weight: 600;
 }
 
-/* ACTIVA EL GIRO 
+
+/* =========================================================
+   LISTADO DE CUARTELES
+   ========================================================= */
+
+/* Espacio antes del listado */
+.listado-cuarteles {
+    padding-top: 80px;
+}
+
+
+/* =========================================================
+   CARD CUARTEL
+   ========================================================= */
+
+/* Tarjeta de cada cuartel */
+.card-cuartel {
+    height: 100%;
+
+    background: var(--blanco-cuarteles);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* Efecto al pasar el mouse */
+.card-cuartel:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   IMAGEN DEL CUARTEL
+   ========================================================= */
+
+/* Contenedor de la imagen */
+.card-imagen {
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+/* Imagen del cuartel */
+.card-imagen img {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+/* Zoom suave de la imagen */
+.card-cuartel:hover .card-imagen img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CABECERA DE LA CARD
+   ========================================================= */
+
+/* Parte superior de la tarjeta */
+.card-header-cuartel {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+}
+
+/* Nombre del cuartel */
+.card-header-cuartel h3 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: var(--negro-cuarteles);
+}
+
+
+/* =========================================================
+   BADGE DE ZONA
+   ========================================================= */
+
+/* Etiqueta que muestra la zona */
+.badge-zona {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    color: var(--blanco-cuarteles);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CUERPO DE LA CARD
+   ========================================================= */
+
+/* Contenido de la tarjeta */
+.card-body-cuartel {
+    padding: 0 25px 20px;
+}
+
+/* Cada dato del cuartel */
+.card-body-cuartel p {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+
+    color: #555555;
+
+    line-height: 1.5;
+}
+
+/* Quita el margen del último dato */
+.card-body-cuartel p:last-child {
+    margin-bottom: 0;
+}
+
+/* Iconos de los datos */
+.card-body-cuartel i {
+    flex-shrink: 0;
+
+    width: 20px;
+
+    margin-top: 3px;
+
+    color: var(--rojo-cuarteles);
+}
+
+
+/* =========================================================
+   FOOTER DE LA CARD
+   ========================================================= */
+
+/* Parte inferior de la tarjeta */
+.card-footer-cuartel {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 20px 25px;
+
+    border-top: 1px solid var(--borde-cuarteles);
+}
+
+/* Botones del footer */
+.card-footer-cuartel .btn {
+    flex: 1;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+/* Ventana modal */
+.modal-content {
+    border: none;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+/* Cabecera del modal */
+.modal-header {
+    background: var(--negro-cuarteles);
+    color: var(--blanco-cuarteles);
+
+    border-bottom: none;
+}
+
+/* Título del modal */
+.modal-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 700;
+}
+
+/* Botón cerrar del modal */
+.modal-header .btn-close {
+    filter: invert(1);
+
+    opacity: 1;
+}
+
+/* Efecto del botón cerrar */
+.modal-header .btn-close:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   FICHA DEL CUARTEL
+   ========================================================= */
+
+/* Nombre del cuartel */
+.ficha-cuartel h2 {
+    margin-bottom: 10px;
+
+    color: var(--negro-cuarteles);
+
+    font-weight: 800;
+}
+
+/* Subtítulos de la ficha */
+.ficha-cuartel h5 {
+    margin-top: 15px;
+    margin-bottom: 12px;
+
+    color: var(--rojo-cuarteles);
+
+    font-weight: 700;
+}
+
+/* Texto de la ficha */
+.ficha-cuartel p {
+    margin-bottom: 8px;
+
+    color: var(--texto-cuarteles);
+}
+
+/* Badge dentro de la ficha */
+.ficha-cuartel .badge {
+    padding: 8px 14px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   BOTONES DE BOOTSTRAP DENTRO DE LA FICHA
+   ========================================================= */
+
+/* Botón rojo de Bootstrap */
+.ficha-cuartel .btn-danger {
+    background: var(--rojo-cuarteles);
+
+    border-color: var(--rojo-cuarteles);
+}
+
+/* Efecto del botón rojo */
+.ficha-cuartel .btn-danger:hover {
+    background: var(--rojo-hover-cuarteles);
+
+    border-color: var(--rojo-hover-cuarteles);
+}
+
+
+/* =========================================================
+   EFECTO TARJETA 3D
+   ========================================================= */
+
+/* Contenedor de la tarjeta 3D */
+.cuartel-card {
+    position: relative;
+
+    perspective: 1000px;
+
+    height: 220px;
+}
+
+/* Parte interna que gira */
+.cuartel-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+        transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+    transform-style: preserve-3d;
+}
+
+/* Frente y dorso de la tarjeta */
+.cuartel-front,
+.cuartel-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   FRENTE 3D
+   ========================================================= */
+
+/* Diseño del frente */
+.cuartel-front {
+    background: var(--blanco-cuarteles);
+
+    color: var(--negro-cuarteles);
+}
+
+/* Icono del frente */
+.cuartel-front i {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+
+    color: var(--zona-color, var(--rojo-cuarteles));
+}
+
+/* Nombre del cuartel */
+.cuartel-front h3 {
+    font-size: 16px;
+
+    text-align: center;
+
+    color: var(--negro-cuarteles);
+}
+
+/* Zona del cuartel */
+.cuartel-front p {
+    color: var(--zona-color, var(--rojo-cuarteles));
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DORSO 3D
+   ========================================================= */
+
+/* Diseño del dorso */
+.cuartel-back {
+    background: var(--zona-color, var(--rojo-cuarteles));
+
+    color: var(--blanco-cuarteles);
+
+    transform: rotateY(180deg);
+
+    text-align: center;
+}
+
+/* Texto blanco del dorso */
+.cuartel-back p,
+.cuartel-back h4 {
+    color: var(--blanco-cuarteles);
+}
+
+/* Información del dorso */
+.cuartel-back p {
+    margin: 5px 0;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   ACTIVACIÓN DEL GIRO
+   ========================================================= */
+
+/* Gira la tarjeta al pasar el mouse */
 .cuartel-card:hover .cuartel-inner {
     transform: rotateY(180deg);
 }
 
+/* Gira la tarjeta cuando tiene la clase active */
 .cuartel-card.active .cuartel-inner {
     transform: rotateY(180deg);
-}*/
-
-/* FRENTE Y DORSO */
-.cuartel-front,
-.cuartel-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-/* BACK */
-.cuartel-back{
-    background: var(--zona-color);
-    color: #fff;
-    transform: rotateY(180deg);
-    text-align: center;
-}
 
-/* para que el texto no pierda contraste */
-.cuartel-back p,
-.cuartel-back h4{
-    color: #fff;
-}
+/* =========================================================
+   BOTÓN DENTRO DE TARJETA 3D
+   ========================================================= */
 
-.cuartel-back p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
+/* Botón del dorso */
+.cuartel-back .btn-mapa {
+    background: var(--blanco-cuarteles);
 
-.btn-mapa{
-    margin-top: 10px;
-    display: inline-block;
-    padding: 8px 12px;
-    background: #fff;
-    color: var(--zona-color);
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
+    color: var(--zona-color, var(--rojo-cuarteles));
 
     border: 2px solid transparent;
 }
 
-/* HOVER */
-.btn-mapa:hover{
-    border: 2px solid #000;
+/* Efecto del botón */
+.cuartel-back .btn-mapa:hover {
+    border-color: var(--negro-cuarteles);
+
     transform: translateY(-2px);
 }
 
-.card-cuartel{
 
-    background:#fff;
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-    border-radius:18px;
+/* Pantallas de hasta 992px */
+@media (max-width: 992px) {
 
-    overflow:hidden;
+    /* Reduce el espacio de la sección */
+    .mapa-cuarteles {
+        padding: 80px 0;
+    }
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    /* Reduce el título */
+    .titulo-seccion h2 {
+        font-size: 36px;
+    }
 
-    transition:.35s;
+    /* Reduce la altura del mapa */
+    #mapa {
+        height: 550px;
+    }
 
-    height:100%;
-
-}
-
-.card-cuartel:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
-
-}
-
-.card-header-cuartel{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    padding:25px;
+    /* Reduce el nombre del cuartel */
+    .card-header-cuartel h3 {
+        font-size: 21px;
+    }
 
 }
 
-.icono-cuartel{
 
-    width:70px;
+/* =========================================================
+   TABLETS Y MÓVILES
+   ========================================================= */
 
-    height:70px;
+/* Pantallas de hasta 768px */
+@media (max-width: 768px) {
 
-    border-radius:50%;
+    /* Reduce el espacio de la sección */
+    .mapa-cuarteles {
+        padding: 60px 0;
+    }
 
-    display:flex;
+    /* Reduce el espacio del botón */
+    .hero-botones {
+        padding-top: 25px;
+    }
 
-    justify-content:center;
+    /* Reduce el margen del título */
+    .titulo-seccion {
+        margin-bottom: 35px;
+    }
 
-    align-items:center;
+    /* Reduce el tamaño del título */
+    .titulo-seccion h2 {
+        font-size: 30px;
+    }
 
-    color:#fff;
+    /* Reduce el texto */
+    .titulo-seccion p {
+        font-size: 14px;
+    }
 
-    font-size:30px;
+    /* Reduce la altura del mapa */
+    #mapa {
+        height: 450px;
 
-}
+        border-radius: 10px;
+    }
 
-.card-header-cuartel h3{
+    /* Reduce el espacio entre zonas */
+    .leyenda-zonas {
+        gap: 8px;
+    }
 
-    margin:0;
+    /* Reduce el tamaño de las zonas */
+    .leyenda-zonas span {
+        padding: 7px 12px;
 
-    font-size:24px;
+        font-size: 13px;
+    }
 
-    font-weight:700;
+    /* Reduce el margen de las estadísticas */
+    .estadisticas-cuarteles {
+        margin-top: 35px;
+    }
 
-}
+    /* Reduce el tamaño de las estadísticas */
+    .stat-box {
+        padding: 25px 15px;
+    }
 
-.badge-zona{
+    /* Reduce el icono */
+    .stat-box i {
+        font-size: 32px;
+    }
 
-    color:#fff;
+    /* Reduce el número */
+    .stat-box h3 {
+        font-size: 28px;
+    }
 
-    padding:5px 12px;
+    /* Reduce el espacio antes del listado */
+    .listado-cuarteles {
+        padding-top: 60px;
+    }
 
-    border-radius:20px;
+    /* Reduce el padding de la cabecera */
+    .card-header-cuartel {
+        padding: 20px;
+    }
 
-    font-size:13px;
+    /* Reduce el nombre */
+    .card-header-cuartel h3 {
+        font-size: 20px;
+    }
 
-}
+    /* Reduce el padding del cuerpo */
+    .card-body-cuartel {
+        padding: 0 20px 20px;
+    }
 
-.card-body-cuartel{
+    /* Botones uno debajo del otro */
+    .card-footer-cuartel {
+        padding: 15px 20px;
 
-    padding:0 25px 20px;
+        flex-direction: column;
+    }
 
-}
+    /* Botones ocupan todo el ancho */
+    .card-footer-cuartel .btn {
+        width: 100%;
+    }
 
-.card-body-cuartel p{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin-bottom:14px;
-
-    color:#555;
-
-}
-
-.card-body-cuartel i{
-
-    width:20px;
-
-    color:#c1121f;
-
-}
-
-.card-footer-cuartel{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:10px;
-
-    padding:20px 25px;
-
-    border-top:1px solid #eee;
-
-}
-
-.card-footer-cuartel .btn{
-
-    flex:1;
-
-    border-radius:10px;
-
-}
-
-.modal-content{
-
-    border:none;
-
-    border-radius:20px;
-
-}
-
-.modal-header{
-
-    background:#111;
-
-    color:#fff;
-
-}
-
-.modal-title{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    font-weight:700;
+    /* Reduce las esquinas del modal */
+    .modal-content {
+        border-radius: 15px;
+    }
 
 }
 
-.ficha-cuartel h2{
 
-    font-weight:800;
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
 
-    margin-bottom:10px;
+/* Pantallas de hasta 576px */
+@media (max-width: 576px) {
+
+    /* Aumenta un poco el ancho del contenido */
+    .container {
+        width: 92%;
+    }
+
+    /* Reduce el badge */
+    .hero-badge {
+        padding: 10px 18px;
+
+        font-size: 13px;
+    }
+
+    /* Reduce el espacio de la sección */
+    .mapa-cuarteles {
+        padding: 50px 0;
+    }
+
+    /* Reduce el título */
+    .titulo-seccion h2 {
+        font-size: 26px;
+    }
+
+    /* Reduce el texto */
+    .titulo-seccion p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    /* Botón ocupa todo el ancho */
+    .btn-principal {
+        width: 100%;
+
+        padding: 13px 18px;
+
+        font-size: 14px;
+    }
+
+    /* Reduce el margen del buscador */
+    .buscador-cuarteles {
+        margin-bottom: 25px;
+    }
+
+    /* Reduce el campo de búsqueda */
+    .buscador-cuarteles input {
+        padding: 13px 15px;
+
+        font-size: 14px;
+    }
+
+    /* Reduce la altura del mapa */
+    #mapa {
+        height: 400px;
+
+        border-radius: 8px;
+    }
+
+    /* Reduce la altura de las imágenes */
+    .card-imagen,
+    .card-imagen img {
+        height: 200px;
+    }
+
+    /* Reduce el nombre del cuartel */
+    .card-header-cuartel h3 {
+        font-size: 19px;
+    }
+
+    /* Reduce el texto de la tarjeta */
+    .card-body-cuartel p {
+        font-size: 14px;
+    }
+
+    /* Reduce el padding del destacado */
+    .detalle-destacado {
+        padding: 20px;
+
+        border-left-width: 4px;
+    }
+
+    /* Reduce el título destacado */
+    .detalle-destacado h3 {
+        font-size: 21px;
+    }
+
+    /* Reduce el subtítulo destacado */
+    .detalle-destacado h4 {
+        font-size: 18px;
+    }
 
 }
 
-.ficha-cuartel h5{
-
-    margin-top:15px;
-
-    font-weight:700;
-
-    color:#c1121f;
-
-}
-
-.ficha-cuartel p{
-
-    margin-bottom:8px;
-
-}
-
-.ficha-cuartel .badge{
-
-    font-size:15px;
-
-    padding:8px 14px;
-
-}
-
-.modal-header .btn-close{
-    filter: invert(1);
-    opacity: 1;
-}
-
-.modal-header .btn-close:hover{
-    opacity: .8;
-}
-
-.card-imagen{
-    width:100%;
-    height:220px;
-    overflow:hidden;
-    border-radius:0;
-}
-
-.card-imagen img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    object-position:center;
-    display:block;
-    border-radius:0;
-}
