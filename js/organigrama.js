@@ -479,26 +479,65 @@ const especialidades = {
 
     socorrismo: {
         nombre: "Dpto. Socorrismo",
-        correo: "",
+        correo: "socorrismoescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Julian Zalazar"
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Julian Zalazar"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Martín Torres"
+            }
         ],
 
-        colaboradores: []
+        instructores: [
+            "Hilda Luna",
+            "Eliana Clemann",
+            "Mariana Burgui",
+            "Ignacio Chiurazzi",
+            "Juan Calfuan",
+            "Fiama Picco"
+        ],
+
+        colaboradores: [
+            "Sol Puhl",
+            "Patricia Perez",
+            "Azul Brilz",
+            "Natan Gonzales"
+        ]
     },
 
 
     vehicular: {
         nombre: "Dpto. Rescate Vehicular",
-        correo: "",
+        correo: "rescatevehicularescuelabvlp@gmail.com",
 
-        conduccion: [],
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Jorge Ruiz"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Cesar Verna"
+            },
+            {
+                cargo: "Secretario",
+                nombre: "Andrés Audubert"
+            },
+            {
+                cargo: "Secretaria Pedagógica",
+                nombre: "Mariela Muñoz"
+            }
+        ],
 
         instructores: [
-            "Jorge Ruiz"
+            "Edgardo Velastini",
+            "Nestor Aguirre",
+            "Jose Hevia",
+            "Mauro Herrera"
         ],
 
         colaboradores: []
@@ -507,12 +546,24 @@ const especialidades = {
 
     cuerdas: {
         nombre: "Dpto. Rescate con Cuerdas",
-        correo: "",
+        correo: "rescateconcuerdasescuelabvlp@gmail.com",
 
-        conduccion: [],
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Marcelo Martinez"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Uciel Serraino"
+            }
+        ],
 
         instructores: [
-            "Marcelo Martínez"
+            "Gerardo Salvatori",
+            "Veronica Santander",
+            "Evelyn Selalles",
+            "Pablo Peralta"
         ],
 
         colaboradores: []
@@ -521,26 +572,57 @@ const especialidades = {
 
     forestales: {
         nombre: "Dpto. Inc. Forestales",
-        correo: "",
+        correo: "iforestalescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Juan Serraino"
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Juan Serraino"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Julio Córdoba"
+            }
         ],
 
-        colaboradores: []
+        instructores: [
+            "Walter Berger",
+            "Nicolas Jerez",
+            "Melisa Welch"
+        ],
+
+        colaboradores: [
+            "Federico Justiniano",
+            "Alma Tassone",
+            "Carlos Torres",
+            "Pamela Ávalos",
+            "Benjamin Leonar",
+            "Ayelen Hollman",
+            "Nora Ozan"
+        ]
     },
 
 
     peligrosos: {
         nombre: "Dpto. Mat. Peligrosos",
-        correo: "",
+        correo: "matpelescuelabvlp@gmail.com",
 
-        conduccion: [],
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Roberto Sacco"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Lis Rearte"
+            }
+        ],
 
         instructores: [
-            "Roberto Sacco"
+            "Pablo Calderon",
+            "Marcos Venetti",
+            "Elias Guillermo",
+            "Enzo Ojeda"
         ],
 
         colaboradores: []
@@ -549,27 +631,40 @@ const especialidades = {
 
     sci: {
         nombre: "Dpto. SCI",
-        correo: "",
+        correo: "comandoescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Alina Tosco"
+        conduccion: [
+            {
+                cargo: "Coordinadora",
+                nombre: "Alina Tosco"
+            }
         ],
 
-        colaboradores: []
+        instructores: [
+            "Roberto Torres",
+            "Walter Berger",
+            "Damian Bollak"
+        ],
+
+        colaboradores: [
+            "Lourdes Bender",
+            "Silvina Abbona"
+        ]
     },
 
 
     canes: {
         nombre: "Dpto. Búsq./Rescate Canes",
-        correo: "",
+        correo: "k9escuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Pamela Ávalo"
+        conduccion: [
+            {
+                cargo: "Coordinadora",
+                nombre: "Pamela Ávalo"
+            }
         ],
+
+        instructores: [],
 
         colaboradores: []
     },
@@ -577,26 +672,48 @@ const especialidades = {
 
     acuatico: {
         nombre: "Dpto. Rescate Acuático",
-        correo: "",
+        correo: "resacuaticoescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "David Rojas"
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "David Rojas"
+            }
         ],
 
-        colaboradores: []
+        instructores: [
+            "Ricardo Balduzzi",
+            "Cesar Solano",
+            "Celso Retamales",
+            "Fabio Fernández"
+        ],
+
+        colaboradores: [
+            "Raul Fibiger",
+            "Anabela Laborde"
+        ]
     },
 
 
     protocolo: {
         nombre: "Dpto. Protocolo y Ceremonial",
-        correo: "",
+        correo: "protocoloescuelabvlp@gmail.com",
 
-        conduccion: [],
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Roque Martinez"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Juan Tome"
+            }
+        ],
 
         instructores: [
-            "Roque Martínez"
+            "Celeste Escudero",
+            "Marcos Vernetti",
+            "Juan Cerda"
         ],
 
         colaboradores: []
@@ -605,26 +722,44 @@ const especialidades = {
 
     seguridad: {
         nombre: "Dpto. Seg. Bomberil",
-        correo: "",
+        correo: "seguridadescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Jazmín Bailo"
+        conduccion: [
+            {
+                cargo: "Coordinadora",
+                nombre: "Jazmín Bailo"
+            }
         ],
 
-        colaboradores: []
+        instructores: [
+            "Maria Morell",
+            "Patricia Molina",
+            "Maria Montalbano"
+        ],
+
+        colaboradores: [
+            "Andrea Montalbano"
+        ]
     },
 
 
     bombas: {
         nombre: "Dpto. Op. de Bombas",
-        correo: "",
+        correo: "conduccionescuelabvlp@gmail.com",
 
-        conduccion: [],
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Martín Meringer"
+            }
+        ],
 
         instructores: [
-            "Martín Meringer"
+            "Santiago Elizarriaga",
+            "Pablo Pollo",
+            "German Garin",
+            "Oscar Zabala",
+            "Javier Bogarin"
         ],
 
         colaboradores: []
@@ -633,13 +768,20 @@ const especialidades = {
 
     psicologia: {
         nombre: "Dpto. Psicología Emergencia",
-        correo: "",
+        correo: "psicologiaescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Gabriela Paoli"
+        conduccion: [
+            {
+                cargo: "Coordinadora",
+                nombre: "Gabriela Paoli"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Ariel Irusta"
+            }
         ],
+
+        instructores: [],
 
         colaboradores: []
     },
@@ -647,26 +789,49 @@ const especialidades = {
 
     estructuras: {
         nombre: "Dpto. Búsq./Rescate Estructuras",
-        correo: "",
+        correo: "brecescuelabvlp@gmail.com",
 
-        conduccion: [],
-
-        instructores: [
-            "Daniela Marín"
+        conduccion: [
+            {
+                cargo: "Coordinadora",
+                nombre: "Daniela Marin"
+            },
+            {
+                cargo: "Sub Coordinador",
+                nombre: "Fabian Perrone"
+            }
         ],
 
-        colaboradores: []
+        instructores: [
+            "Alexis Cuello"
+        ],
+
+        colaboradores: [
+            "Yesica Fernández"
+        ]
     },
 
 
     cadetes: {
         nombre: "Dpto. Cadetes",
-        correo: "",
+        correo: "cadetesescuelabvlp@gmail.com",
 
-        conduccion: [],
+        conduccion: [
+            {
+                cargo: "Coordinador",
+                nombre: "Leandro Cortejarena"
+            },
+            {
+                cargo: "Secretario",
+                nombre: "Juan Nicolas Martin"
+            }
+        ],
 
         instructores: [
-            "Leandro Cortejarena"
+            "Eliana Cleman",
+            "Juan Pereyra",
+            "Debora Ydraste",
+            "Camila Sauco"
         ],
 
         colaboradores: []
@@ -952,30 +1117,6 @@ document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
 
         cerrarModalEspecialidad();
-
-    }
-
-});
-
-/* =========================================================
-   ESCAPE
-========================================================= */
-
-document.addEventListener("keydown", function (e) {
-
-    if (e.key === "Escape") {
-
-        if (modalEspecialidad.classList.contains("mostrar")) {
-
-            cerrarModalEspecialidad();
-
-        }
-
-        else if (informacionZona.classList.contains("mostrar")) {
-
-            cerrarZona();
-
-        }
 
     }
 
