@@ -43,10 +43,13 @@ body {
 .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    max-width: max-content;
     background: var(--rojo-cuarteles);
     color: var(--blanco-cuarteles);
-    padding: 12px 24px;
+    padding: 10px 22px;
     border-radius: 50px;
     font-weight: 700;
     margin-bottom: 30px;
