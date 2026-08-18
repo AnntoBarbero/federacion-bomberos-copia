@@ -1,3 +1,7 @@
+/* =========================================================
+   INFORMACIÓN DE ZONAS
+========================================================= */
+
 const informacionZonas = {
 
     1: {
@@ -208,27 +212,35 @@ const informacionZonas = {
 };
 
 
-// ELEMENTOS
+/* =========================================================
+   ELEMENTOS DE LAS ZONAS
+========================================================= */
+
 const botonesZona = document.querySelectorAll(".zona-org");
 const informacionZona = document.getElementById("informacion-zona");
 
 
-// ABRIR INFORMACIÓN DE ZONA
+/* =========================================================
+   ABRIR ZONA
+========================================================= */
+
 botonesZona.forEach(boton => {
 
-    boton.addEventListener("click", () => {
+    boton.addEventListener("click", function () {
 
-        const numeroZona = boton.dataset.zona;
-
+        const numeroZona = this.dataset.zona;
         const zona = informacionZonas[numeroZona];
 
         if (!zona) return;
 
 
-        // EQUIPO
+        /* -----------------------------------------
+           EQUIPO
+        ----------------------------------------- */
+
         let equipoHTML = "";
 
-        if (zona.equipo.length > 0) {
+        if (zona.equipo && zona.equipo.length > 0) {
 
             zona.equipo.forEach(persona => {
 
@@ -259,10 +271,13 @@ botonesZona.forEach(boton => {
         }
 
 
-        // CUARTELES
+        /* -----------------------------------------
+           CUARTELES
+        ----------------------------------------- */
+
         let cuartelesHTML = "";
 
-        if (zona.cuarteles.length > 0) {
+        if (zona.cuarteles && zona.cuarteles.length > 0) {
 
             zona.cuarteles.forEach(cuartel => {
 
@@ -286,26 +301,30 @@ botonesZona.forEach(boton => {
         }
 
 
-        // MOSTRAR VENTANA
+        /* -----------------------------------------
+           CONTENIDO DE LA VENTANA
+        ----------------------------------------- */
+
         informacionZona.innerHTML = `
 
             <div class="ventana-zona">
 
                 <button
+                    type="button"
                     class="cerrar-zona"
-                    id="cerrar-zona">
+                    aria-label="Cerrar">
 
                     <i class="fa-solid fa-xmark"></i>
 
                 </button>
 
 
+                <!-- CABECERA -->
+
                 <div class="cabecera-zona">
 
                     <div class="icono-zona">
-
                         <i class="fa-solid fa-fire-flame-curved"></i>
-
                     </div>
 
                     <div>
@@ -324,6 +343,8 @@ botonesZona.forEach(boton => {
                 </div>
 
 
+                <!-- CONTENIDO -->
+
                 <div class="contenido-zona">
 
 
@@ -337,9 +358,7 @@ botonesZona.forEach(boton => {
                         </h3>
 
                         <div class="equipo-zona">
-
                             ${equipoHTML}
-
                         </div>
 
                     </div>
@@ -355,9 +374,7 @@ botonesZona.forEach(boton => {
                         </h3>
 
                         <ul class="lista-cuarteles-zona">
-
                             ${cuartelesHTML}
-
                         </ul>
 
                     </div>
@@ -370,31 +387,50 @@ botonesZona.forEach(boton => {
         `;
 
 
-        // MOSTRAR
+        /* -----------------------------------------
+           MOSTRAR
+        ----------------------------------------- */
+
         informacionZona.classList.add("mostrar");
 
+        document.body.style.overflow = "hidden";
 
-        // CERRAR
-        document
-            .getElementById("cerrar-zona")
-            .addEventListener("click", cerrarZona);
 
+        /* -----------------------------------------
+           BOTÓN CERRAR
+        ----------------------------------------- */
+
+        const cerrar = informacionZona.querySelector(".cerrar-zona");
+
+        if (cerrar) {
+
+            cerrar.addEventListener("click", cerrarZona);
+
+        }
 
     });
 
 });
 
 
-// CERRAR VENTANA
+/* =========================================================
+   CERRAR ZONA
+========================================================= */
+
 function cerrarZona() {
 
     informacionZona.classList.remove("mostrar");
 
+    document.body.style.overflow = "";
+
 }
 
 
-// CERRAR HACIENDO CLICK FUERA
-informacionZona.addEventListener("click", function(e) {
+/* =========================================================
+   CERRAR ZONA HACIENDO CLICK FUERA
+========================================================= */
+
+informacionZona.addEventListener("click", function (e) {
 
     if (e.target === informacionZona) {
 
@@ -405,20 +441,9 @@ informacionZona.addEventListener("click", function(e) {
 });
 
 
-// CERRAR CON ESC
-document.addEventListener("keydown", function(e) {
-
-    if (e.key === "Escape") {
-
-        cerrarZona();
-
-    }
-
-});
-
-/* =========================================
+/* =========================================================
    DEPARTAMENTOS DE ESPECIALIDADES
-========================================= */
+========================================================= */
 
 const especialidades = {
 
@@ -451,147 +476,208 @@ const especialidades = {
         ]
     },
 
+
     socorrismo: {
         nombre: "Dpto. Socorrismo",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Julian Zalazar"
         ],
+
         colaboradores: []
     },
+
 
     vehicular: {
         nombre: "Dpto. Rescate Vehicular",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Jorge Ruiz"
         ],
+
         colaboradores: []
     },
+
 
     cuerdas: {
         nombre: "Dpto. Rescate con Cuerdas",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Marcelo Martínez"
         ],
+
         colaboradores: []
     },
+
 
     forestales: {
         nombre: "Dpto. Inc. Forestales",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Juan Serraino"
         ],
+
         colaboradores: []
     },
+
 
     peligrosos: {
         nombre: "Dpto. Mat. Peligrosos",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Roberto Sacco"
         ],
+
         colaboradores: []
     },
+
 
     sci: {
         nombre: "Dpto. SCI",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Alina Tosco"
         ],
+
         colaboradores: []
     },
+
 
     canes: {
         nombre: "Dpto. Búsq./Rescate Canes",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Pamela Ávalo"
         ],
+
         colaboradores: []
     },
+
 
     acuatico: {
         nombre: "Dpto. Rescate Acuático",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "David Rojas"
         ],
+
         colaboradores: []
     },
+
 
     protocolo: {
         nombre: "Dpto. Protocolo y Ceremonial",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Roque Martínez"
         ],
+
         colaboradores: []
     },
+
 
     seguridad: {
         nombre: "Dpto. Seg. Bomberil",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Jazmín Bailo"
         ],
+
         colaboradores: []
     },
+
 
     bombas: {
         nombre: "Dpto. Op. de Bombas",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Martín Meringer"
         ],
+
         colaboradores: []
     },
+
 
     psicologia: {
         nombre: "Dpto. Psicología Emergencia",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Gabriela Paoli"
         ],
+
         colaboradores: []
     },
+
 
     estructuras: {
         nombre: "Dpto. Búsq./Rescate Estructuras",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Daniela Marín"
         ],
+
         colaboradores: []
     },
+
 
     cadetes: {
         nombre: "Dpto. Cadetes",
         correo: "",
+
         conduccion: [],
+
         instructores: [
             "Leandro Cortejarena"
         ],
+
         colaboradores: []
     }
 
 };
+
+
+/* =========================================================
+   ELEMENTOS DEL MODAL DE ESPECIALIDADES
+========================================================= */
 
 const modalEspecialidad =
     document.getElementById("modal-especialidad");
@@ -599,20 +685,18 @@ const modalEspecialidad =
 const contenidoEspecialidad =
     document.getElementById("contenido-especialidad");
 
-const cerrarEspecialidad =
-    document.getElementById("cerrar-especialidad");
 
+/* =========================================================
+   ABRIR ESPECIALIDAD
+========================================================= */
 
-document.querySelectorAll(".especialidad-card")
-.forEach(boton => {
+document.querySelectorAll(".especialidad-card").forEach(boton => {
 
     boton.addEventListener("click", function () {
 
-        const id =
-            this.dataset.especialidad;
+        const id = this.dataset.especialidad;
 
-        const departamento =
-            especialidades[id];
+        const departamento = especialidades[id];
 
         if (!departamento) return;
 
@@ -623,58 +707,96 @@ document.querySelectorAll(".especialidad-card")
 });
 
 
+/* =========================================================
+   MOSTRAR ESPECIALIDAD
+========================================================= */
+
 function mostrarEspecialidad(departamento) {
 
     let conduccionHTML = "";
-
-    departamento.conduccion.forEach(persona => {
-
-        conduccionHTML += `
-
-            <div class="persona-especialidad">
-
-                <span>
-                    ${persona.cargo}
-                </span>
-
-                <strong>
-                    ${persona.nombre}
-                </strong>
-
-            </div>
-
-        `;
-
-    });
-
-
     let instructoresHTML = "";
-
-    departamento.instructores.forEach(persona => {
-
-        instructoresHTML += `
-            <li>
-                <i class="fa-solid fa-user"></i>
-                ${persona}
-            </li>
-        `;
-
-    });
-
-
     let colaboradoresHTML = "";
 
-    departamento.colaboradores.forEach(persona => {
 
-        colaboradoresHTML += `
-            <li>
-                <i class="fa-solid fa-user"></i>
-                ${persona}
-            </li>
-        `;
+    /* -----------------------------------------
+       CONDUCCIÓN
+    ----------------------------------------- */
 
-    });
+    if (
+        departamento.conduccion &&
+        departamento.conduccion.length > 0
+    ) {
 
+        departamento.conduccion.forEach(persona => {
+
+            conduccionHTML += `
+                <div class="persona-especialidad">
+
+                    <span>
+                        ${persona.cargo}
+                    </span>
+
+                    <strong>
+                        ${persona.nombre}
+                    </strong>
+
+                </div>
+            `;
+
+        });
+
+    }
+
+
+    /* -----------------------------------------
+       INSTRUCTORES
+    ----------------------------------------- */
+
+    if (
+        departamento.instructores &&
+        departamento.instructores.length > 0
+    ) {
+
+        departamento.instructores.forEach(persona => {
+
+            instructoresHTML += `
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    ${persona}
+                </li>
+            `;
+
+        });
+
+    }
+
+
+    /* -----------------------------------------
+       COLABORADORES
+    ----------------------------------------- */
+
+    if (
+        departamento.colaboradores &&
+        departamento.colaboradores.length > 0
+    ) {
+
+        departamento.colaboradores.forEach(persona => {
+
+            colaboradoresHTML += `
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    ${persona}
+                </li>
+            `;
+
+        });
+
+    }
+
+
+    /* -----------------------------------------
+       MODAL
+    ----------------------------------------- */
 
     contenidoEspecialidad.innerHTML = `
 
@@ -695,10 +817,12 @@ function mostrarEspecialidad(departamento) {
                 ${
                     departamento.correo
                     ?
-                    `<a href="mailto:${departamento.correo}">
+                    `
+                    <a href="mailto:${departamento.correo}">
                         <i class="fa-solid fa-envelope"></i>
                         ${departamento.correo}
-                    </a>`
+                    </a>
+                    `
                     :
                     ""
                 }
@@ -712,7 +836,8 @@ function mostrarEspecialidad(departamento) {
 
 
             ${
-                departamento.conduccion.length
+                departamento.conduccion &&
+                departamento.conduccion.length > 0
                 ?
                 `
                 <div class="bloque-especialidad">
@@ -723,9 +848,7 @@ function mostrarEspecialidad(departamento) {
                     </h3>
 
                     <div class="equipo-especialidad">
-
                         ${conduccionHTML}
-
                     </div>
 
                 </div>
@@ -736,7 +859,8 @@ function mostrarEspecialidad(departamento) {
 
 
             ${
-                departamento.instructores.length
+                departamento.instructores &&
+                departamento.instructores.length > 0
                 ?
                 `
                 <div class="bloque-especialidad">
@@ -747,9 +871,7 @@ function mostrarEspecialidad(departamento) {
                     </h3>
 
                     <ul class="lista-especialidad">
-
                         ${instructoresHTML}
-
                     </ul>
 
                 </div>
@@ -760,7 +882,8 @@ function mostrarEspecialidad(departamento) {
 
 
             ${
-                departamento.colaboradores.length
+                departamento.colaboradores &&
+                departamento.colaboradores.length > 0
                 ?
                 `
                 <div class="bloque-especialidad">
@@ -771,9 +894,7 @@ function mostrarEspecialidad(departamento) {
                     </h3>
 
                     <ul class="lista-especialidad">
-
                         ${colaboradoresHTML}
-
                     </ul>
 
                 </div>
@@ -782,9 +903,15 @@ function mostrarEspecialidad(departamento) {
                 ""
             }
 
+
         </div>
 
     `;
+
+
+    /* -----------------------------------------
+       ABRIR MODAL
+    ----------------------------------------- */
 
     modalEspecialidad.classList.add("mostrar");
 
@@ -792,10 +919,25 @@ function mostrarEspecialidad(departamento) {
 
 }
 
-cerrarEspecialidad.addEventListener("click", cerrarModalEspecialidad);
+
+/* =========================================================
+   CERRAR ESPECIALIDAD
+========================================================= */
+
+function cerrarModalEspecialidad() {
+
+    modalEspecialidad.classList.remove("mostrar");
+
+    document.body.style.overflow = "";
+
+}
 
 
-modalEspecialidad.addEventListener("click", function(e) {
+/* =========================================================
+   CLICK FUERA DE LA VENTANA
+========================================================= */
+
+modalEspecialidad.addEventListener("click", function (e) {
 
     if (e.target === modalEspecialidad) {
 
@@ -806,10 +948,26 @@ modalEspecialidad.addEventListener("click", function(e) {
 });
 
 
-function cerrarModalEspecialidad() {
+/* =========================================================
+   ESCAPE
+========================================================= */
 
-    modalEspecialidad.classList.remove("mostrar");
+document.addEventListener("keydown", function (e) {
 
-    document.body.style.overflow = "";
+    if (e.key === "Escape") {
 
-}
+        if (modalEspecialidad.classList.contains("mostrar")) {
+
+            cerrarModalEspecialidad();
+
+        }
+
+        else if (informacionZona.classList.contains("mostrar")) {
+
+            cerrarZona();
+
+        }
+
+    }
+
+});
