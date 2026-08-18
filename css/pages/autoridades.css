@@ -76,6 +76,10 @@
     max-width: 700px;
 }
 
+.hero-content span{
+    display:block;
+    color:#ffd166;
+}
 
 /* BADGE DEL HERO */
 
