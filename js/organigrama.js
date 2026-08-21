@@ -143,7 +143,7 @@ function mostrarPersona(persona) {
                 <img
                     src="${persona.foto}"
                     alt="${persona.nombre}"
-                    onerror="this.src='../img/organigrama/sin-foto.jpg';">
+                    onerror="this.src='../img/organigrama/sin-foto.PNG';">
 
             </div>
 
