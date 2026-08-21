@@ -191,7 +191,29 @@ body{
     font-size:clamp(2rem,5vw,4rem);
     font-weight:800;
 }
+.footer-content{
+    text-align:right;
+}
 
+.footer-copy{
+    text-align:right;
+}
+
+.footer-redes{
+    justify-content:flex-end;
+    margin-left:0;
+}
+
+@media (max-width:768px){
+    .footer-content,
+    .footer-copy{
+        text-align:center;
+    }
+
+    .footer-redes{
+        justify-content:center;
+    }
+}
 .hero span{
     display:block;
     color:#ffd166;
