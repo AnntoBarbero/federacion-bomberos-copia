@@ -411,16 +411,12 @@ body{
     box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
-
 .footer{
     position:relative;
     background:url('../img/pie/pie.png');
     background-size:cover;
     background-position:center;
-    color:#fff;
+    color:white;
 }
 
 .footer-overlay{
@@ -432,286 +428,96 @@ body{
 .footer-content{
     position:relative;
     z-index:10;
-    padding:90px 20px 30px;
+    text-align:center;
+    padding:100px 20px;
 }
-
-
-/* =========================================================
-   CONTENIDO PRINCIPAL DEL FOOTER
-========================================================= */
 
 .footer-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns:1fr 2fr;
     gap:60px;
-
-    align-items:start;
-
-    text-align:left;
-}
-
-
-/* =========================================================
-   COLUMNA PRINCIPAL
-========================================================= */
-
-.footer-cta-box{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-start;
-
-    align-items:flex-start;
 }
 
 .footer-cta-box h2{
-
-    font-family:'Montserrat',sans-serif;
-
     font-size:2rem;
-
-    line-height:1.2;
-
+    line-height:1.1;
     margin-bottom:20px;
-
-    font-weight:700;
-
+    font-family:'Montserrat',sans-serif;
+    font-weight: 700;
 }
 
 .footer-cta-box p{
-
     margin-bottom:25px;
-
-    color:#ddd;
-
-    line-height:1.7;
-
 }
-
-
-/* =========================================================
-   COLUMNAS DE LINKS
-========================================================= */
 
 .footer-inferior{
-
-    display:contents;
-
-}
-
-
-.footer-links{
-
-    min-width:0;
-
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
 }
 
 .footer-links h3{
-
-    margin:0 0 20px;
-
+    margin-bottom:20px;
     color:#fff;
-
-    font-family:'Montserrat',sans-serif;
-
-    font-size:1.1rem;
-
-    font-weight:700;
-
 }
 
 .footer-links ul{
-
     list-style:none;
-
     padding:0;
-
-    margin:0;
-
 }
 
 .footer-links li{
-
     margin-bottom:12px;
-
 }
 
 .footer-links a{
-
     color:#ddd;
-
     text-decoration:none;
-
-    transition:.3s ease;
-
+    transition:.3s;
 }
 
 .footer-links a:hover{
-
     color:#c1121f;
-
-    padding-left:5px;
-
 }
-
-
-/* =========================================================
-   REDES SOCIALES
-========================================================= */
 
 .footer-redes{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:flex-start;
-
-    gap:15px;
-
     margin-top:20px;
-
-    margin-left:0;
-
-}
-
-.footer-redes a{
-
-    width:40px;
-
-    height:40px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.10);
-
     display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    transition:.3s ease;
-
+    gap:15px;
+    margin-left: 47px;
 }
 
 .footer-redes a i{
-
     color:#fff;
+    transition:.3s;
+}
 
-    transition:.3s ease;
-
+.footer-redes a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(255,255,255,.10);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    transition:.3s;
 }
 
 .footer-redes a:hover{
-
     background:#c1121f;
-
     transform:translateY(-3px);
-
 }
-
-
-/* =========================================================
-   LÍNEA INFERIOR
-========================================================= */
 
 .footer-linea{
-
     height:1px;
-
     background:rgba(255,255,255,.15);
-
-    margin:50px 0 20px;
-
+    margin:40px 0 20px;
 }
-
-
-/* =========================================================
-   COPYRIGHT
-========================================================= */
 
 .footer-copy{
-
     text-align:center;
-
     color:#ccc;
-
-    font-size:.9rem;
-
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width:992px){
-
-    .footer-grid{
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap:40px;
-
-    }
-
-}
-
-
-@media (max-width:768px){
-
-    .footer-content{
-
-        padding:70px 20px 25px;
-
-    }
-
-    .footer-grid{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-
-        text-align:center;
-
-    }
-
-    .footer-cta-box{
-
-        align-items:center;
-
-    }
-
-    .footer-links{
-
-        text-align:center;
-
-    }
-
-    .footer-redes{
-
-        justify-content:center;
-
-    }
-
-    .footer-copy{
-
-        text-align:center;
-
-    }
-
 }
 /* ACCESOS RAPIDOS */
 
