@@ -71,7 +71,7 @@ const personasOrganigrama = {
     },
 
     "jorge-fredes": {
-        nombre: "J. Fredes Fdez.",
+        nombre: "Jorgelina Fernández.",
         cargo: "Director",
         zona: "Zona 4",
         asociacion: "Anguil",
