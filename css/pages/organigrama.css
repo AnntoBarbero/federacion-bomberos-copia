@@ -70,7 +70,8 @@
 ========================================================= */
 
 .org-card.principal {
-    min-width: 300px;
+    width: 375px;
+    min-width: 375px;
     border-width: 3px;
 }
 
@@ -160,14 +161,24 @@
 
 .nivel {
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 40px;
 }
 
+/* =========================================================
+   SEGUNDO NIVEL
+========================================================= */
+
+.nivel-dos {
+    gap: 50px;
+}
+
+.nivel-dos .org-card {
+    width: 360px;
+    min-width: 360px;
+}
 
 /* =========================================================
    REGIONALES
@@ -175,6 +186,11 @@
 
 .nivel-regionales {
     gap: 80px;
+}
+
+.nivel-regionales .org-card {
+    width: 340px;
+    min-width: 340px;
 }
 
 .regional {
