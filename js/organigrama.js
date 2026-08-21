@@ -47,7 +47,7 @@ const personasOrganigrama = {
         cargo: "Director",
         zona: "Zona 1",
         asociacion: "Alta Italia",
-        foto: "../img/organigrama/cesar-verna.jpg"
+        foto: "../img/organigrama/cesar_verna.png"
     },
 
     "ignacio-chiurazzi": {
