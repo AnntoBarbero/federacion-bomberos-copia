@@ -9,20 +9,23 @@ const personasOrganigrama = {
 
     "andres-adoubert": {
         nombre: "Andrés Adoubert",
-        cargo: "Director",
-        foto: "../img/organigrama/andres-adoubert.jpg"
+        cargo: "Director Escuela de capacitación",
+        foto: "../img/organigrama/Andres_Adoubert.PNG",
+        asociacion:"Altaliva Roca"
     },
 
     "perez-campana": {
         nombre: "S. Pérez Campana",
-        cargo: "Vicedirector",
-        foto: "../img/organigrama/perez-campana.jpg"
+        cargo: "Vicedirector Escuela de capacitación ",
+        foto: "../img/organigrama/Sebastian_Perez.PNG",
+        asociacion: "Trenel"
     },
 
     "gabriela-paoli": {
         nombre: "Gabriela Paoli",
         cargo: "Coord. Departamentos",
-        foto: "../img/organigrama/gabriela-paoli.jpg"
+        foto: "../img/organigrama/Gabriela_Paoli.PNG",
+        asociacion:"Realicó"
     },
 
     "carla-gonzalez": {
@@ -33,8 +36,9 @@ const personasOrganigrama = {
 
     "daniela-marin": {
         nombre: "Daniela Marín",
-        cargo: "Regional Sur",
-        foto: "../img/organigrama/daniela-marin.jpg"
+        cargo: "Coordinadora Regional Sur",
+        foto: "../img/organigrama/Daniela_Marin.PNG",
+        asociacion: "Alpachiri"
     },
 
 
@@ -55,31 +59,31 @@ const personasOrganigrama = {
         cargo: "Director",
         zona: "Zona 2",
         asociacion: "",
-        foto: "../img/organigrama/ignacio-chiurazzi.jpg"
+        foto: "../img/organigrama/Ignacio_Chiurazzi.PNG"
     },
 
     "heber-yrigoyen": {
         nombre: "Heber Yrigoyen",
         cargo: "Director",
         zona: "Zona 3",
-        asociacion: "",
-        foto: "../img/organigrama/heber-yrigoyen.jpg"
+        asociacion: "Victorica",
+        foto: "../img/organigrama/Heber_Yrigoyen.PNG"
     },
 
     "jorge-fredes": {
         nombre: "J. Fredes Fdez.",
         cargo: "Director",
         zona: "Zona 4",
-        asociacion: "",
-        foto: "../img/organigrama/jorge-fredes.jpg"
+        asociacion: "Anguil",
+        foto: "../img/organigrama/Jorgelina_Fernandez.PNG"
     },
 
     "mariela-munoz": {
         nombre: "Mariela Muñoz",
         cargo: "Directora",
         zona: "Zona 5",
-        asociacion: "",
-        foto: "../img/organigrama/mariela-munoz.jpg"
+        asociacion: "Toay",
+        foto: "../img/organigrama/Mariela_Munioz.PNG"
     },
 
     "eliana-cleman": {
@@ -87,7 +91,7 @@ const personasOrganigrama = {
         cargo: "Directora",
         zona: "Zona 6",
         asociacion: "",
-        foto: "../img/organigrama/eliana-cleman.jpg"
+        foto: "../img/organigrama/Eliana_Cleman.PNG"
     }
 
 };
