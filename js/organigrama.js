@@ -8,9 +8,9 @@
 const personasOrganigrama = {
 
     "andres-adoubert": {
-        nombre: "Andrés Adoubert",
+        nombre: "Andrés Audubert",
         cargo: "Director Escuela de capacitación",
-        foto: "../img/organigrama/Andres_Adoubert.PNG",
+        foto: "../img/organigrama/Andres_Audubert.PNG",
         asociacion:"Altaliva Roca"
     },
 
@@ -31,7 +31,7 @@ const personasOrganigrama = {
     "carla-gonzalez": {
         nombre: "Carla González",
         cargo: "Regional Norte/Oeste",
-        foto: "../img/organigrama/carla-gonzalez.jpg"
+        foto: "../img/organigrama/Carla_Gonzales.PNG"
     },
 
     "daniela-marin": {
