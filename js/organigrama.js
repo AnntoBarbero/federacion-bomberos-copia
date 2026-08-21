@@ -82,7 +82,7 @@ const informacionZonas = {
             },
             {
                 cargo: "Vice Directora",
-                nombre: "Fiama Pico"
+                nombre: "Fiama Picco"
             },
             {
                 cargo: "Secretaria",
