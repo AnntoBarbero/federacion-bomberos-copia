@@ -956,6 +956,258 @@
     color: #c1121f;
 }
 
+/* =========================================================
+   MODAL DE PERSONA
+========================================================= */
+
+.modal-persona {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 11000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+}
+
+
+/* =========================================================
+   MODAL ABIERTO
+========================================================= */
+
+.modal-persona.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================================
+   VENTANA PERSONA
+========================================================= */
+
+.ventana-persona {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, .35);
+
+    transform: translateY(30px) scale(.95);
+
+    transition: transform .3s ease;
+}
+
+
+.modal-persona.mostrar .ventana-persona {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.cerrar-persona {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, .15);
+
+    color: #fff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .25s ease;
+}
+
+
+.cerrar-persona:hover {
+    background: rgba(0, 0, 0, .3);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   PERFIL DE PERSONA
+========================================================= */
+
+.perfil-persona {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 45px 40px;
+}
+
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.foto-persona {
+    width: 210px;
+    height: 210px;
+
+    min-width: 210px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #f1f1f1;
+
+    border: 6px solid #c1121f;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .15);
+}
+
+
+.foto-persona img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   DATOS PERSONA
+========================================================= */
+
+.datos-persona {
+    flex: 1;
+}
+
+
+.datos-persona h2 {
+    margin: 0 0 12px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    color: #222;
+}
+
+
+.datos-persona p {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 12px 0;
+
+    color: #555;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+}
+
+
+.datos-persona p i {
+    width: 20px;
+
+    color: #c1121f;
+
+    text-align: center;
+}
+
+
+/* CARGO */
+
+.datos-persona .cargo-persona-modal {
+    color: #c1121f;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PERSONAS CLICKEABLES
+========================================================= */
+
+.persona-organigrama {
+    cursor: pointer;
+}
+
+
+.persona-organigrama h3 {
+    transition: color .25s ease;
+}
+
+
+.persona-organigrama:hover h3 {
+    color: #c1121f;
+}
+
+
+/* =========================================================
+   ZONAS CLICKEABLES
+========================================================= */
+
+.zona-org.persona-organigrama {
+    cursor: pointer;
+}
+
+
+.zona-org.persona-organigrama:focus {
+    outline: none;
+}
+
+
+.zona-org.persona-organigrama:focus-visible {
+    outline: 3px solid rgba(193, 18, 31, .3);
+    outline-offset: 3px;
+}
 
 /* =========================================================
    ANIMACIÓN
@@ -1114,6 +1366,52 @@
         grid-template-columns: 1fr;
     }
 
+        /* =====================================================
+       MODAL PERSONA
+    ===================================================== */
+
+    .modal-persona {
+        padding: 15px;
+    }
+
+    .ventana-persona {
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+        border-radius: 18px;
+    }
+
+    .perfil-persona {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+        padding: 40px 25px;
+    }
+
+    .foto-persona {
+        width: 170px;
+        height: 170px;
+
+        min-width: 170px;
+    }
+
+    .datos-persona h2 {
+        font-size: 24px;
+    }
+
+    .datos-persona p {
+        justify-content: center;
+
+        font-size: 14px;
+    }
+
+    .datos-persona .cargo-persona-modal {
+        font-size: 16px;
+    }
 }
 
 
@@ -1138,6 +1436,26 @@
 
     .especialidad-card strong {
         font-size: 12px;
+    }
+        .perfil-persona {
+        padding: 35px 20px;
+    }
+
+    .foto-persona {
+        width: 145px;
+        height: 145px;
+
+        min-width: 145px;
+
+        border-width: 5px;
+    }
+
+    .datos-persona h2 {
+        font-size: 21px;
+    }
+
+    .datos-persona p {
+        font-size: 13px;
     }
 
 }

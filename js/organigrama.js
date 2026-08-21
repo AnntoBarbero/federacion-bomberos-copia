@@ -1,6 +1,256 @@
 /* =========================================================
    INFORMACIÓN DE ZONAS
 ========================================================= */
+/* =========================================================
+   PERSONAS DEL ORGANIGRAMA
+========================================================= */
+
+const personasOrganigrama = {
+
+    "andres-adoubert": {
+        nombre: "Andrés Adoubert",
+        cargo: "Director",
+        foto: "../img/organigrama/andres-adoubert.jpg"
+    },
+
+    "perez-campana": {
+        nombre: "S. Pérez Campana",
+        cargo: "Vicedirector",
+        foto: "../img/organigrama/perez-campana.jpg"
+    },
+
+    "gabriela-paoli": {
+        nombre: "Gabriela Paoli",
+        cargo: "Coord. Departamentos",
+        foto: "../img/organigrama/gabriela-paoli.jpg"
+    },
+
+    "carla-gonzalez": {
+        nombre: "Carla González",
+        cargo: "Regional Norte/Oeste",
+        foto: "../img/organigrama/carla-gonzalez.jpg"
+    },
+
+    "daniela-marin": {
+        nombre: "Daniela Marín",
+        cargo: "Regional Sur",
+        foto: "../img/organigrama/daniela-marin.jpg"
+    },
+
+
+    /* =========================
+       ZONAS
+    ========================= */
+
+    "cesar-verna": {
+        nombre: "Cesar Verna",
+        cargo: "Director",
+        zona: "Zona 1",
+        asociacion: "Alta Italia",
+        foto: "../img/organigrama/cesar-verna.jpg"
+    },
+
+    "ignacio-chiurazzi": {
+        nombre: "Ignacio Chiurazzi",
+        cargo: "Director",
+        zona: "Zona 2",
+        asociacion: "",
+        foto: "../img/organigrama/ignacio-chiurazzi.jpg"
+    },
+
+    "heber-yrigoyen": {
+        nombre: "Heber Yrigoyen",
+        cargo: "Director",
+        zona: "Zona 3",
+        asociacion: "",
+        foto: "../img/organigrama/heber-yrigoyen.jpg"
+    },
+
+    "jorge-fredes": {
+        nombre: "J. Fredes Fdez.",
+        cargo: "Director",
+        zona: "Zona 4",
+        asociacion: "",
+        foto: "../img/organigrama/jorge-fredes.jpg"
+    },
+
+    "mariela-munoz": {
+        nombre: "Mariela Muñoz",
+        cargo: "Directora",
+        zona: "Zona 5",
+        asociacion: "",
+        foto: "../img/organigrama/mariela-munoz.jpg"
+    },
+
+    "eliana-cleman": {
+        nombre: "Eliana Cleman",
+        cargo: "Directora",
+        zona: "Zona 6",
+        asociacion: "",
+        foto: "../img/organigrama/eliana-cleman.jpg"
+    }
+
+};
+
+/* =========================================================
+   MODAL DE PERSONAS
+========================================================= */
+
+const modalPersona =
+    document.getElementById("modal-persona");
+
+const contenidoPersona =
+    document.getElementById("contenido-persona");
+
+const cerrarPersona =
+    document.getElementById("cerrar-persona");
+
+
+/* =========================================================
+   ABRIR PERSONA
+========================================================= */
+
+document.querySelectorAll(".persona-organigrama").forEach(persona => {
+
+    persona.addEventListener("click", function () {
+
+        const idPersona = this.dataset.persona;
+
+        const personaData =
+            personasOrganigrama[idPersona];
+
+        if (!personaData) return;
+
+        mostrarPersona(personaData);
+
+    });
+
+});
+
+
+/* =========================================================
+   MOSTRAR PERSONA
+========================================================= */
+
+function mostrarPersona(persona) {
+
+    contenidoPersona.innerHTML = `
+
+        <div class="perfil-persona">
+
+            <div class="foto-persona">
+
+                <img
+                    src="${persona.foto}"
+                    alt="${persona.nombre}"
+                    onerror="this.src='../img/organigrama/sin-foto.jpg';">
+
+            </div>
+
+
+            <div class="datos-persona">
+
+                <h2>
+                    ${persona.nombre}
+                </h2>
+
+                <p class="cargo-persona-modal">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    ${persona.cargo}
+
+                </p>
+
+
+                ${
+                    persona.zona
+                    ?
+                    `
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        ${persona.zona}
+                    </p>
+                    `
+                    :
+                    ""
+                }
+
+
+                ${
+                    persona.asociacion
+                    ?
+                    `
+                    <p>
+                        <i class="fa-solid fa-building"></i>
+                        Asociación: ${persona.asociacion}
+                    </p>
+                    `
+                    :
+                    ""
+                }
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    modalPersona.classList.add("mostrar");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================================
+   CERRAR
+========================================================= */
+
+cerrarPersona.addEventListener(
+    "click",
+    cerrarModalPersona
+);
+
+
+function cerrarModalPersona() {
+
+    modalPersona.classList.remove("mostrar");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================================================
+   CERRAR HACIENDO CLICK AFUERA
+========================================================= */
+
+modalPersona.addEventListener("click", function (e) {
+
+    if (e.target === modalPersona) {
+
+        cerrarModalPersona();
+
+    }
+
+});
+
+
+/* =========================================================
+   ESC
+========================================================= */
+
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape") {
+
+        cerrarModalPersona();
+
+    }
+
+});
 
 const informacionZonas = {
 
@@ -228,7 +478,10 @@ botonesZona.forEach(boton => {
 
     boton.addEventListener("click", function () {
 
+        if (this.dataset.persona) return;
+
         const numeroZona = this.dataset.zona;
+
         const zona = informacionZonas[numeroZona];
 
         if (!zona) return;
