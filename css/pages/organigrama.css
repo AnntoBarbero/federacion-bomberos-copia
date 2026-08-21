@@ -39,18 +39,6 @@
 
 
 /* =========================================================
-   NIVELES
-========================================================= */
-
-.nivel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-
-/* =========================================================
    TARJETAS DEL ORGANIGRAMA
 ========================================================= */
 
@@ -140,10 +128,44 @@
 ========================================================= */
 
 .linea-vertical {
-    width: 2px;
-    height: 40px;
+    width: 3px;
+    height: 45px;
 
     background: #ff9d4d;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   CENTRADO DE LOS NIVELES
+========================================================= */
+
+.nivel-director,
+.nivel-dos,
+.nivel-regionales {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================================
+   NIVELES
+========================================================= */
+
+.nivel {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
 }
 
 
