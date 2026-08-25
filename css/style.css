@@ -151,14 +151,9 @@ body{
     transform:translateY(0);
 }
 
-.dropdown.active > a i{
-    transform:rotate(180deg);
-}
-
+.dropdown.active > a i,
 .dropdown:hover i{
-
     transform:rotate(180deg);
-
 }
 
 .hero{
@@ -207,12 +202,21 @@ body{
     display:flex;
     justify-content:center;
     gap:20px;
+}
+
+.btn-principal,
+.btn-secundario {
+    display:inline-block;
+    text-decoration:none;
     padding:15px 30px;
     border-radius:50px;
-    text-decoration:none;
     font-weight:600;
-
     transition:all .3s ease;
+}
+
+.btn-principal{
+    background:#c1121f;
+    color:white;
 }
 
 .btn-principal:hover{
@@ -221,28 +225,9 @@ body{
     box-shadow:0 10px 25px rgba(193,18,31,.35);
 }
 
-.btn-principal,
-.btn-secundario {
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-.btn-principal{
-    background:#c1121f;
-    color:white;
-}
-
 .btn-secundario{
     background:#fff;
     color:#111;
-    padding:15px 30px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-
-    transition:all .3s ease;
 }
 
 .btn-secundario:hover{
