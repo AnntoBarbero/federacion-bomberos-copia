@@ -1,15 +1,4 @@
-/*SEMPRE PAGE*/
-
-:root{
-
-    --rojo:#c1121f;
-    --rojo-hover:#a40f1a;
-    --oscuro:#151515;
-    --gris:#f6f7fb;
-    --texto:#555;
-    --blanco:#fff;
-
-}
+/*SEMPRE*/
 
 /*SECCIONES*/
 
@@ -18,7 +7,7 @@
 }
 
 .fondo-gris{
-    background:var(--gris);
+    background:#f6f7fb;
 }
 
 /*HERO*/
@@ -111,7 +100,7 @@
     align-items:center;
     background:linear-gradient(
         135deg,
-        var(--rojo),
+        #c1121f,
         #ef233c
     );
     color:#fff;
@@ -157,7 +146,7 @@
     height:90px;
     border-radius:20px;
     background:#ffe7ea;
-    color:var(--rojo);
+    color:#c1121f;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -189,22 +178,22 @@
 }
 
 .btn-ver{
-    background:var(--rojo);
+    background:#c1121f;
     color:#fff;
 }
 
 .btn-ver:hover{
-    background:var(--rojo-hover);
+    background:#a40f1a;
     transform:translateY(-3px);
 }
 
 .btn-descargar{
-    border:2px solid var(--rojo);
-    color:var(--rojo);
+    border:2px solid #c1121f;
+    color:var#c1121f;
 }
 
 .btn-descargar:hover{
-    background:var(--rojo);
+    background:#c1121f;
     color:#fff;
     transform:translateY(-3px);
 }
