@@ -84,16 +84,20 @@
 /* BADGE DEL HERO */
 
 /* Etiqueta roja del Hero */
-.autoridades-hero .hero-badge {
+.hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 30px;
-    padding: 12px 24px;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    max-width: max-content;
+    background: var(--rojo-cuarteles);
+    color: var(--blanco-cuarteles);
+    padding: 10px 22px;
     border-radius: 50px;
-    background: var(--rojo);
-    color: var(--blanco);
     font-weight: 700;
+    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
 }
 
 /* Palabra institucional en amarillo */
