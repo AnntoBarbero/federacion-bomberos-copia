@@ -1,78 +1,54 @@
-/* =========================================================
-   AUTORIDADES
-   Federación de Bomberos Voluntarios de La Pampa
-   ========================================================= */
+/* ESTILOS PARA AUTORIDADES */
 
-
-/* =========================================================
-   VARIABLES LOCALES
-   NO modificar variables globales del sitio
-   ========================================================= */
-
-.autoridades-page {
-    --autoridades-rojo: #c1121f;
-    --autoridades-rojo-hover: #a40f1a;
-    --autoridades-rojo-claro: #e63946;
-
-    --autoridades-gris: #f6f7fb;
-    --autoridades-texto: #5b5b5b;
-    --autoridades-texto-secundario: #666666;
-
-    --autoridades-oscuro: #1b1b1b;
-    --autoridades-blanco: #ffffff;
-
-    --autoridades-amarillo: #ffd166;
-
-    --autoridades-sombra-suave:
-        0 10px 30px rgba(0, 0, 0, 0.08);
-
-    --autoridades-sombra-media:
-        0 15px 40px rgba(0, 0, 0, 0.10);
+/* VARIABLES */
+:root {
+    --rojo: #c1121f;
+    --rojo-hover: #a40f1a;
+    --gris: #f6f7fb;
+    --texto: #5b5b5b;
+    --oscuro: #1b1b1b;
+    --blanco: #ffffff;
+    --amarillo:#ffd166;
 }
 
-
-/* =========================================================
-   SECCIONES
-   ========================================================= */
-
+/* Espaciado general de las secciones */
 .autoridades-section {
     padding: 100px 0;
 }
 
-.autoridades-section.fondo-gris {
-    background: var(--autoridades-gris);
+/* Fondo gris */
+.fondo-gris {
+    background: var(--gris);
 }
 
+/* TÍTULOS DE SECCIÓN */
 
-/* =========================================================
-   TÍTULOS DE SECCIÓN
-   ========================================================= */
-
-.autoridades-page .titulo-seccion {
+/* Contenedor del título */
+.titulo-seccion {
     text-align: center;
     margin-bottom: 70px;
 }
 
-.autoridades-page .titulo-seccion h2 {
+/* Título principal */
+.titulo-seccion h2 {
     margin-bottom: 20px;
-    color: var(--autoridades-oscuro);
+    color: var(--oscuro);
     font-size: 3rem;
     font-weight: 800;
-    line-height: 1.2;
 }
 
-.autoridades-page .titulo-seccion p {
+/* Texto debajo del título */
+.titulo-seccion p {
     max-width: 750px;
     margin: 0 auto;
-    color: var(--autoridades-texto-secundario);
+    color: var(--texto-secundario);
     line-height: 1.9;
 }
 
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* HERO */
 
+/* Sección principal de autoridades */
 .autoridades-hero {
     position: relative;
     display: flex;
@@ -81,13 +57,10 @@
     min-height: 600px;
 }
 
-
-/* Capa oscura */
-
+/* Capa oscura sobre la imagen */
 .autoridades-hero .overlay {
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.82),
@@ -96,70 +69,61 @@
     );
 }
 
-
-/* Contenido */
-
+/* Contenido del Hero */
 .autoridades-hero .hero-content {
     position: relative;
     z-index: 5;
     max-width: 700px;
 }
 
+.hero-content span{
+    display:block;
+    color:var(--amarillo);
+}
 
-/* IMPORTANTE:
-   No usar .hero-content span global.
-   Solo afecta el badge de autoridades.
-*/
+/* BADGE DEL HERO */
 
+/* Etiqueta roja del Hero */
 .autoridades-hero .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-
     margin-bottom: 30px;
     padding: 12px 24px;
-
     border-radius: 50px;
-
-    background: var(--autoridades-rojo);
-    color: var(--autoridades-amarillo);
-
+    background: var(--rojo);
+    color: var(--blanco);
     font-weight: 700;
 }
 
+/* Palabra institucional en amarillo */
+.autoridades-hero .hero-badge {
+    color: var(--amarillo);
+}
 
-/* Icono */
-
+/* Icono dentro del badge */
 .autoridades-hero .hero-badge i {
-    color: var(--autoridades-amarillo);
     font-size: 1rem;
 }
 
 
-/* =========================================================
-   TÍTULO HERO
-   ========================================================= */
+/* TÍTULO DEL HERO */
 
+/* Título principal del Hero */
 .autoridades-hero h1 {
     margin-bottom: 30px;
-
-    color: var(--autoridades-blanco);
-
+    color: var(--blanco);
     font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.05;
 }
 
-
-/* Parte destacada */
-
+/* Parte destacada del título */
 .autoridades-hero h1 span {
-    color: var(--autoridades-amarillo);
+    color: var(--amarillo);
 }
 
-
-/* Texto */
-
+/* Texto del Hero */
 .autoridades-hero p {
     color: #ededed;
     font-size: 1.15rem;
@@ -167,324 +131,257 @@
 }
 
 
-/* =========================================================
-   INTRODUCCIÓN
-   ========================================================= */
+/* INTRODUCCIÓN */
 
+/* Tarjeta de introducción */
 .intro-card {
     display: flex;
     align-items: center;
-
     gap: 40px;
-
     padding: 60px;
-
-    background: var(--autoridades-blanco);
-
+    background: var(--blanco);
     border-radius: 25px;
-
-    box-shadow: var(--autoridades-sombra-media);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+    box-shadow: var(--sombra-media);
+    transition: transform 0.35s ease;
 }
 
-
+/* Efecto al pasar el mouse */
 .intro-card:hover {
     transform: translateY(-6px);
 }
 
 
-/* =========================================================
-   ICONO INTRODUCCIÓN
-   ========================================================= */
+/* ICONO INTRODUCCIÓN */
 
+/* Círculo del icono */
 .intro-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
-
     width: 110px;
     height: 110px;
-
     border-radius: 50%;
-
     background: linear-gradient(
         135deg,
-        var(--autoridades-rojo),
-        var(--autoridades-rojo-claro)
+        var(--rojo),
+        var(--rojo-claro)
     );
-
-    color: var(--autoridades-blanco);
-
+    color: var(--blanco);
     font-size: 45px;
 }
 
 
-/* =========================================================
-   TEXTO INTRODUCCIÓN
-   ========================================================= */
+/* TEXTO INTRODUCCIÓN */
 
+/* Título de introducción */
 .intro-texto h2 {
     margin-bottom: 20px;
-
-    color: var(--autoridades-oscuro);
-
+    color: var(--oscuro);
     font-size: 2rem;
     font-weight: 800;
 }
 
-
+/* Texto de introducción */
 .intro-texto p {
     margin: 0;
-
-    color: var(--autoridades-texto);
-
+    color: var(--texto);
     line-height: 2;
 }
 
 
-/* =========================================================
-   PRESIDENTE
-   ========================================================= */
+/* PRESIDENTE */
 
+/* Tarjeta principal del presidente */
 .presidente-card {
     display: grid;
-
     grid-template-columns: 350px 1fr;
-
     overflow: hidden;
-
-    background: var(--autoridades-blanco);
-
+    background: var(--blanco);
     border-radius: 30px;
-
-    box-shadow: var(--autoridades-sombra-media);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+    box-shadow: var(--sombra-media);
+    transition: transform 0.35s ease;
 }
 
-
+/* Efecto al pasar el mouse */
 .presidente-card:hover {
     transform: translateY(-6px);
 }
 
 
-/* =========================================================
-   FOTO PRESIDENTE
-   ========================================================= */
+/* FOTO PRESIDENTE */
 
+/* Imagen del presidente */
 .presidente-card img {
-    display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center top;
-
-    user-select: none;
 }
 
 
-/* =========================================================
-   INFORMACIÓN PRESIDENTE
-   ========================================================= */
+/* INFORMACIÓN PRESIDENTE */
 
+/* Contenedor de la información */
 .presidente-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 60px;
 }
 
-
+/* Cargo del presidente */
 .presidente-info .cargo {
     display: inline-block;
-
     width: max-content;
-
     margin-bottom: 25px;
     padding: 10px 22px;
-
     border-radius: 50px;
-
-    background: var(--autoridades-rojo);
-
-    color: var(--autoridades-blanco);
-
+    background: var(--rojo);
+    color: var(--blanco);
     font-weight: 700;
 }
 
-
+/* Nombre del presidente */
 .presidente-info h2 {
     margin-bottom: 20px;
-
-    color: var(--autoridades-oscuro);
-
+    color: var(--oscuro);
     font-size: 2.4rem;
     font-weight: 800;
 }
 
-
+/* Descripción del presidente */
 .presidente-info p {
     margin: 0;
-
-    color: var(--autoridades-texto-secundario);
-
+    color: var(--texto-secundario);
     line-height: 1.9;
 }
 
 
-/* =========================================================
-   GRID DE AUTORIDADES
-   ========================================================= */
+/* GRID DE AUTORIDADES */
 
+/* Distribución de las tarjetas */
 .autoridades-grid {
     display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(270px, 1fr)
-        );
-
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(270px, 1fr)
+    );
     gap: 35px;
 }
 
 
-/* =========================================================
-   TARJETA AUTORIDAD
-   ========================================================= */
+/* TARJETA DE AUTORIDAD */
 
+/* Tarjeta individual */
 .autoridad-card {
-    min-width: 0;
-
     overflow: hidden;
-
-    background: var(--autoridades-blanco);
-
+    background: var(--blanco);
     border: 2px solid transparent;
-
     border-radius: 22px;
-
-    box-shadow: var(--autoridades-sombra-suave);
-
+    box-shadow: var(--sombra-suave);
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease,
         border-color 0.35s ease;
 }
 
-
+/* Efecto al pasar el mouse */
 .autoridad-card:hover {
     transform: translateY(-10px);
-
-    border-color: var(--autoridades-rojo);
-
+    border-color: var(--rojo);
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.12),
         0 0 0 4px rgba(193, 18, 31, 0.08);
 }
 
 
-/* =========================================================
-   FOTO AUTORIDAD
-   ========================================================= */
+/* FOTO DE AUTORIDAD */
 
+/* Imagen de cada autoridad */
 .autoridad-card img {
     display: block;
-
     width: 100%;
     height: 320px;
-
     object-fit: cover;
     object-position: center top;
-
-    user-select: none;
 }
 
 
-/* =========================================================
-   INFORMACIÓN AUTORIDAD
-   ========================================================= */
+/* INFORMACIÓN DE AUTORIDAD */
 
+/* Texto de la tarjeta */
 .autoridad-info {
     padding: 30px;
-
     text-align: center;
 }
 
-
+/* Nombre de la autoridad */
 .autoridad-info h3 {
     margin-bottom: 10px;
-
-    color: var(--autoridades-texto);
-
+    color: var(--texto);
     font-size: 1.35rem;
     font-weight: 700;
-
     line-height: 1.3;
 }
 
-
+/* Cargo de la autoridad */
 .autoridad-info span {
     display: inline-block;
-
-    color: var(--autoridades-rojo);
-
+    color: var(--rojo);
     font-weight: 600;
 }
 
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* AJUSTES PARA SECCIONES CON MUCHAS AUTORIDADES */
+
+/* Evita problemas de tamaño en las tarjetas */
+.autoridades-grid .autoridad-card {
+    min-width: 0;
+}
 
 
-/* =========================================================
-   TABLETS
-   ========================================================= */
+/* ACCESIBILIDAD */
 
+/* Evita seleccionar las imágenes con el mouse */
+.autoridad-card img,
+.presidente-card img {
+    user-select: none;
+}
+
+
+/* RESPONSIVE ESPECÍFICO DE AUTORIDADES */
+
+/* Pantallas de hasta 992px */
 @media (max-width: 992px) {
 
+    /* Reduce la altura mínima del Hero */
     .autoridades-hero {
         min-height: 520px;
     }
 
-
-    /* Presidente */
-
+    /* Presidente pasa de dos columnas a una */
     .presidente-card {
         grid-template-columns: 1fr;
     }
 
-
+    /* Altura de la foto del presidente */
     .presidente-card img {
         height: 420px;
     }
 
-
+    /* Reduce el espacio de información */
     .presidente-info {
         padding: 40px;
     }
 
-
-    /* Introducción */
-
+    /* La introducción pasa a formato vertical */
     .intro-card {
         flex-direction: column;
-
         text-align: center;
     }
 
-
+    /* Texto de introducción justificado */
     .intro-texto p {
         text-align: justify;
     }
@@ -492,34 +389,32 @@
 }
 
 
-/* =========================================================
-   TABLETS PEQUEÑAS / MÓVILES
-   ========================================================= */
+/* TABLETS / MÓVILES */
 
+/* Pantallas de hasta 768px */
 @media (max-width: 768px) {
 
+    /* Reduce el espacio de las secciones */
     .autoridades-section {
         padding: 70px 0;
     }
 
-
-    .autoridades-page .titulo-seccion {
+    /* Reduce el margen del título */
+    .titulo-seccion {
         margin-bottom: 45px;
     }
 
-
-    .autoridades-page .titulo-seccion h2 {
+    /* Reduce el tamaño del título */
+    .titulo-seccion h2 {
         font-size: 2.2rem;
     }
 
-
-    /* Introducción */
-
+    /* Reduce el tamaño de la tarjeta */
     .intro-card {
         padding: 40px 30px;
     }
 
-
+    /* Reduce el icono */
     .intro-icon {
         width: 90px;
         height: 90px;
@@ -527,28 +422,23 @@
         font-size: 35px;
     }
 
-
+    /* Reduce el título de introducción */
     .intro-texto h2 {
         font-size: 1.7rem;
     }
 
-
-    /* Presidente */
-
+    /* Centra la información del presidente */
     .presidente-info {
         align-items: center;
-
         text-align: center;
     }
 
-
+    /* Reduce el nombre del presidente */
     .presidente-info h2 {
         font-size: 2rem;
     }
 
-
-    /* Autoridades */
-
+    /* Ajusta la altura de las fotos */
     .autoridad-card img {
         height: 340px;
     }
@@ -556,68 +446,62 @@
 }
 
 
-/* =========================================================
-   MÓVILES
-   ========================================================= */
+/* MÓVILES PEQUEÑOS */
 
+/* Pantallas de hasta 585px */
 @media (max-width: 585px) {
 
+    /* Ajusta la altura del Hero */
     .autoridades-hero {
         min-height: 520px;
     }
 
-
+    /* Reduce el título del Hero */
     .autoridades-hero h1 {
         font-size: 2.5rem;
     }
 
-
+    /* Reduce el texto del Hero */
     .autoridades-hero p {
         font-size: 1rem;
     }
 
-
-    .autoridades-page .titulo-seccion h2 {
+    /* Reduce el título de sección */
+    .titulo-seccion h2 {
         font-size: 2rem;
     }
 
-
-    /* Introducción */
-
+    /* Reduce el padding de introducción */
     .intro-card {
         padding: 25px 20px;
     }
 
-
-    /* Presidente */
-
+    /* Ajusta la foto del presidente */
     .presidente-card img {
         height: 330px;
     }
 
-
+    /* Reduce el espacio de información */
     .presidente-info {
         padding: 30px 25px;
     }
 
-
+    /* Reduce el nombre del presidente */
     .presidente-info h2 {
         font-size: 1.8rem;
     }
 
-
-    /* Autoridades */
-
+    /* Ajusta las fotos de autoridades */
     .autoridad-card img {
         height: 320px;
     }
 
-
+    /* Reduce el espacio de la información */
     .autoridad-info {
         padding: 25px 20px;
     }
 
-
+    /* Reduce el nombre de la autoridad */
     .autoridad-info h3 {
         font-size: 1.2rem;
     }
