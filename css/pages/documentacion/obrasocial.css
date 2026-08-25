@@ -10,40 +10,6 @@
     background:#f6f7fb;
 }
 
-/*HERO*/
-
-.sempre-hero{
-    position:relative;
-    height:72vh;
-    min-height:600px;
-    display:flex;
-    align-items:center;
-}
-
-.hero.sempre-hero{
-    background-image: url("../../../img/documentacion/documentacion.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.sempre-hero .overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        90deg,
-        rgba(0,0,0,.82),
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.25)
-    );
-
-}
-
-.sempre-hero .hero-content{
-    position:relative;
-    z-index:5;
-    max-width:700px;
-}
 
 .hero-badge{
     display:inline-flex;
@@ -61,23 +27,6 @@
     margin: 0 auto 30px auto;
 }
 
-.sempre-hero h1{
-    font-size:clamp(3rem,6vw,5rem);
-    font-weight:800;
-    color:#fff;
-    line-height:1.05;
-    margin-bottom:30px;
-}
-
-.sempre-hero span{
-    color:#ffd166;
-}
-
-.sempre-hero p{
-    color:#ededed;
-    line-height:1.9;
-    font-size:1.15rem;
-}
 
 /*INTRO*/
 
