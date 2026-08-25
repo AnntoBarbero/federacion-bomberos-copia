@@ -23,6 +23,12 @@
 
 /* TÍTULOS DE SECCIÓN */
 
+/* Contenedor del título */
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
 /* Título principal */
 .titulo-seccion h2 {
     margin-bottom: 20px;
@@ -129,7 +135,12 @@
 
 /* Tarjeta de introducción */
 .intro-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
     background: var(--blanco);
+    border-radius: 25px;
     box-shadow: var(--sombra-media);
     transition: transform 0.35s ease;
 }
@@ -144,12 +155,20 @@
 
 /* Círculo del icono */
 .intro-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
     background: linear-gradient(
         135deg,
         var(--rojo),
         var(--rojo-claro)
     );
     color: var(--blanco);
+    font-size: 45px;
 }
 
 

@@ -37,6 +37,26 @@ body {
     margin: 0 auto;
 }
 
+/* HERO */
+
+/* Etiqueta roja del Hero */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    max-width: max-content;
+    background: var(--rojo-cuarteles);
+    color: var(--blanco-cuarteles);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+}
+
+
 /* SECCIÓN MAPA */
 
 /* Espaciado y fondo de la sección del mapa */
@@ -47,6 +67,12 @@ body {
 
 
 /* TÍTULOS DE SECCIÓN */
+
+/* Contenedor del título */
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 /* Título principal */
 .titulo-seccion h2 {

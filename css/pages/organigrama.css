@@ -1,4 +1,21 @@
 /* =========================================================
+   HERO
+========================================================= */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #c1121f;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
    SECCIÓN ORGANIGRAMA
 ========================================================= */
 
