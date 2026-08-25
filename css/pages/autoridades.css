@@ -350,4 +350,160 @@
 }
 
 
+/* RESPONSIVE ESPECÍFICO DE AUTORIDADES */
 
+/* Pantallas de hasta 992px */
+@media (max-width: 992px) {
+
+    /* Reduce la altura mínima del Hero */
+    .autoridades-hero {
+        min-height: 520px;
+    }
+
+    /* Presidente pasa de dos columnas a una */
+    .presidente-card {
+        grid-template-columns: 1fr;
+    }
+
+    /* Altura de la foto del presidente */
+    .presidente-card img {
+        height: 420px;
+    }
+
+    /* Reduce el espacio de información */
+    .presidente-info {
+        padding: 40px;
+    }
+
+    /* La introducción pasa a formato vertical */
+    .intro-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Texto de introducción justificado */
+    .intro-texto p {
+        text-align: justify;
+    }
+
+}
+
+
+/* TABLETS / MÓVILES */
+
+/* Pantallas de hasta 768px */
+@media (max-width: 768px) {
+
+    /* Reduce el espacio de las secciones */
+    .autoridades-section {
+        padding: 70px 0;
+    }
+
+    /* Reduce el margen del título */
+    .titulo-seccion {
+        margin-bottom: 45px;
+    }
+
+    /* Reduce el tamaño del título */
+    .titulo-seccion h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Reduce el tamaño de la tarjeta */
+    .intro-card {
+        padding: 40px 30px;
+    }
+
+    /* Reduce el icono */
+    .intro-icon {
+        width: 90px;
+        height: 90px;
+
+        font-size: 35px;
+    }
+
+    /* Reduce el título de introducción */
+    .intro-texto h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Centra la información del presidente */
+    .presidente-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Reduce el nombre del presidente */
+    .presidente-info h2 {
+        font-size: 2rem;
+    }
+
+    /* Ajusta la altura de las fotos */
+    .autoridad-card img {
+        height: 340px;
+    }
+
+}
+
+
+/* MÓVILES PEQUEÑOS */
+
+/* Pantallas de hasta 585px */
+@media (max-width: 585px) {
+
+    /* Ajusta la altura del Hero */
+    .autoridades-hero {
+        min-height: 520px;
+    }
+
+    /* Reduce el título del Hero */
+    .autoridades-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Reduce el texto del Hero */
+    .autoridades-hero p {
+        font-size: 1rem;
+    }
+
+    /* Reduce el título de sección */
+    .titulo-seccion h2 {
+        font-size: 2rem;
+    }
+
+    /* Reduce el padding de introducción */
+    .intro-card {
+        padding: 25px 20px;
+    }
+
+    /* Ajusta la foto del presidente */
+    .presidente-card img {
+        height: 330px;
+    }
+
+    /* Reduce el espacio de información */
+    .presidente-info {
+        padding: 30px 25px;
+    }
+
+    /* Reduce el nombre del presidente */
+    .presidente-info h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Ajusta las fotos de autoridades */
+    .autoridad-card img {
+        height: 320px;
+    }
+
+    /* Reduce el espacio de la información */
+    .autoridad-info {
+        padding: 25px 20px;
+    }
+
+    /* Reduce el nombre de la autoridad */
+    .autoridad-info h3 {
+        font-size: 1.2rem;
+    }
+
+}

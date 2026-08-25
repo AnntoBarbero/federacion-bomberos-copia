@@ -1264,4 +1264,236 @@
 }
 
 
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
 
+@media (max-width: 992px) {
+
+    .zonas-organigrama {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .especialidades-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ORGANIGRAMA */
+
+    .nivel {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .nivel-regionales {
+        gap: 15px;
+    }
+
+    .org-card,
+    .org-card.principal,
+    .regional {
+        min-width: 0;
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* ZONAS */
+
+    .zonas-organigrama {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+
+    /* MODAL ZONA */
+
+    .informacion-zona {
+        padding: 15px;
+    }
+
+    .ventana-zona {
+        max-height: 90vh;
+        border-radius: 16px;
+    }
+
+    .cabecera-zona {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+
+    .icono-zona {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+
+        font-size: 23px;
+    }
+
+    .cabecera-zona h2 {
+        font-size: 22px;
+    }
+
+    .cabecera-zona a {
+        font-size: 12px;
+        word-break: break-word;
+    }
+
+    .contenido-zona {
+        padding: 20px;
+    }
+
+    .equipo-zona {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-cuarteles-zona {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ESPECIALIDADES */
+
+    .especialidades-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .especialidad-card {
+        min-height: 105px;
+
+        padding: 15px 10px;
+    }
+
+
+    /* MODAL ESPECIALIDAD */
+
+    .ventana-especialidad {
+        max-height: 90vh;
+
+        border-radius: 16px;
+    }
+
+    .cabecera-especialidad {
+        padding: 25px 20px;
+    }
+
+    .cabecera-especialidad h2 {
+        font-size: 21px;
+    }
+
+    .contenido-especialidad {
+        padding: 20px;
+    }
+
+    .equipo-especialidad,
+    .lista-especialidad {
+        grid-template-columns: 1fr;
+    }
+
+        /* =====================================================
+       MODAL PERSONA
+    ===================================================== */
+
+    .modal-persona {
+        padding: 15px;
+    }
+
+    .ventana-persona {
+        max-height: 90vh;
+
+        overflow-y: auto;
+
+        border-radius: 18px;
+    }
+
+    .perfil-persona {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+        padding: 40px 25px;
+    }
+
+    .foto-persona {
+        width: 170px;
+        height: 170px;
+
+        min-width: 170px;
+    }
+
+    .datos-persona h2 {
+        font-size: 24px;
+    }
+
+    .datos-persona p {
+        justify-content: center;
+
+        font-size: 14px;
+    }
+
+    .datos-persona .cargo-persona-modal {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .zonas-organigrama {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .zona-org {
+        min-height: 100px;
+        padding: 12px 8px;
+    }
+
+    .especialidades-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .especialidad-card strong {
+        font-size: 12px;
+    }
+        .perfil-persona {
+        padding: 35px 20px;
+    }
+
+    .foto-persona {
+        width: 145px;
+        height: 145px;
+
+        min-width: 145px;
+
+        border-width: 5px;
+    }
+
+    .datos-persona h2 {
+        font-size: 21px;
+    }
+
+    .datos-persona p {
+        font-size: 13px;
+    }
+
+}

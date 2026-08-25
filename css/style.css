@@ -131,6 +131,20 @@ body{
 
 }
 
+@media (hover: hover) {
+
+    .dropdown:hover .submenu{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+    }
+
+    .dropdown:hover i{
+        transform:rotate(180deg);
+    }
+
+}
+
 .dropdown.active .submenu{
     opacity:1;
     visibility:visible;
