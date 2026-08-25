@@ -2,16 +2,20 @@
    HERO
 ========================================================= */
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: #c1121f;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 700;
-    margin-bottom: 30px;
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    gap:10px;
+    width: fit-content;
+    max-width: max-content;
+    background:#c1121f;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:50px;
+    font-weight:700;
+    margin-bottom:30px;
+    margin: 0 auto 30px auto;
 }
 
 

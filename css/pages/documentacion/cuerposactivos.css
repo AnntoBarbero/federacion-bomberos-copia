@@ -59,16 +59,17 @@
 .hero-badge{
     display:inline-flex;
     align-items:center;
+    justify-content: center;
     gap:10px;
-    background:var(--rojo);
+    width: fit-content;
+    max-width: max-content;
+    background:#c1121f;
     color:#fff;
-    padding:12px 24px;
+    padding:10px 22px;
     border-radius:50px;
     font-weight:700;
     margin-bottom:30px;
-    letter-spacing:.8px;
-    margin-top: 20px;
-
+    margin: 0 auto 30px auto;
 }
 
 .cuerpos-hero h1{
