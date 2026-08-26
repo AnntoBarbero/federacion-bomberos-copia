@@ -4,6 +4,12 @@
     box-sizing:border-box;
 }
 
+:root{
+    --blanco:#fff;
+    --rojo:#c1121f;
+    --rojo-hover:#a40f1a;
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -507,7 +513,7 @@ body{
 
     background: rgba(255, 255, 255, 0.12);
 
-    color: var(--blanco);
+    color: var(--rojo);
 
     font-size: 1.1rem;
 
@@ -522,8 +528,8 @@ body{
 /* HOVER */
 
 .footer-redes a:hover {
-    background: var(--rojo);
-    color: var(--blanco);
+    background: var(--blanco);
+    color: var(--rojo);
     transform: translateY(-4px);
 }
 
