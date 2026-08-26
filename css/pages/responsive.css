@@ -114,57 +114,7 @@
     }
 
 
-    /* ESTATUTO */
 
-    .estatuto-section{
-        padding:80px 0;
-    }
-
-    .estatuto-hero{
-        min-height:520px;
-        height:auto;
-        padding:170px 0 100px;
-    }
-
-    .estatuto-hero .hero-content{
-        max-width:100%;
-    }
-
-    .estatuto-hero h1{
-        font-size:3.2rem;
-    }
-
-    .estatuto-hero p{
-        font-size:1.05rem;
-    }
-
-    .intro-card{
-        flex-direction:column;
-        text-align:center;
-        padding:45px;
-        gap:30px;
-    }
-
-    .intro-texto p{
-        text-align:justify;
-    }
-
-    .documento-card{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .documento-info{
-        flex-direction:column;
-    }
-
-    .documento-botones{
-        justify-content:center;
-    }
-
-    .aspectos-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 
     /* ORGANIGRAMA */
     .zonas-organigrama{
@@ -280,80 +230,6 @@
         grid-template-columns:repeat(2,1fr);
     }
 
-    /* ESTATUTO */
-
-    .estatuto-section{
-        padding:70px 0;
-    }
-
-    .estatuto-hero{
-        min-height:auto;
-        height:auto;
-        padding:160px 0 80px;
-    }
-
-    .hero-badge{
-        font-size:.8rem;
-        padding:10px 18px;
-    }
-
-    .estatuto-hero h1{
-        font-size:2.5rem;
-        line-height:1.1;
-    }
-
-    .estatuto-hero p{
-        font-size:1rem;
-        line-height:1.7;
-    }
-
-    .intro-card{
-        padding:35px 25px;
-    }
-
-    .intro-icon{
-        width:85px;
-        height:85px;
-        font-size:34px;
-    }
-
-    .intro-texto h2{
-        font-size:1.7rem;
-    }
-
-    .documento-card{
-        padding:30px 25px;
-    }
-
-    .pdf-icon{
-        width:70px;
-        height:70px;
-        font-size:32px;
-    }
-
-    .documento-info h3{
-        font-size:1.3rem;
-    }
-
-    .documento-botones{
-        width:100%;
-        flex-direction:column;
-    }
-
-    .btn-ver,
-    .btn-descargar{
-        width:100%;
-        text-align:center;
-    }
-
-    .aspectos-grid{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-
-    .aspecto-card{
-        padding:30px 25px;
-    }
 
     /* HISTORIA ESCUELA */
     .historia-escuela{
@@ -496,7 +372,7 @@
     .zona-info-card{
         padding:25px 20px;
     }
-}
+
 
 
 /* TELEFONOS PEQUEÑOS */
@@ -557,36 +433,6 @@
 
     }
 
-    /* ESTATUTO */
-
-    .estatuto-hero{
-        padding:140px 0 60px;
-    }
-
-    .estatuto-hero h1{
-        font-size:2rem;
-    }
-
-    .hero-badge{
-        font-size:.75rem;
-        padding:8px 15px;
-    }
-
-    .intro-card{
-        padding:25px 20px;
-    }
-
-    .intro-texto h2{
-        font-size:1.5rem;
-    }
-
-    .documento-card{
-        padding:25px 20px;
-    }
-
-    .aspecto-card{
-        padding:25px 20px;
-    }
 
 
     /* CALENDARIO */
