@@ -74,20 +74,17 @@
 
 /*DOCUMENTO*/
 
-.documento-card {
-    background: #fff;
-    border-radius: 25px;
-    padding: 35px 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-
-    margin-top: 20px;
-
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+.documento-card{
+    background:#fff;
+    border-radius:25px;
+    padding:45px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top: 10px;
+    gap:40px;
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
 .documento-info{
@@ -117,36 +114,19 @@
     color:#777;
 }
 
-.documento-botones {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
-    flex-wrap: wrap;
-    flex-shrink: 0;
+.documento-botones{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .btn-ver,
-.btn-descargar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: auto;
-    min-width: 150px;
-
-    padding: 14px 24px;
-
-    border-radius: 12px;
-
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-
-    transition:
-        background 0.35s ease,
-        color 0.35s ease,
-        transform 0.35s ease;
+.btn-descargar{
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
 }
 
 .btn-ver{
