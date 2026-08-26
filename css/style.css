@@ -404,7 +404,7 @@ body{
     position: relative;
     overflow: hidden;
     padding: 70px 0 25px;
-    background-image: url("../img/footer/fondo-footer.jpg");
+    background-image: url('../img/pie/pie.png');;
     background-size: cover;
     background-position: center;
     color: var(--blanco);
