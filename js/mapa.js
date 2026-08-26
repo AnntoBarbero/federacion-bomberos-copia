@@ -550,15 +550,3 @@ document.querySelectorAll(".cuartel-card").forEach(card => {
     });
 
 });
-
-document.querySelectorAll(".cuartel-card").forEach(card => {
-
-    card.addEventListener("click", function () {
-
-        if (window.innerWidth <= 768) {
-            this.classList.toggle("active");
-        }
-
-    });
-
-});
