@@ -5,8 +5,12 @@
 
 
 /* =========================================================
+   RESPONSIVE GENERAL
+   ========================================================= */
+
+
+/* =========================================================
    DESKTOP GRANDE
-   1600px EN ADELANTE
    ========================================================= */
 
 @media (min-width: 1600px) {
@@ -15,22 +19,28 @@
         max-width: 1400px;
     }
 
+    .footer-grid {
+        display: grid;
+        gap: 60px;
+        align-items: start;
+    }
+
+    .footer-inferior {
+        display: grid;
+        gap: 40px;
+    }
 }
 
 
 /* =========================================================
    NOTEBOOKS
-   HASTA 1200px
    ========================================================= */
 
 @media (max-width: 1200px) {
 
     .container {
         width: 95%;
-        max-width: 1140px;
     }
-
-    /* HERO */
 
     .hero h1 {
         font-size: 3.2rem;
@@ -40,48 +50,35 @@
         font-size: 1.1rem;
     }
 
-
-    /* CARDS */
-
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
-
-    /* INFORMACIÓN */
-
     .info-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
 /* =========================================================
    TABLETS
-   HASTA 992px
    ========================================================= */
 
 @media (max-width: 992px) {
 
     .container {
         width: 95%;
-        max-width: 960px;
     }
 
 
-    /* =====================================================
-       HEADER / NAVBAR
-       ===================================================== */
+    /* HEADER */
 
     .menu {
         gap: 15px;
     }
 
 
-    /* =====================================================
-       HERO
-       ===================================================== */
+    /* HERO */
 
     .hero {
         min-height: 100vh;
@@ -97,45 +94,35 @@
     }
 
 
-    /* =====================================================
-       ESTADÍSTICAS
-       ===================================================== */
+    /* ESTADÍSTICAS */
 
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
 
-    /* =====================================================
-       CARDS
-       ===================================================== */
+    /* CARDS */
 
     .cards {
         grid-template-columns: 1fr;
     }
 
 
-    /* =====================================================
-       ACCESOS RÁPIDOS
-       ===================================================== */
+    /* ACCESOS */
 
     .accesos-rapidos {
         grid-template-columns: repeat(2, 1fr);
     }
 
 
-    /* =====================================================
-       INFORMACIÓN
-       ===================================================== */
+    /* INFORMACIÓN */
 
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .hero h1 {
+        font-size: 1.8rem;
     }
 
 
-    /* =====================================================
-       FOOTER
-       ===================================================== */
+    /* FOOTER */
 
     .footer-grid {
         grid-template-columns: 1fr;
@@ -151,54 +138,185 @@
     }
 
 
-    /* =====================================================
-       ORGANIGRAMA
-       ===================================================== */
+    /* ORGANIGRAMA */
 
     .zonas-organigrama {
         grid-template-columns: repeat(3, 1fr);
     }
-
-
-    /* =====================================================
-       GALERÍA
-       ===================================================== */
-
-    .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
 
 
 /* =========================================================
-   MÓVILES GRANDES / TABLETS PEQUEÑAS
-   HASTA 768px
+   MENÚ HAMBURGUESA
+   ========================================================= */
+
+/*
+   IMPORTANTE:
+   El botón está OCULTO por defecto.
+   Solamente aparece hasta 992px.
+*/
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.menu-toggle:focus,
+.menu-toggle:active,
+.menu-toggle:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+
+/* =========================================================
+   TABLET / MENÚ MÓVIL
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        z-index: 2001;
+    }
+
+    .nav-menu {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 300px;
+        height: 100vh;
+
+        background: #111;
+
+        transition: right .35s ease;
+
+        z-index: 2000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+
+        width: 100%;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+
+        padding: 10px;
+
+        font-size: 1.1rem;
+
+        color: #fff;
+    }
+
+
+    /* SUBMENÚ MÓVIL */
+
+    .dropdown .submenu {
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        background: #fff;
+
+        border-radius: 12px;
+
+        box-shadow: none;
+
+        margin: 10px 15px;
+        padding: 10px 0;
+
+        z-index: 9999;
+    }
+
+    .dropdown.active .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        display: block;
+
+        padding: 12px 20px;
+
+        color: #222 !important;
+
+        pointer-events: auto;
+    }
+
+
+    /* CALENDARIO */
+
+    .agenda-capacitacion {
+        padding: 80px 0;
+    }
+
+    .agenda-capacitacion .titulo-seccion h2 {
+        font-size: 2.2rem;
+    }
+
+    .calendario-container iframe {
+        height: 650px;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES GRANDES
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* =====================================================
-       CONTENEDOR
-       ===================================================== */
-
-    .container {
-        width: 92%;
-    }
-
-
-    /* =====================================================
-       LOGO
-       ===================================================== */
+    /* LOGO */
 
     .logo img {
         height: 55px;
     }
 
 
-    /* =====================================================
-       HERO
-       ===================================================== */
+    /* HERO */
 
     .hero {
         min-height: 100vh;
@@ -214,9 +332,7 @@
     }
 
 
-    /* =====================================================
-       BOTONES DEL HERO
-       ===================================================== */
+    /* BOTONES HERO */
 
     .hero-botones {
         flex-direction: column;
@@ -232,9 +348,7 @@
     }
 
 
-    /* =====================================================
-       ESTADÍSTICAS
-       ===================================================== */
+    /* ESTADÍSTICAS */
 
     .stats-grid {
         grid-template-columns: 1fr;
@@ -245,9 +359,7 @@
     }
 
 
-    /* =====================================================
-       ACCESOS
-       ===================================================== */
+    /* ACCESOS */
 
     .accesos-rapidos {
         grid-template-columns: 1fr;
@@ -255,39 +367,24 @@
     }
 
 
-    /* =====================================================
-       INFORMACIÓN
-       ===================================================== */
+    /* INFORMACIÓN */
 
     .info-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* =====================================================
-       GALERÍA
-       ===================================================== */
+    /* GALERÍA */
 
     .galeria-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
 
-    /* =====================================================
-       FOOTER
-       ===================================================== */
+    /* FOOTER */
 
     .footer {
         padding: 55px 20px 20px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-inferior {
-        grid-template-columns: 1fr;
-        gap: 35px;
     }
 
     .footer-contacto h3 {
@@ -316,13 +413,10 @@
 
     .footer-copy p {
         font-size: 0.8rem;
-        text-align: center;
     }
 
 
-    /* =====================================================
-       HISTORIA ESCUELA
-       ===================================================== */
+    /* HISTORIA ESCUELA */
 
     .historia-escuela {
         padding: 70px 0;
@@ -341,9 +435,7 @@
     }
 
 
-    /* =====================================================
-       TIMELINE
-       ===================================================== */
+    /* TIMELINE */
 
     .timeline::before {
         left: 27px;
@@ -353,18 +445,24 @@
     .timeline-item,
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
+
         width: 100%;
         left: 0;
+
         text-align: left;
+
         padding-left: 75px;
         padding-right: 10px;
+
         margin-bottom: 35px;
     }
 
     .timeline-item:nth-child(odd) .timeline-marker,
     .timeline-item:nth-child(even) .timeline-marker {
+
         left: 0;
         right: auto;
+
         width: 54px;
         height: 54px;
     }
@@ -387,9 +485,7 @@
     }
 
 
-    /* =====================================================
-       IDENTIDAD ESCUELA
-       ===================================================== */
+    /* IDENTIDAD ESCUELA */
 
     .identidad-grid {
         grid-template-columns: 1fr;
@@ -405,9 +501,7 @@
     }
 
 
-    /* =====================================================
-       ORGANIGRAMA
-       ===================================================== */
+    /* ORGANIGRAMA */
 
     .seccion-organigrama {
         padding: 60px 0;
@@ -450,193 +544,14 @@
     .zona-info-card {
         padding: 25px 20px;
     }
-
-
-    /* =====================================================
-       CALENDARIO
-       ===================================================== */
-
-    .agenda-capacitacion {
-        padding: 80px 0;
-    }
-
-    .agenda-capacitacion .titulo-seccion h2 {
-        font-size: 2.2rem;
-    }
-
-    .calendario-container iframe {
-        height: 650px;
-    }
-
-
-    /* =====================================================
-       MAPA DE CUARTELES
-       ===================================================== */
-
-    #mapa {
-        width: 100%;
-    }
-
-    .buscador-cuarteles {
-        width: 100%;
-    }
-
-
-    /* =====================================================
-       MENÚ HAMBURGUESA
-       ===================================================== */
-
-    .menu-toggle {
-        display: block;
-        z-index: 2001;
-
-        background: transparent;
-        border: none;
-        outline: none;
-        box-shadow: none;
-
-        color: #fff;
-        font-size: 2rem;
-        cursor: pointer;
-
-        padding: 0;
-    }
-
-    .menu-toggle:focus,
-    .menu-toggle:active,
-    .menu-toggle:hover {
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        outline: none;
-    }
-
-
-    /* =====================================================
-       MENÚ LATERAL
-       ===================================================== */
-
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-
-        width: 300px;
-        height: 100vh;
-
-        background: #111;
-
-        transition: right .35s ease;
-
-        z-index: 2000;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-
-    /* =====================================================
-       LINKS DEL MENÚ
-       ===================================================== */
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        gap: 25px;
-        width: 100%;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu a {
-        display: block;
-        padding: 10px;
-        font-size: 1.1rem;
-        color: #fff;
-    }
-
-
-    /* =====================================================
-       SUBMENÚ MOBILE
-       ===================================================== */
-
-    .dropdown .submenu,
-    .submenu {
-        position: static !important;
-
-        display: none;
-
-        width: calc(100% - 30px);
-
-        background: #fff;
-
-        border-radius: 12px;
-
-        margin: 10px 15px;
-        padding: 10px 0;
-
-        box-shadow: none;
-
-        z-index: 9999;
-    }
-
-    .dropdown.active .submenu {
-        display: block;
-    }
-
-    .submenu li {
-        width: 100%;
-    }
-
-    .submenu a {
-        display: block;
-
-        padding: 12px 20px;
-
-        color: #333 !important;
-
-        font-size: 1rem;
-
-        pointer-events: auto;
-    }
-
-    .submenu a:hover {
-        color: #c1121f !important;
-    }
-
 }
 
 
 /* =========================================================
    MÓVILES PEQUEÑOS
-   HASTA 585px
    ========================================================= */
 
 @media (max-width: 585px) {
-
-    /* =====================================================
-       CONTENEDOR
-       ===================================================== */
-
-    .container {
-        width: 90%;
-    }
-
-
-    /* =====================================================
-       HERO
-       ===================================================== */
 
     .hero h1 {
         font-size: 1.8rem;
@@ -647,9 +562,7 @@
     }
 
 
-    /* =====================================================
-       SECCIONES
-       ===================================================== */
+    /* SECCIONES */
 
     .institucional,
     .destacados,
@@ -664,49 +577,35 @@
     }
 
 
-    /* =====================================================
-       EMERGENCIA
-       ===================================================== */
+    /* EMERGENCIA */
 
     .emergencia h3 {
         font-size: 3rem;
     }
 
 
-    /* =====================================================
-       ESTADÍSTICAS
-       ===================================================== */
+    /* ESTADÍSTICAS */
 
     .stat h3 {
         font-size: 2rem;
     }
 
-    .estadisticas-grid {
-        grid-template-columns: 1fr;
-    }
 
-
-    /* =====================================================
-       FOOTER
-       ===================================================== */
+    /* FOOTER */
 
     .footer-cta-box h2 {
         font-size: 1.8rem;
     }
 
 
-    /* =====================================================
-       GALERÍA
-       ===================================================== */
+    /* GALERÍA */
 
     .galeria-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* =====================================================
-       MAPA
-       ===================================================== */
+    /* MAPA */
 
     #mapa {
         height: 320px;
@@ -716,10 +615,12 @@
         padding: 12px 15px;
     }
 
+    .estadisticas-grid {
+        grid-template-columns: 1fr;
+    }
 
-    /* =====================================================
-       CALENDARIO
-       ===================================================== */
+
+    /* CALENDARIO */
 
     .agenda-capacitacion .titulo-seccion h2 {
         font-size: 1.9rem;
@@ -740,9 +641,7 @@
     }
 
 
-    /* =====================================================
-       HISTORIA ESCUELA
-       ===================================================== */
+    /* HISTORIA ESCUELA */
 
     .historia-escuela {
         padding: 60px 0;
@@ -751,11 +650,6 @@
     .historia-escuela .titulo-seccion h2 {
         font-size: 27px;
     }
-
-
-    /* =====================================================
-       TIMELINE
-       ===================================================== */
 
     .timeline-item,
     .timeline-item:nth-child(odd),
@@ -783,9 +677,7 @@
     }
 
 
-    /* =====================================================
-       IDENTIDAD ESCUELA
-       ===================================================== */
+    /* IDENTIDAD ESCUELA */
 
     .identidad-escuela {
         padding: 70px 0;
@@ -811,9 +703,7 @@
     }
 
 
-    /* =====================================================
-       ORGANIGRAMA
-       ===================================================== */
+    /* ORGANIGRAMA */
 
     .zonas-organigrama {
         grid-template-columns: 1fr;
@@ -826,39 +716,11 @@
     .org-card h3 {
         font-size: 16px;
     }
-
-
-    /* =====================================================
-       MENÚ MOBILE
-       ===================================================== */
-
-    .nav-menu {
-        width: 280px;
-    }
-
-    .menu {
-        gap: 18px;
-    }
-
-    .menu a {
-        font-size: 1rem;
-    }
-
-
-    /* =====================================================
-       SUBMENÚ
-       ===================================================== */
-
-    .submenu {
-        width: calc(100% - 20px);
-        margin: 10px;
-    }
-
 }
 
 
 /* =========================================================
-   SEGURIDAD / EVITAR DESBORDAMIENTO HORIZONTAL
+   SEGURIDAD RESPONSIVE
    ========================================================= */
 
 html,
@@ -876,3 +738,4 @@ iframe,
 video {
     max-width: 100%;
 }
+
