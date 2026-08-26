@@ -11,23 +11,18 @@
 }
 
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
     justify-content: center;
-    gap: 10px;
+    gap:10px;
     width: fit-content;
     max-width: max-content;
-
-    background: #c1121f;
-    color: #fff;
-
-    padding: 10px 22px;
-    border-radius: 50px;
-
-    font-weight: 700;
-
-    margin: 0 auto 30px;
+    background:#c1121f;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:50px;
+    font-weight:700;
 }
 
 
@@ -74,17 +69,17 @@
 
 /*DOCUMENTO*/
 
-.documento-card {
-    background: #fff;
-    border-radius: 25px;
-    padding: 35px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+.documento-card{
+    background:#fff;
+    border-radius:25px;
+    padding:45px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
     margin-top: 10px;
-    gap: 30px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
+    gap:40px;
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
 }
 
 .documento-info{
@@ -114,28 +109,19 @@
     color:#777;
 }
 
-.documento-botones {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
-    flex-wrap: wrap;
-    flex-shrink: 0;
+.documento-botones{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 .btn-ver,
-.btn-descargar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    min-width: 140px;
-    padding: 12px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-    transition: 0.35s;
+.btn-descargar{
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
 }
 
 .btn-ver{
