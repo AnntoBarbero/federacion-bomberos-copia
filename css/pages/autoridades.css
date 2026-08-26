@@ -385,9 +385,9 @@
         text-align: center;
     }
 
-    /* Texto de introducción justificado */
+    /* Evita espacios irregulares en líneas angostas */
     .intro-texto p {
-        text-align: justify;
+        text-align: left;
     }
 
 }
