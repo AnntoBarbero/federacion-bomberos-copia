@@ -396,114 +396,170 @@ body{
     box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.footer{
-    position:relative;
-    background:url('../img/pie/pie.png');
-    background-size:cover;
-    background-position:center;
-    color:white;
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0 25px;
+    background-image: url("../img/footer/fondo-footer.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--blanco);
 }
 
-.footer-overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.75);
+
+/* CAPA OSCURA */
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    z-index: 0;
 }
 
-.footer-content{
-    position:relative;
-    z-index:10;
-    text-align:center;
-    padding:100px 20px;
+
+/* CONTENIDO */
+
+.footer-content {
+    position: relative;
+    z-index: 2;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:60px;
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.footer-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.footer-cta-box h2{
-    font-size:2rem;
-    line-height:1.1;
-    margin-bottom:20px;
-    font-family:'Montserrat',sans-serif;
-    font-weight: 700;
+
+/* TÍTULO */
+
+.footer-contacto h3 {
+    margin-bottom: 30px;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
-.footer-cta-box p{
-    margin-bottom:25px;
+
+/* DATOS DE CONTACTO */
+
+.footer-contacto-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
 }
 
-.footer-inferior{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px;
+
+/* CADA DATO */
+
+.footer-contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blanco);
+    font-size: 1rem;
 }
 
-.footer-links h3{
-    margin-bottom:20px;
-    color:#fff;
+
+/* ICONOS */
+
+.footer-contacto-item i {
+    color: var(--rojo);
+    font-size: 1.1rem;
 }
 
-.footer-links ul{
-    list-style:none;
-    padding:0;
+
+/* =========================================================
+   REDES SOCIALES
+   ========================================================= */
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
 }
 
-.footer-links li{
-    margin-bottom:12px;
+
+/* BOTONES */
+
+.footer-redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: var(--blanco);
+
+    font-size: 1.1rem;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
-.footer-links a{
-    color:#ddd;
-    text-decoration:none;
-    transition:.3s;
+
+/* HOVER */
+
+.footer-redes a:hover {
+    background: var(--rojo);
+    color: var(--blanco);
+    transform: translateY(-4px);
 }
 
-.footer-links a:hover{
-    color:#c1121f;
+
+/* =========================================================
+   LÍNEA
+   ========================================================= */
+
+.footer-linea {
+    width: 100%;
+    height: 1px;
+
+    margin: 50px 0 20px;
+
+    background: rgba(255, 255, 255, 0.18);
 }
 
-.footer-redes{
-    margin-top:20px;
-    display:flex;
-    gap:15px;
-    margin-left: 47px;
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.footer-copy {
+    text-align: center;
 }
 
-.footer-redes a i{
-    color:#fff;
-    transition:.3s;
+
+.footer-copy p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
-.footer-redes a{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:rgba(255,255,255,.10);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    transition:.3s;
-}
-
-.footer-redes a:hover{
-    background:#c1121f;
-    transform:translateY(-3px);
-}
-
-.footer-linea{
-    height:1px;
-    background:rgba(255,255,255,.15);
-    margin:40px 0 20px;
-}
-
-.footer-copy{
-    text-align:center;
-    color:#ccc;
-}
 /* ACCESOS RAPIDOS */
 
 .accesos-rapidos{
