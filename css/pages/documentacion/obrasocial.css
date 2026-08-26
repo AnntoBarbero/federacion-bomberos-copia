@@ -1,190 +1,540 @@
-/*SEMPRE*/
+/* =========================================================
+   OBRA SOCIAL SEMPRE
+========================================================= */
 
-/*SECCIONES*/
-
-.sempre-section{
-    padding:100px 0;
+:root {
+    --rojo-sempre: #c1121f;
+    --rojo-hover-sempre: #a40f1a;
+    --gris-sempre: #f6f7fb;
+    --texto-sempre: #555;
+    --borde-sempre: #e8e8e8;
+    --blanco-sempre: #fff;
 }
 
-.fondo-gris{
-    background:#f6f7fb;
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.sempre-section {
+    padding: 75px 0;
+}
+
+.sempre-section .container {
+    max-width: 1180px;
+}
+
+.sempre-section.fondo-gris {
+    background: var(--gris-sempre);
 }
 
 
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
+.hero .hero-badge {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap:10px;
+    gap: 9px;
+
     width: fit-content;
-    max-width: max-content;
-    background:#c1121f;
-    color:#fff;
-    padding:10px 22px;
-    border-radius:50px;
-    font-weight:700;
+
+    background: var(--rojo-sempre);
+    color: var(--blanco-sempre);
+
+    padding: 8px 17px;
+
+    border-radius: 50px;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    margin-bottom: 22px;
+}
+
+.hero .hero-badge i {
+    font-size: .9rem;
 }
 
 
-/*INTRO*/
+/* =========================================================
+   HERO SEMPRE
+========================================================= */
 
-.intro-card{
-    background:#fff;
-    border-radius:25px;
-    padding:60px;
-    display:flex;
-    gap:40px;
-    align-items:center;
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
+.hero {
+    min-height: 540px;
 }
 
-.intro-icon{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(
+.hero h1 {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.hero h1 span {
+    color: #ffd166;
+}
+
+.hero p {
+    max-width: 680px;
+    line-height: 1.75;
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro-card {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    background: var(--blanco-sempre);
+
+    border: 1px solid var(--borde-sempre);
+    border-radius: 20px;
+
+    padding: 38px 42px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .06);
+}
+
+.intro-icon {
+    width: 85px;
+    height: 85px;
+
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
         135deg,
-        #c1121f,
+        var(--rojo-sempre),
         #ef233c
     );
-    color:#fff;
-    font-size:45px;
-    flex-shrink:0;
+
+    color: var(--blanco-sempre);
+
+    font-size: 32px;
+
+    flex-shrink: 0;
 }
 
-.intro-texto h2{
-    font-size:2rem;
-    font-weight:800;
-    margin-bottom:20px;
+.intro-texto {
+    max-width: 850px;
 }
 
-.intro-texto p{
-    color:var(--texto);
-    line-height:2;
-    margin:0;
+.intro-texto h2 {
+    font-size: 1.65rem;
+    font-weight: 800;
+
+    margin-bottom: 12px;
 }
 
-/*DOCUMENTO*/
+.intro-texto p {
+    color: var(--texto-sempre);
 
-.documento-card{
-    background:#fff;
-    border-radius:25px;
-    padding:45px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    margin-top: 10px;
-    gap:40px;
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    font-size: .95rem;
+    line-height: 1.8;
+
+    margin: 0;
 }
 
-.documento-info{
-    display:flex;
-    gap:25px;
-    align-items:center;
+
+/* =========================================================
+   TITULOS DE SECCION
+========================================================= */
+
+.sempre-section .titulo-seccion {
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
 }
 
-.pdf-icon{
-    width:90px;
-    height:90px;
-    border-radius:20px;
-    background:#ffe7ea;
-    color:#c1121f;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:42px;
+.sempre-section .titulo-seccion h2 {
+    font-size: 2rem;
+    font-weight: 800;
+
+    margin-bottom: 10px;
 }
 
-.documento-info h3{
-    font-weight:700;
-    margin-bottom:8px;
+.sempre-section .titulo-seccion p {
+    color: #707070;
+
+    font-size: .95rem;
+    line-height: 1.7;
+
+    margin: 0;
 }
 
-.documento-info span{
-    color:#777;
+
+/* =========================================================
+   DOCUMENTACIÓN
+========================================================= */
+
+.documento-card {
+    max-width: 1000px;
+    margin: 0 auto 18px;
+
+    background: var(--blanco-sempre);
+
+    border: 1px solid var(--borde-sempre);
+    border-radius: 18px;
+
+    padding: 26px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .05);
+
+    transition: .25s ease;
 }
 
-.documento-botones{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+.documento-card:last-child {
+    margin-bottom: 0;
+}
+
+.documento-card:hover {
+    box-shadow: 0 15px 32px rgba(0, 0, 0, .08);
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL DOCUMENTO
+========================================================= */
+
+.documento-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    min-width: 0;
+}
+
+.pdf-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffe7ea;
+    color: var(--rojo-sempre);
+
+    font-size: 29px;
+
+    flex-shrink: 0;
+}
+
+.documento-info h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    margin: 0 0 5px;
+}
+
+.documento-info span {
+    color: #777;
+
+    font-size: .82rem;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.documento-botones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
 }
 
 .btn-ver,
-.btn-descargar{
-    padding:15px 30px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.35s;
-}
+.btn-descargar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
 
-.btn-ver{
-    background:#c1121f;
-    color:#fff;
-}
+    padding: 10px 16px;
 
-.btn-ver:hover{
-    background:#a40f1a;
-    transform:translateY(-3px);
-}
+    border-radius: 9px;
 
-.btn-descargar{
-    border:2px solid #c1121f;
-    color:#c1121f;
-}
+    font-size: .82rem;
+    font-weight: 600;
 
-.btn-descargar:hover{
-    background:#c1121f;
-    color:#fff;
-    transform:translateY(-3px);
-}
+    text-decoration: none;
 
-/*ASPECTOS*/
-
-.aspectos-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:30px;
-    margin-top:50px;
-}
-
-.aspecto-card{
-    background:#fff;
-    border-radius:20px;
-    padding:35px;
-    text-align:center;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-    transition:.3s;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-
-.aspecto-card:hover{
-    transform:translateY(-8px);
-}
-
-.aspecto-card i{
-    font-size:42px;
-    color:#c1121f;
-    margin-bottom:20px;
-}
-
-.aspecto-card h4{
-    font-weight:700;
-    margin-bottom:15px;
-}
-
-.aspecto-card p{
-    color:#666;
-    line-height:1.7;
+    transition: .25s ease;
 }
 
 
+/* VER PDF */
+
+.btn-ver {
+    background: var(--rojo-sempre);
+    color: var(--blanco-sempre);
+
+    border: 1px solid var(--rojo-sempre);
+}
+
+.btn-ver:hover {
+    background: var(--rojo-hover-sempre);
+    border-color: var(--rojo-hover-sempre);
+
+    color: var(--blanco-sempre);
+
+    transform: translateY(-2px);
+}
+
+
+/* DESCARGAR */
+
+.btn-descargar {
+    background: transparent;
+
+    border: 1px solid var(--rojo-sempre);
+    color: var(--rojo-sempre);
+}
+
+.btn-descargar:hover {
+    background: var(--rojo-sempre);
+    color: var(--blanco-sempre);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INFORMACIÓN IMPORTANTE
+========================================================= */
+
+.aspectos-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.aspecto-card {
+    background: var(--blanco-sempre);
+
+    border: 1px solid var(--borde-sempre);
+    border-radius: 17px;
+
+    padding: 28px 24px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    min-height: 205px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aspecto-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .09);
+}
+
+.aspecto-card i {
+    font-size: 30px;
+
+    color: var(--rojo-sempre);
+
+    margin-bottom: 15px;
+}
+
+.aspecto-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.aspecto-card p {
+    max-width: 280px;
+
+    color: #666;
+
+    font-size: .85rem;
+    line-height: 1.65;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .sempre-section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .intro-card {
+        padding: 30px;
+    }
+
+    .documento-card {
+        padding: 24px;
+    }
+
+    .aspectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .sempre-section {
+        padding: 50px 0;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: .95rem;
+    }
+
+    /* INTRO */
+
+    .intro-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 24px;
+    }
+
+    .intro-icon {
+        width: 70px;
+        height: 70px;
+
+        font-size: 27px;
+    }
+
+    .intro-texto h2 {
+        font-size: 1.45rem;
+    }
+
+    .intro-texto p {
+        font-size: .9rem;
+    }
+
+
+    /* DOCUMENTOS */
+
+    .documento-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 24px;
+    }
+
+    .documento-botones {
+        width: 100%;
+    }
+
+    .btn-ver,
+    .btn-descargar {
+        flex: 1;
+    }
+
+
+    /* INFORMACIÓN */
+
+    .aspectos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero .hero-badge {
+        font-size: .78rem;
+        padding: 7px 14px;
+    }
+
+    .documento-info {
+        align-items: flex-start;
+    }
+
+    .pdf-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 24px;
+    }
+
+    .documento-info h3 {
+        font-size: .95rem;
+    }
+
+    .documento-botones {
+        flex-direction: column;
+    }
+
+    .btn-ver,
+    .btn-descargar {
+        width: 100%;
+    }
+}
