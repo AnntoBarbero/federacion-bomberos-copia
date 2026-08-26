@@ -1,684 +1,878 @@
-/* DESKTOP GRANDE */
+/* =========================================================
+   RESPONSIVE GENERAL
+   Federación Provincial de Bomberos Voluntarios de La Pampa
+   ========================================================= */
 
-@media (min-width:1600px){
-    .container{
-        max-width:1400px;
-    }
 
-    .footer-grid{
-    display:grid;
-    gap:60px;
-    align-items:start;
-}
+/* =========================================================
+   DESKTOP GRANDE
+   1600px EN ADELANTE
+   ========================================================= */
 
-    .footer-inferior{
-        display:grid;
-        gap:40px;
-    }
+@media (min-width: 1600px) {
 
-}
-
-/* NOTEBOOKS */
-
-@media (max-width:1200px){
-
-    .container{
-        width:95%;
-    }
-
-    .hero h1{
-        font-size:3.2rem;
-    }
-
-    .hero p{
-        font-size:1.1rem;
-    }
-
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .info-grid{
-        grid-template-columns:repeat(2,1fr);
+    .container {
+        max-width: 1400px;
     }
 
 }
 
 
-/* TABLETS */
+/* =========================================================
+   NOTEBOOKS
+   HASTA 1200px
+   ========================================================= */
 
-@media (max-width:992px){
+@media (max-width: 1200px) {
 
-    .container{
-        width:95%;
-    }
-
-    /* HEADER */
-
-    .menu{
-        gap:15px;
+    .container {
+        width: 95%;
+        max-width: 1140px;
     }
 
     /* HERO */
 
-    .hero{
-        min-height:100vh;
-        padding:120px 20px 80px;
+    .hero h1 {
+        font-size: 3.2rem;
     }
 
-    .hero h1{
-        font-size:2.8rem;
+    .hero p {
+        font-size: 1.1rem;
     }
 
-    .hero p{
-        font-size:1.05rem;
-    }
-
-    /* ESTADISTICAS */
-
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 
     /* CARDS */
 
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    /* ACCESOS */
-
-    .accesos-rapidos{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    /* INFORMACION */
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    /* FOOTER */
-
-    .footer-grid{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .footer-inferior{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-redes{
-        justify-content:center;
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 
+    /* INFORMACIÓN */
 
-
-    /* ORGANIGRAMA */
-    .zonas-organigrama{
-        grid-template-columns: repeat(3,1fr);
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
 
-/* MOVILES GRANDES */
+/* =========================================================
+   TABLETS
+   HASTA 992px
+   ========================================================= */
 
-@media (max-width:768px){
+@media (max-width: 992px) {
 
-    /* LOGO */
-
-    .logo img{
-        height:55px;
+    .container {
+        width: 95%;
+        max-width: 960px;
     }
 
-    /* HERO */
 
-    .hero{
-        min-height:100vh;
-        padding:110px 20px 70px;
+    /* =====================================================
+       HEADER / NAVBAR
+       ===================================================== */
+
+    .menu {
+        gap: 15px;
     }
 
-    .hero h1{
-        font-size:2.2rem;
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+        min-height: 100vh;
+        padding: 120px 20px 80px;
     }
 
-    .hero p{
-        font-size:1rem;
+    .hero h1 {
+        font-size: 2.8rem;
     }
 
-    .hero-botones{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+
+    /* =====================================================
+       ESTADÍSTICAS
+       ===================================================== */
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       ACCESOS RÁPIDOS
+       ===================================================== */
+
+    .accesos-rapidos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =====================================================
+       INFORMACIÓN
+       ===================================================== */
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-inferior {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-redes {
+        justify-content: center;
+    }
+
+
+    /* =====================================================
+       ORGANIGRAMA
+       ===================================================== */
+
+    .zonas-organigrama {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* =====================================================
+       GALERÍA
+       ===================================================== */
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES GRANDES / TABLETS PEQUEÑAS
+   HASTA 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       CONTENEDOR
+       ===================================================== */
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* =====================================================
+       LOGO
+       ===================================================== */
+
+    .logo img {
+        height: 55px;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+        min-height: 100vh;
+        padding: 110px 20px 70px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+
+    /* =====================================================
+       BOTONES DEL HERO
+       ===================================================== */
+
+    .hero-botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .btn-principal,
-    .btn-secundario{
-        width:100%;
-        max-width:320px;
-        text-align:center;
+    .btn-secundario {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
     }
 
-    /* ESTADISTICAS */
 
-    .stats-grid{
-        grid-template-columns:1fr;
+    /* =====================================================
+       ESTADÍSTICAS
+       ===================================================== */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 
-    .stat h3{
-        font-size:2.5rem;
+    .stat h3 {
+        font-size: 2.5rem;
     }
 
-    /* ACCESOS */
 
-    .accesos-rapidos{
-        grid-template-columns:1fr;
-        margin-top:-25px;
+    /* =====================================================
+       ACCESOS
+       ===================================================== */
+
+    .accesos-rapidos {
+        grid-template-columns: 1fr;
+        margin-top: -25px;
     }
 
-    .info-grid{
-        grid-template-columns:1fr;
+
+    /* =====================================================
+       INFORMACIÓN
+       ===================================================== */
+
+    .info-grid {
+        grid-template-columns: 1fr;
     }
 
-    /* FOOTER */
+
+    /* =====================================================
+       GALERÍA
+       ===================================================== */
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
 
     .footer {
         padding: 55px 20px 20px;
     }
 
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inferior {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
     .footer-contacto h3 {
         margin-bottom: 25px;
         font-size: 1.3rem;
     }
 
-
     .footer-contacto-items {
         flex-direction: column;
         gap: 18px;
     }
-
 
     .footer-contacto-item {
         justify-content: center;
         font-size: 0.95rem;
     }
 
-
     .footer-redes {
+        justify-content: center;
         margin-top: 30px;
     }
-
 
     .footer-linea {
         margin: 40px 0 20px;
     }
 
-
     .footer-copy p {
         font-size: 0.8rem;
-    }
-
-}
-
-    /* GALERIA */
-
-    .galeria-grid{
-        grid-template-columns:repeat(2,1fr);
+        text-align: center;
     }
 
 
-    /* HISTORIA ESCUELA */
-    .historia-escuela{
+    /* =====================================================
+       HISTORIA ESCUELA
+       ===================================================== */
+
+    .historia-escuela {
         padding: 70px 0;
     }
 
-    .historia-escuela .titulo-seccion{
+    .historia-escuela .titulo-seccion {
         margin-bottom: 50px;
     }
 
-    .historia-escuela .titulo-seccion h2{
+    .historia-escuela .titulo-seccion h2 {
         font-size: 30px;
     }
 
-    .historia-escuela .titulo-seccion p{
+    .historia-escuela .titulo-seccion p {
         font-size: 14px;
     }
 
 
-    /* QUITAMOS EL CENTRO */
+    /* =====================================================
+       TIMELINE
+       ===================================================== */
 
-    .timeline::before{
+    .timeline::before {
         left: 27px;
         transform: none;
     }
 
-
-    /* TODOS LOS ELEMENTOS A LA DERECHA */
-
     .timeline-item,
     .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even){
-
+    .timeline-item:nth-child(even) {
         width: 100%;
-
         left: 0;
-
         text-align: left;
-
         padding-left: 75px;
         padding-right: 10px;
-
         margin-bottom: 35px;
     }
 
-
-    /* MARCADOR */
-
     .timeline-item:nth-child(odd) .timeline-marker,
-    .timeline-item:nth-child(even) .timeline-marker{
-
+    .timeline-item:nth-child(even) .timeline-marker {
         left: 0;
         right: auto;
-
         width: 54px;
         height: 54px;
     }
 
-
-    /* OCULTAR CONECTORES */
-
-    .timeline-item::after{
+    .timeline-item::after {
         display: none;
     }
 
-
-    /* TARJETA */
-
-    .timeline-content{
+    .timeline-content {
         padding: 25px 22px;
-
         border-radius: 15px;
     }
 
-
-    .timeline-content h3{
+    .timeline-content h3 {
         font-size: 21px;
     }
 
-    .timeline-content p{
+    .timeline-content p {
         font-size: 14px;
     }
 
-    /* IDENTIDAD ESCUELA*/
-    .identidad-grid{
+
+    /* =====================================================
+       IDENTIDAD ESCUELA
+       ===================================================== */
+
+    .identidad-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    .identidad-card{
+    .identidad-card {
         padding: 35px 30px;
     }
 
-    .identidad-escuela .titulo-seccion h2{
+    .identidad-escuela .titulo-seccion h2 {
         font-size: 34px;
     }
 
-    /* ORGANIGRAMA */
-    .seccion-organigrama{
-        padding:60px 0;
+
+    /* =====================================================
+       ORGANIGRAMA
+       ===================================================== */
+
+    .seccion-organigrama {
+        padding: 60px 0;
     }
 
-    .nivel{
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
+    .nivel {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-
-    .nivel-regionales{
-        gap:20px;
+    .nivel-regionales {
+        gap: 20px;
     }
 
-    .linea-vertical{
-        height:25px;
+    .linea-vertical {
+        height: 25px;
     }
 
     .org-card,
     .org-card.principal,
-    .regional{
-        width:90%;
-        min-width:0;
+    .regional {
+        width: 90%;
+        min-width: 0;
+    }
+
+    .zonas-organigrama {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .zona-org {
+        min-height: 100px;
+    }
+
+    .zona-info-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .zona-info-card {
+        padding: 25px 20px;
     }
 
 
-    .zonas-organigrama{
-        grid-template-columns:
-            repeat(2,1fr);
-        gap:12px;
+    /* =====================================================
+       CALENDARIO
+       ===================================================== */
+
+    .agenda-capacitacion {
+        padding: 80px 0;
     }
 
-    .zona-org{
-        min-height:100px;
+    .agenda-capacitacion .titulo-seccion h2 {
+        font-size: 2.2rem;
     }
 
-    .zona-info-contenido{
-        grid-template-columns:1fr;
-    }
-
-    .zona-info-card{
-        padding:25px 20px;
+    .calendario-container iframe {
+        height: 650px;
     }
 
 
+    /* =====================================================
+       MAPA DE CUARTELES
+       ===================================================== */
 
-/* TELEFONOS PEQUEÑOS */
-
-@media (max-width:585px){
-
-    .hero h1{
-        font-size:1.8rem;
+    #mapa {
+        width: 100%;
     }
 
-    .hero p{
-        font-size:.95rem;
+    .buscador-cuarteles {
+        width: 100%;
     }
+
+
+    /* =====================================================
+       MENÚ HAMBURGUESA
+       ===================================================== */
+
+    .menu-toggle {
+        display: block;
+        z-index: 2001;
+
+        background: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+
+        padding: 0;
+    }
+
+    .menu-toggle:focus,
+    .menu-toggle:active,
+    .menu-toggle:hover {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+
+    /* =====================================================
+       MENÚ LATERAL
+       ===================================================== */
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        width: 300px;
+        height: 100vh;
+
+        background: #111;
+
+        transition: right .35s ease;
+
+        z-index: 2000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+
+    /* =====================================================
+       LINKS DEL MENÚ
+       ===================================================== */
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+        width: 100%;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        font-size: 1.1rem;
+        color: #fff;
+    }
+
+
+    /* =====================================================
+       SUBMENÚ MOBILE
+       ===================================================== */
+
+    .dropdown .submenu,
+    .submenu {
+        position: static !important;
+
+        display: none;
+
+        width: calc(100% - 30px);
+
+        background: #fff;
+
+        border-radius: 12px;
+
+        margin: 10px 15px;
+        padding: 10px 0;
+
+        box-shadow: none;
+
+        z-index: 9999;
+    }
+
+    .dropdown.active .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .submenu a {
+        display: block;
+
+        padding: 12px 20px;
+
+        color: #333 !important;
+
+        font-size: 1rem;
+
+        pointer-events: auto;
+    }
+
+    .submenu a:hover {
+        color: #c1121f !important;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   HASTA 585px
+   ========================================================= */
+
+@media (max-width: 585px) {
+
+    /* =====================================================
+       CONTENEDOR
+       ===================================================== */
+
+    .container {
+        width: 90%;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: .95rem;
+    }
+
+
+    /* =====================================================
+       SECCIONES
+       ===================================================== */
 
     .institucional,
     .destacados,
     .estadisticas,
-    .informacion{
-        padding:60px 0;
-    }
-
-    .institucional h2,
-    .destacados h2{
-        font-size:2rem;
-    }
-
-    .emergencia h3{
-        font-size:3rem;
-    }
-
-    .stat h3{
-        font-size:2rem;
-    }
-
-    .footer-cta-box h2{
-        font-size:1.8rem;
-    }
-
-    .galeria-grid{
-        grid-template-columns:1fr;
-    }
-
-    #mapa{
-        height:320px;
-    }
-
-    .buscador-cuarteles input{
-        padding:12px 15px;
-    }
-
-    .estadisticas-grid{
-    grid-template-columns:1fr;
-    }
-
-    .galeria-grid{
-
-        columns:1;
-
-    }
-
-
-
-    /* CALENDARIO */
-
-    .agenda-capacitacion .titulo-seccion h2{
-        font-size:1.9rem;
-    }
-
-    .agenda-capacitacion .titulo-seccion p{
-        font-size:.95rem;
-    }
-
-    .calendario-container{
-        padding:10px;
-        border-radius:18px;
-    }
-
-    .calendario-container iframe{
-        height:500px;
-        border-radius:12px;
-    }
-
-    /* HISTORIA DE ESCUELA */
-     .historia-escuela{
+    .informacion {
         padding: 60px 0;
     }
 
-    .historia-escuela .titulo-seccion h2{
+    .institucional h2,
+    .destacados h2 {
+        font-size: 2rem;
+    }
+
+
+    /* =====================================================
+       EMERGENCIA
+       ===================================================== */
+
+    .emergencia h3 {
+        font-size: 3rem;
+    }
+
+
+    /* =====================================================
+       ESTADÍSTICAS
+       ===================================================== */
+
+    .stat h3 {
+        font-size: 2rem;
+    }
+
+    .estadisticas-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer-cta-box h2 {
+        font-size: 1.8rem;
+    }
+
+
+    /* =====================================================
+       GALERÍA
+       ===================================================== */
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       MAPA
+       ===================================================== */
+
+    #mapa {
+        height: 320px;
+    }
+
+    .buscador-cuarteles input {
+        padding: 12px 15px;
+    }
+
+
+    /* =====================================================
+       CALENDARIO
+       ===================================================== */
+
+    .agenda-capacitacion .titulo-seccion h2 {
+        font-size: 1.9rem;
+    }
+
+    .agenda-capacitacion .titulo-seccion p {
+        font-size: .95rem;
+    }
+
+    .calendario-container {
+        padding: 10px;
+        border-radius: 18px;
+    }
+
+    .calendario-container iframe {
+        height: 500px;
+        border-radius: 12px;
+    }
+
+
+    /* =====================================================
+       HISTORIA ESCUELA
+       ===================================================== */
+
+    .historia-escuela {
+        padding: 60px 0;
+    }
+
+    .historia-escuela .titulo-seccion h2 {
         font-size: 27px;
     }
 
+
+    /* =====================================================
+       TIMELINE
+       ===================================================== */
+
     .timeline-item,
     .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even){
+    .timeline-item:nth-child(even) {
         padding-left: 65px;
     }
 
     .timeline-item:nth-child(odd) .timeline-marker,
-    .timeline-item:nth-child(even) .timeline-marker{
+    .timeline-item:nth-child(even) .timeline-marker {
         width: 48px;
         height: 48px;
         font-size: 17px;
     }
 
-    .timeline-content{
+    .timeline-content {
         padding: 22px 18px;
     }
 
-    .timeline-fecha{
+    .timeline-fecha {
         font-size: 12px;
     }
 
-    .timeline-content h3{
+    .timeline-content h3 {
         font-size: 19px;
     }
 
-    /* IDENTIDAD ESCUELA */
-    .identidad-escuela{
+
+    /* =====================================================
+       IDENTIDAD ESCUELA
+       ===================================================== */
+
+    .identidad-escuela {
         padding: 70px 0;
     }
 
-    .identidad-escuela .titulo-seccion h2{
+    .identidad-escuela .titulo-seccion h2 {
         font-size: 29px;
     }
 
-    .identidad-card{
+    .identidad-card {
         padding: 30px 25px;
         border-radius: 15px;
     }
 
-    .identidad-icono{
+    .identidad-icono {
         width: 60px;
         height: 60px;
         font-size: 24px;
     }
 
-    .identidad-card h3{
+    .identidad-card h3 {
         font-size: 24px;
     }
 
-    /* ORGANIGRAMA */
-    .zonas-organigrama{
-        grid-template-columns:1fr;
+
+    /* =====================================================
+       ORGANIGRAMA
+       ===================================================== */
+
+    .zonas-organigrama {
+        grid-template-columns: 1fr;
     }
 
-    .zona-org{
-        width:100%;
-    }
-
-    .org-card h3{
-        font-size:16px;
-    }
-}
-
-
-/* MENU HAMBURGUESA */
-
-.menu-toggle{
-    display: none; /* o display:flex dentro del media query */
-
-    background: transparent;
-    border: none;
-    outline: none;
-    box-shadow: none;
-
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-
-    padding: 0;
-}
-
-.menu-toggle:focus,
-.menu-toggle:active,
-.menu-toggle:hover{
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    outline: none;
-}
-
-@media (max-width:992px){
-
-    .menu-toggle{
-        display:block;
-        z-index:2001;
-    }
-
-    .nav-menu{
-        position:fixed;
-        top:0;
-        right:-100%;
-        width:300px;
-        height:100vh;
-        background:#111;
-        transition:all .35s ease;
-        z-index:2000;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
-    .nav-menu.active{
-        right:0;
-    }
-
-    .menu{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:25px;
-        width:100%;
-    }
-
-    .menu li{
-        width:100%;
-        text-align:center;
-    }
-
-    .menu a{
-        display:block;
-        padding:10px;
-        font-size:1.1rem;
-        color:white;
-    }
-
-    /* CALENDARIO */
-
-    .agenda-capacitacion{
-        padding:80px 0;
-    }
-
-    .agenda-capacitacion .titulo-seccion h2{
-        font-size:2.2rem;
-    }
-
-    .calendario-container iframe{
-        height:650px;
-    }
-
-    .dropdown .submenu{
-        display:none;
-        position:static;
-        background:transparent;
-        box-shadow:none;
-        width:100%;
-        padding:0;
-        margin-top:10px;
-    }
-
-    .dropdown.active .submenu{
-        display:block;
-    }
-
-    .dropdown .submenu li{
-        text-align:center;
-    }
-
-    .dropdown .submenu a{
-        padding:10px 0;
-        font-size:1rem;
-        color:#ddd;
-    }
-
-    .submenu{
-        position: static !important;
-        display: none;
-        background: #fff;
-        border-radius: 12px;
-        margin: 10px 15px;
-        padding: 10px 0;
-        z-index: 9999;
-    }
-
-    .dropdown.active .submenu{
-        display: block;
-    }
-
-    .submenu li{
+    .zona-org {
         width: 100%;
     }
 
-    .submenu a{
-        display: block;
-        padding: 12px 20px;
-        color: #fff !important;
-        pointer-events: auto;
+    .org-card h3 {
+        font-size: 16px;
     }
+
+
+    /* =====================================================
+       MENÚ MOBILE
+       ===================================================== */
+
+    .nav-menu {
+        width: 280px;
+    }
+
+    .menu {
+        gap: 18px;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+
+    /* =====================================================
+       SUBMENÚ
+       ===================================================== */
+
+    .submenu {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+
 }
 
 
-/* SEGURIDAD RESPONSIVE */
+/* =========================================================
+   SEGURIDAD / EVITAR DESBORDAMIENTO HORIZONTAL
+   ========================================================= */
 
 html,
-body{
-    overflow-x:hidden;
+body {
+    overflow-x: hidden;
 }
 
-img{
-    max-width:100%;
-    height:auto;
-    display:block;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 iframe,
-video{
-    max-width:100%;
+video {
+    max-width: 100%;
 }
