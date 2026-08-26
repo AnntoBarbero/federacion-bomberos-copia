@@ -42,9 +42,9 @@
     width: fit-content;
 
     background: var(--rojo-sempre);
-    color: var(--blanco-sempre);
+    color: #ffd166;
 
-    padding: 8px 17px;
+    padding: 12px 17px;
 
     border-radius: 50px;
 
